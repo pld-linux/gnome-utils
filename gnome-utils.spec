@@ -5,7 +5,7 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.1.5
+Version:	2.1.90
 Release:	1
 Epoch:		1
 License:	GPL
@@ -18,16 +18,16 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	gnome-panel-devel >= 2.1.2-2
-BuildRequires:	gnome-vfs2-devel >= 2.1.3-3
-BuildRequires:	libbonoboui-devel >= 2.1.0
+BuildRequires:	gnome-panel-devel >= 2.1.90
+BuildRequires:	gnome-vfs2-devel >= 2.1.6
+BuildRequires:	libbonoboui-devel >= 2.1.2
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnome-devel >= 2.1.1-2
 BuildRequires:	libgnomeui-devel >= 2.0.5
 BuildRequires:	popt-devel
 BuildRequires:	scrollkeeper >= 0.3.11
-BuildRequires:	rpm-build >= 4.1-8.2
-Requires:	gnome-vfs2 >= 2.1.3-3
+BuildRequires:	rpm-build >= 4.1-10
+Requires:	gnome-vfs2 >= 2.1.6
 Prereq:		scrollkeeper
 Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
