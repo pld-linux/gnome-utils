@@ -37,7 +37,6 @@ Obsoletes:	gnome-admin
 %define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11/GNOME2
 %define		_localstatedir	/var
-%define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 
 %description
 GNOME utility programs.
