@@ -6,13 +6,14 @@ Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
 Version:	2.7.90
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.7/%{name}-%{version}.tar.bz2
 # Source0-md5:	7bef530e1169268780a0cd590c6bf209
-Patch0: 	%{name}-locale-names.patch
+Patch0:		%{name}-locale-names.patch
+Patch1:		%{name}-desktop.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.7.3
@@ -69,6 +70,7 @@ Programy u¿ytkowe GNOME'a.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 mv po/{no,nb}.po
 
