@@ -5,38 +5,37 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.6.2
-Release:	2
+Version:	2.8.0
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	b2325307fd311c8ba1bd045d7432830e
-Patch0:		%{name}-kdev_t.patch
-Patch1: 	%{name}-locale-names.patch
-Patch2: 	%{name}-desktop.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	c7cf5b675667efdc1f9ddbc81a9e5497
+Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.6.1
+BuildRequires:	GConf2-devel >= 2.7.92
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-desktop-devel >= 2.6.1
-BuildRequires:	gnome-panel-devel >= 2.6.1
-BuildRequires:	gnome-vfs2-devel >= 2.6.1.1
+BuildRequires:	gnome-desktop-devel >= 2.7.92
+BuildRequires:	gnome-panel-devel >= 2.7.92
+BuildRequires:	gnome-vfs2-devel >= 2.7.92
 BuildRequires:	intltool >= 0.29
-BuildRequires:	libbonoboui-devel >= 2.6.0
-BuildRequires:	libglade2-devel >= 1:2.3.6
-BuildRequires:	libgnome-devel >= 2.6.1
-BuildRequires:	libgnomeui-devel >= 2.6.0
+BuildRequires:	libbonoboui-devel >= 2.6.1
+BuildRequires:	libglade2-devel >= 1:2.4.0
+BuildRequires:	libgnome-devel >= 2.7.92
+BuildRequires:	libgnomeui-devel >= 2.7.92
 BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post):	GConf2
 Requires(post):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.6.1.1
+Requires:	gnome-vfs2 >= 2.7.92
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -72,9 +71,6 @@ Programy u©ytkowe GNOME'a.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-
-mv po/{no,nb}.po
 
 %build
 %{__libtoolize}
@@ -96,13 +92,20 @@ rm -rf $RPM_BUILD_ROOT
 mv ChangeLog main-ChangeLog
 find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
 
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
+
 %find_lang %{name} --with-gnome --all-name
 
 %post
+umask 022
 /usr/bin/scrollkeeper-update
 %gconf_schema_install
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
 
-%postun -p /usr/bin/scrollkeeper-update
+%postun
+umask 022
+/usr/bin/scrollkeeper-update
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -118,6 +121,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
 %{_datadir}/gnome-system-log
-%{_datadir}/mime-info/*
 %{_omf_dest_dir}/%{name}
 %{_mandir}/man1/*
