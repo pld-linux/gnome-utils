@@ -2,7 +2,8 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.2.1
-Release:	6
+Release:	7
+Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
@@ -11,6 +12,8 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{vers
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-fixdistr.patch
 Patch2:		%{name}-sparkle.patch
+Patch3:		%{name}-errordialog.patch
+Patch4:		%{name}-nomailx.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -28,7 +31,6 @@ BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel
-BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
 BuildRequires:	jade
 BuildRequires:	docbook-dsssl
@@ -55,6 +57,8 @@ Programy u¿ytkowe GNOME'a.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 autoconf
