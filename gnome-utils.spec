@@ -1,19 +1,18 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.2.1
-Release:	7
+Version:	1.3.1
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
-Patch0:		%{name}-applnk.patch
-Patch1:		%{name}-fixdistr.patch
-Patch2:		%{name}-sparkle.patch
-Patch3:		%{name}-errordialog.patch
-Patch4:		%{name}-nomailx.patch
+Patch0:		%{name}-fixdistr.patch
+Patch1:		%{name}-sparkle.patch
+Patch2:		%{name}-errordialog.patch
+Patch3:		%{name}-configure.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -33,7 +32,9 @@ BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel
 BuildRequires:	zlib-devel
 BuildRequires:	jade
-BuildRequires:	docbook-dsssl
+BuildRequires:	docbook-style-dsssl
+BuildRequires:	flex
+BuildRequires:	bison
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
@@ -58,11 +59,12 @@ Programy u¿ytkowe GNOME'a.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
-%patch4 -p1
 
 %build
+gettextize --copy --force
+automake -a -c
+aclocal -I macros
 autoconf
-automake
 gettextize --copy --force
 (cd gfloppy; gettextize --copy --force)
 %configure
@@ -73,7 +75,12 @@ gettextize --copy --force
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} DESTDIR=$RPM_BUILD_ROOT install \
+	Utilitiesdir=%{_applnkdir}/Utilities \
+	gdictappdir=%{_applnkdir}/Utilities \
+	Systemdir=%{_applnkdir}/System \
+	Productivitydir=%{_applnkdir}/Applications \
+	desktopdir=%{_applnkdir}/Utilities 
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
@@ -91,6 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/*/*.desktop
 %{_datadir}/applets/Monitors/*
 %{_datadir}/applets/Utility/*
+%{_datadir}/idl/*
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
@@ -98,3 +106,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/logview
 %dir %{_datadir}/gstripchart/
 %config %{_datadir}/gstripchart/gstripchart.conf
+%dir %{_datadir}/stripchart/
+%config %{_datadir}/stripchart/stripchart.conf
+%{_datadir}/stripchart/stripchart.params
