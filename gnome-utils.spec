@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.9.91
+Version:	2.9.92
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	7b73c083f8c0d54678059972be18bc67
+# Source0-md5:	8dd9bbadb3cd26d80928a1d14443372d
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
@@ -31,12 +31,14 @@ BuildRequires:	libglade2-devel >= 1:2.5.0
 BuildRequires:	libgnomeprintui-devel >= 2.8.2
 BuildRequires:	libgnomeui-devel >= 2.9.1
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post):	GConf2
 Requires(post):	scrollkeeper
 Requires:	gnome-vfs2 >= 2.9.90
+Requires:	gtk+2 >= 2:2.6.2
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -79,7 +81,6 @@ cp /usr/share/gnome-common/data/omf.make .
 %{__automake}
 %configure \
 	--disable-schemas-install
-
 %{__make}
 
 %install
