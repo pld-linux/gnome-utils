@@ -5,37 +5,37 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.7.90
+Version:	2.7.91
 Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	7bef530e1169268780a0cd590c6bf209
+# Source0-md5:	a7f59398d7154486a74daf6a51dee7b0
 Patch0:		%{name}-locale-names.patch
 Patch1:		%{name}-desktop.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.7.3
+BuildRequires:	GConf2-devel >= 2.7.91
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-desktop-devel >= 2.7.4
-BuildRequires:	gnome-panel-devel >= 2.7.4
-BuildRequires:	gnome-vfs2-devel >= 2.7.5
+BuildRequires:	gnome-desktop-devel >= 2.7.91
+BuildRequires:	gnome-panel-devel >= 2.7.91
+BuildRequires:	gnome-vfs2-devel >= 2.7.91
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libbonoboui-devel >= 2.6.1
 BuildRequires:	libglade2-devel >= 1:2.4.0
-BuildRequires:	libgnome-devel >= 2.7.2
-BuildRequires:	libgnomeui-devel >= 2.7.2
+BuildRequires:	libgnome-devel >= 2.7.91
+BuildRequires:	libgnomeui-devel >= 2.7.91
 BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post):	GConf2
 Requires(post):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.7.5
+Requires:	gnome-vfs2 >= 2.7.91
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -72,7 +72,7 @@ Programy u©ytkowe GNOME'a.
 %patch0 -p1
 %patch1 -p1
 
-mv po/{no,nb}.po
+rm po/no.po
 
 %build
 %{__libtoolize}
