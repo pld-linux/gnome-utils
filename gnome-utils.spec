@@ -5,17 +5,17 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.5.1
+Version:	2.5.2
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	5e95e7d81685f73f5cb8a23c73908b4f
+# Source0-md5:	85ae1f6fe0a84de2b0838d8d298649f5
 Patch0:		%{name}-kdev_t.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.4.0
+BuildRequires:	GConf2-devel >= 2.5.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
@@ -99,7 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS *ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
-%{_pixmapsdir}/*
 %{_desktopdir}/*
 %{_libdir}/bonobo/servers/*
 %attr(755,root,root) %{_libdir}/gdict-applet
