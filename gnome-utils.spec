@@ -2,7 +2,7 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.4.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
