@@ -31,6 +31,7 @@ BuildRequires:	libpng-devel
 BuildRequires:	zlib-devel
 BuildRequires:	gdbm-devel
 BuildRequires:	e2fsprogs-devel
+BuildRequires:	jade
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
