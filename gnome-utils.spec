@@ -17,17 +17,10 @@ Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	gnome-panel-devel >= 2.0.7
-BuildRequires:	gnome-vfs2-devel >= 2.0.3
-BuildRequires:	libbonoboui-devel >= 2.0.2
-BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	libgnome-devel >= 2.0.4
-BuildRequires:	libgnomeui-devel >= 2.0.5
-BuildRequires:	popt-devel
-BuildRequires:	scrollkeeper >= 0.3.11
+BuildRequires:	gnome-panel-devel
+BuildRequires:	ncurses-devel
+BuildRequires:	scrollkeeper
 Prereq:		scrollkeeper
 Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
