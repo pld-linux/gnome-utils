@@ -70,7 +70,7 @@ rm -f missing
 libtoolize --copy --force
 aclocal -I %{_aclocaldir}/gnome
 autoconf
-automake -a -c
+automake -a -c -f
 %configure \
 	--with-messages=/var/log/messages
 
