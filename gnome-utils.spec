@@ -44,7 +44,7 @@ strip $RPM_BUILD_ROOT/usr/X11R6/bin/*
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f gnome-utils.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) /usr/X11R6/bin/*
