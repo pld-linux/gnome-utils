@@ -20,12 +20,12 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	gnome-panel-devel >= 2.0.6
-BuildRequires:	gnome-vfs2-devel >= 2.0.2
-BuildRequires:	libbonoboui-devel >= 2.0.1
+BuildRequires:	gnome-panel-devel >= 2.0.7
+BuildRequires:	gnome-vfs2-devel >= 2.0.3
+BuildRequires:	libbonoboui-devel >= 2.0.2
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnome-devel >= 2.0.2
-BuildRequires:	libgnomeui-devel >= 2.0.3
+BuildRequires:	libgnome-devel >= 2.0.3
+BuildRequires:	libgnomeui-devel >= 2.0.4
 BuildRequires:	popt-devel
 BuildRequires:	scrollkeeper >= 0.3.11
 Prereq:		scrollkeeper
