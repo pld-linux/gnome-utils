@@ -5,12 +5,12 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	1.106.0
+Version:	1.109.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/gnome/pre-gnome2/sources/%{name}/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/%{name}/%{name}-%{version}.tar.bz2
 Source1:	xmldocs.make
 Source2:	omf.make
 Icon:		gnome-utils.xpm
@@ -19,15 +19,15 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	GConf2-devel
-BuildRequires:	gnome-panel-devel >= 1.5.21
-BuildRequires:	gnome-vfs2-devel >= 1.9.3
-BuildRequires:	libbonoboui-devel >= 1.116.0
-BuildRequires:	libglade2-devel >= 1.99.2
-BuildRequires:	libgnome-devel >= 1.117.0
-BuildRequires:	libgnomeui-devel >= 1.117.0
+BuildRequires:	GConf2-devel >= 1.2.0
+BuildRequires:	gnome-panel-devel >= 2.0.0
+BuildRequires:	gnome-vfs2-devel >= 2.0.0
+BuildRequires:	libbonoboui-devel >= 2.0.0
+BuildRequires:	libglade2-devel >= 2.0.0
+BuildRequires:	libgnome-devel >= 2.0.1
+BuildRequires:	libgnomeui-devel >= 2.0.1
 BuildRequires:	popt-devel
-BuildRequires:	scrollkeeper
+BuildRequires:	scrollkeeper >= 0.3.6
 Prereq:		scrollkeeper
 Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -89,6 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
 %find_lang %{name} --with-gnome --all-name
+find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
 
 %post
 /usr/bin/scrollkeeper-update
@@ -101,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS *ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
@@ -109,7 +110,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/*
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
-%{_datadir}/idl/*
+%{_datadir}/gnome-system-log
+#%{_datadir}/idl/*
 %{_datadir}/mime-info/*
 %{_omf_dest_dir}/%{name}
 %{_mandir}/man1/*
