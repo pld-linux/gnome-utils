@@ -10,6 +10,7 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
+# Source0-md5:	73a8d71bd409146c4a99f3443369c419
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
