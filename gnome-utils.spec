@@ -1,7 +1,7 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.4.0.2
+Version:	1.4.1.1
 Release:	1
 Epoch:		1
 License:	GPL
@@ -11,10 +11,8 @@ Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am_fixes.patch
 Patch1:		%{name}-configure.patch
-Patch2:		%{name}-use_AM_GNU_GETTEXT.patch
-Patch3:		%{name}-am_conditional.patch
-Patch4:		%{name}-defs.patch
-Patch5:		%{name}-glade_cflags.patch
+Patch2:		%{name}-am_conditional.patch
+Patch3:		%{name}-defs.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -35,6 +33,7 @@ BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	oaf-devel >= 0.6.5
 BuildRequires:	readline-devel
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
@@ -65,11 +64,13 @@ Programy u¿ytkowe GNOME'a.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
-%patch4 -p1
-%patch5 -p1
 
 %build
-aclocal -I macros
+sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
+mv -f configure.in.tmp configure.in
+rm -f missing
+libtoolize --copy --force
+aclocal -I %{_aclocaldir}/gnome
 autoconf
 automake -a -c
 %configure
@@ -105,11 +106,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/*/*.desktop
 %{_datadir}/application-registry
 %{_datadir}/applets/*/*
-%{_pixmapsdir}/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
+%{_datadir}/gnome-utils
+%{_datadir}/gtt
+%{_datadir}/idl/*
 %{_datadir}/logview
-%{_datadir}/%{name}
+%{_datadir}/mime-info/*
 %{_mandir}/man*/*
-%{_omf_dest_dir}/omf/%{name}
 %{_datadir}/stripchart
+%{_pixmapsdir}/*
+%{_omf_dest_dir}/omf/%{name}
