@@ -5,8 +5,8 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	1.4.1.2
-Release:	5
+Version:	1.4.1.3
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -19,6 +19,7 @@ Patch3:		%{name}-defs.patch
 Patch4:		%{name}-omf.patch
 Patch5:		%{name}-ac.patch
 Patch6:		%{name}-desktop.patch
+Patch7:		%{name}-bogus_dir.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -89,6 +90,7 @@ Programy u©ytkowe GNOME'a.
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
+%patch7 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
