@@ -56,27 +56,3 @@ rm -rf $RPM_BUILD_ROOT
 /usr/X11R6/share/apps/*.desktop
 /usr/X11R6/share/gnome/help/*
 /usr/X11R6/share/pixmaps/*
-
-%changelog
-* Fri Sep 25 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [0.30-1]
-- added in Requires "gtk+ >= 1.1.2, glib >= 1.1.3",
-- removed obsolete /usr/X11R6/share/go from main package.
-
-* Fri Sep 18 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [0.28-2]
-- added package Icon,
-- changed prefix to /usr/X11R6.
-
-* Thu Sep  3 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [0.28-1]
-- added -q %setup parameter,
-- added pl translation (Wojtek ¦lusarczyk <wojtek@shadow.eu.org>),
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added using %%{name} and %%{version} in Source,
-- added full %attr description in %files,
-- added %lang macros for %{_datadir}/locale/*/LC_MESSAGES/gnome-utils.mo
-  files.
-
-* Mon Apr 6 1998 Marc Ewing <marc@redhat.com>
-- Integrate into gnome-utils CVS source tree
