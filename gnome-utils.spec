@@ -84,7 +84,7 @@ find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst)
 
 %post
 /usr/bin/scrollkeeper-update
-GCONF_CONFIG_SOURCE="`%{_bindir}/gconftool-2 --get-default-source`" %{_bindir}/gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/*.schemas > /dev/null
+%gconf_schema_install
 
 %postun -p /usr/bin/scrollkeeper-update
 
