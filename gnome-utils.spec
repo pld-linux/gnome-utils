@@ -86,7 +86,7 @@ Programy u¿ytkowe GNOME'a.
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
 mv -f configure.in.tmp configure.in
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 aclocal -I %{_aclocaldir}/gnome
 %{__autoconf}
 %{__automake}
