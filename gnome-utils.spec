@@ -32,13 +32,14 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-core-devel
 BuildRequires:	gnome-objc-devel
 BuildRequires:	guile-devel >= 1.4.1
-BuildRequires:	openjade
 BuildRequires:	libglade-gnome-devel >= 0.11
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	oaf-devel >= 0.6.5
+BuildRequires:	openjade
 BuildRequires:	readline-devel
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
@@ -91,7 +92,7 @@ sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
 mv -f configure.in.tmp configure.in
 rm -f missing
 %{__libtoolize}
-aclocal -I %{_aclocaldir}/gnome
+%{__aclocal} -I %{_aclocaldir}/gnome
 %{__autoconf}
 %{__automake}
 %configure \
