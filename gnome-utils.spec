@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644, root, root, 755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755, root, root) /usr/X11R6/bin/*
-%attr(644, root,  man) /usr/X11R6/man/man1/*
+/usr/X11R6/man/man1/*
 /usr/X11R6/share/apps/Applications/*
 /usr/X11R6/share/apps/Productivity/*
 /usr/X11R6/share/apps/System/*
