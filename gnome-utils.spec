@@ -6,7 +6,7 @@ Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
 Version:	2.1.3
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -26,7 +26,7 @@ BuildRequires:	libgnome-devel >= 2.1.1-2
 BuildRequires:	libgnomeui-devel >= 2.0.5
 BuildRequires:	popt-devel
 BuildRequires:	scrollkeeper >= 0.3.11
-BuildRequires:	rpm-build >= 4.1-7
+BuildRequires:	rpm-build >= 4.1-8.2
 Requires:	gnome-vfs2 >= 2.1.3-3
 Prereq:		scrollkeeper
 Prereq:		GConf2
@@ -34,9 +34,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-%define		_sysconfdir	/etc/X11/GNOME2
 %define		_localstatedir	/var
 
 %description
