@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/*/*.desktop
 %{_datadir}/applets/Monitors/*
 %{_datadir}/applets/Utility/*
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
 %{_datadir}/gfloppy
