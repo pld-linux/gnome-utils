@@ -1,7 +1,7 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.4.0.1
+Version:	1.4.0.2
 Release:	1
 Epoch:		1
 License:	GPL
@@ -41,6 +41,7 @@ Obsoletes:	gnome
 Obsoletes:	gnome-admin
 
 %define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_localstatedir	/var
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
@@ -71,7 +72,6 @@ automake -a -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install \
 	Utilitiesdir=%{_applnkdir}/Utilities \
@@ -97,13 +97,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
 %{_applnkdir}/*/*.desktop
+%{_datadir}/application-registry
 %{_datadir}/applets/*/*
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
 %{_datadir}/logview
 %{_datadir}/%{name}
+%{_mandir}/man*/*
 %{_omf_dest_dir}/omf/%{name}
-%dir %{_datadir}/stripchart/
-%config %{_datadir}/stripchart/stripchart.conf
-%{_datadir}/stripchart/stripchart.params
+%{_datadir}/stripchart
