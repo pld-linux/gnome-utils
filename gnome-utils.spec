@@ -9,7 +9,7 @@ Source:      ftp://ftp.gnome.org/pub/GNOME/sources/%{name}-%{version}.tar.gz
 URL:         http://www.gnome.org
 Icon:        %{name}.gif
 Requires:    gtk+ >= 1.1.2, glib >= 1.1.3
-BuildRoot:   /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:   gnome
 
 %description
