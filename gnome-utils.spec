@@ -5,37 +5,36 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.7.0
+Version:	2.7.90
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	390d24b01f27ae77cc9531c8be9d5be8
-Patch0:		%{name}-kdev_t.patch
-Patch1: 	%{name}-locale-names.patch
+# Source0-md5:	7bef530e1169268780a0cd590c6bf209
+Patch0: 	%{name}-locale-names.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.7.1
+BuildRequires:	GConf2-devel >= 2.7.3
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-desktop-devel >= 2.7.1
-BuildRequires:	gnome-panel-devel >= 2.7.1
-BuildRequires:	gnome-vfs2-devel >= 2.7.1
+BuildRequires:	gnome-desktop-devel >= 2.7.4
+BuildRequires:	gnome-panel-devel >= 2.7.4
+BuildRequires:	gnome-vfs2-devel >= 2.7.5
 BuildRequires:	intltool >= 0.29
-BuildRequires:	libbonoboui-devel >= 2.6.0
+BuildRequires:	libbonoboui-devel >= 2.6.1
 BuildRequires:	libglade2-devel >= 1:2.4.0
-BuildRequires:	libgnome-devel >= 2.7.1
-BuildRequires:	libgnomeui-devel >= 2.7.1
+BuildRequires:	libgnome-devel >= 2.7.2
+BuildRequires:	libgnomeui-devel >= 2.7.2
 BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post):	GConf2
 Requires(post):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.7.1
+Requires:	gnome-vfs2 >= 2.7.5
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -70,7 +69,6 @@ Programy u©ytkowe GNOME'a.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 mv po/{no,nb}.po
 
@@ -116,6 +114,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
 %{_datadir}/gnome-system-log
-%{_datadir}/mime-info/*
 %{_omf_dest_dir}/%{name}
 %{_mandir}/man1/*
