@@ -5,12 +5,12 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.0.0
+Version:	2.0.2
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/2.0.1/releases/final/%{name}-%{version}.tar.bz2
 Source1:	xmldocs.make
 Source2:	omf.make
 Icon:		gnome-utils.xpm
@@ -88,13 +88,21 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install \
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
+for i in `find $RPM_BUILD_ROOT -name "*\.xml" | grep help`
+do
+	sed s@http://www.oasis-open.org/docbook/xml/4.1.2@/usr/share/sgml/docbook/xml-dtd-4.1.2@ $i > $i-
+	# there's no such host
+	sed s@http://basil.ireland.sun.com:8080/docbook@/usr/share/sgml/docbook/xml-dtd-4.1.2@ $i- > $i
+	rm -f $i-
+done
+
 mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
 find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
 
 %post
 /usr/bin/scrollkeeper-update
-GCONF_CONFIG_SOURCE="" %{_bindir}/gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/*.schemas > /dev/null
+GCONF_CONFIG_SOURCE="`%{_bindir}/gconftool-2 --get-default-source`" %{_bindir}/gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/*.schemas > /dev/null
 
 %postun -p /usr/bin/scrollkeeper-update
 
@@ -108,6 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
 %{_libdir}/bonobo/servers/*
+%{_libdir}/gdict-applet
 %{_datadir}/applications/*
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
