@@ -1,6 +1,6 @@
-diff -Nuard gnome-utils-1.4.1.2.orig/exe-handler/help/C/gnome-exe-handler-C.omf gnome-utils-1.4.1.2/exe-handler/help/C/gnome-exe-handler-C.omf
---- gnome-utils-1.4.1.2.orig/exe-handler/help/C/gnome-exe-handler-C.omf	Sat Jun 16 06:23:23 2001
-+++ gnome-utils-1.4.1.2/exe-handler/help/C/gnome-exe-handler-C.omf	Wed Oct  2 15:57:38 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/exe-handler/help/C/gnome-exe-handler-C.omf gnome-utils-1.4.1.3/exe-handler/help/C/gnome-exe-handler-C.omf
+--- gnome-utils-1.4.1.3.orig/exe-handler/help/C/gnome-exe-handler-C.omf	Sat Jun 16 06:23:23 2001
++++ gnome-utils-1.4.1.3/exe-handler/help/C/gnome-exe-handler-C.omf	Wed Oct  2 15:57:38 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -19,9 +19,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/exe-handler/help/C/gnome-exe-handler-C.omf 
 -    <identifier url="gnome-exe-handler.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />    
++    <version identifier="1.4.1.3" date="2002-12-24" />    
 +    <subject category="GNOME|Utilities" /> 
 +    <description/>
 +    <type/>
@@ -34,9 +34,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/exe-handler/help/C/gnome-exe-handler-C.omf 
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/C/gcalc-C.omf gnome-utils-1.4.1.2/gcalc/doc/C/gcalc-C.omf
---- gnome-utils-1.4.1.2.orig/gcalc/doc/C/gcalc-C.omf	Thu Feb 15 04:54:36 2001
-+++ gnome-utils-1.4.1.2/gcalc/doc/C/gcalc-C.omf	Wed Oct  2 19:04:38 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gcalc/doc/C/gcalc-C.omf gnome-utils-1.4.1.3/gcalc/doc/C/gcalc-C.omf
+--- gnome-utils-1.4.1.3.orig/gcalc/doc/C/gcalc-C.omf	Thu Feb 15 04:54:36 2001
++++ gnome-utils-1.4.1.3/gcalc/doc/C/gcalc-C.omf	Wed Oct  2 19:04:38 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -55,9 +55,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/C/gcalc-C.omf gnome-utils-1.4.1.2
 -    <identifier url="gcalc.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -70,9 +70,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/C/gcalc-C.omf gnome-utils-1.4.1.2
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/de/gcalc-de.omf gnome-utils-1.4.1.2/gcalc/doc/de/gcalc-de.omf
---- gnome-utils-1.4.1.2.orig/gcalc/doc/de/gcalc-de.omf	Tue May 29 15:50:08 2001
-+++ gnome-utils-1.4.1.2/gcalc/doc/de/gcalc-de.omf	Wed Oct  2 19:05:11 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gcalc/doc/de/gcalc-de.omf gnome-utils-1.4.1.3/gcalc/doc/de/gcalc-de.omf
+--- gnome-utils-1.4.1.3.orig/gcalc/doc/de/gcalc-de.omf	Tue May 29 15:50:08 2001
++++ gnome-utils-1.4.1.3/gcalc/doc/de/gcalc-de.omf	Wed Oct  2 19:05:11 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -91,9 +91,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/de/gcalc-de.omf gnome-utils-1.4.1
 -    <identifier url="gcalc.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Werkzeuge" />
 +    <description/>
 +    <type/>
@@ -104,9 +104,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/de/gcalc-de.omf gnome-utils-1.4.1
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/es/gcalc-es.omf gnome-utils-1.4.1.2/gcalc/doc/es/gcalc-es.omf
---- gnome-utils-1.4.1.2.orig/gcalc/doc/es/gcalc-es.omf	Wed Mar 21 05:12:23 2001
-+++ gnome-utils-1.4.1.2/gcalc/doc/es/gcalc-es.omf	Wed Oct  2 19:06:11 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gcalc/doc/es/gcalc-es.omf gnome-utils-1.4.1.3/gcalc/doc/es/gcalc-es.omf
+--- gnome-utils-1.4.1.3.orig/gcalc/doc/es/gcalc-es.omf	Wed Mar 21 05:12:23 2001
++++ gnome-utils-1.4.1.3/gcalc/doc/es/gcalc-es.omf	Wed Oct  2 19:06:11 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -124,9 +124,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/es/gcalc-es.omf gnome-utils-1.4.1
 -    <identifier url="gcalc.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -137,9 +137,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/es/gcalc-es.omf gnome-utils-1.4.1
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/it/gcalc-it.omf gnome-utils-1.4.1.2/gcalc/doc/it/gcalc-it.omf
---- gnome-utils-1.4.1.2.orig/gcalc/doc/it/gcalc-it.omf	Thu Feb 15 04:54:36 2001
-+++ gnome-utils-1.4.1.2/gcalc/doc/it/gcalc-it.omf	Wed Oct  2 19:07:14 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gcalc/doc/it/gcalc-it.omf gnome-utils-1.4.1.3/gcalc/doc/it/gcalc-it.omf
+--- gnome-utils-1.4.1.3.orig/gcalc/doc/it/gcalc-it.omf	Thu Feb 15 04:54:36 2001
++++ gnome-utils-1.4.1.3/gcalc/doc/it/gcalc-it.omf	Wed Oct  2 19:07:14 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -157,9 +157,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/it/gcalc-it.omf gnome-utils-1.4.1
 -    <identifier url="gcalc.sgml"/>
 -    <language code="it"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -172,9 +172,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/it/gcalc-it.omf gnome-utils-1.4.1
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gcharmap/doc/C/gcharmap-C.omf gnome-utils-1.4.1.2/gcharmap/doc/C/gcharmap-C.omf
---- gnome-utils-1.4.1.2.orig/gcharmap/doc/C/gcharmap-C.omf	Thu Feb 15 04:54:37 2001
-+++ gnome-utils-1.4.1.2/gcharmap/doc/C/gcharmap-C.omf	Wed Oct  2 19:07:32 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gcharmap/doc/C/gcharmap-C.omf gnome-utils-1.4.1.3/gcharmap/doc/C/gcharmap-C.omf
+--- gnome-utils-1.4.1.3.orig/gcharmap/doc/C/gcharmap-C.omf	Thu Feb 15 04:54:37 2001
++++ gnome-utils-1.4.1.3/gcharmap/doc/C/gcharmap-C.omf	Wed Oct  2 19:07:32 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -193,9 +193,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcharmap/doc/C/gcharmap-C.omf gnome-utils-1
 -    <identifier url="gcharmap.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -208,9 +208,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gcharmap/doc/C/gcharmap-C.omf gnome-utils-1
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gdialog/doc/C/gdialog-C.omf gnome-utils-1.4.1.2/gdialog/doc/C/gdialog-C.omf
---- gnome-utils-1.4.1.2.orig/gdialog/doc/C/gdialog-C.omf	Sat Aug 25 19:58:20 2001
-+++ gnome-utils-1.4.1.2/gdialog/doc/C/gdialog-C.omf	Wed Oct  2 19:07:50 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gdialog/doc/C/gdialog-C.omf gnome-utils-1.4.1.3/gdialog/doc/C/gdialog-C.omf
+--- gnome-utils-1.4.1.3.orig/gdialog/doc/C/gdialog-C.omf	Sat Aug 25 19:58:20 2001
++++ gnome-utils-1.4.1.3/gdialog/doc/C/gdialog-C.omf	Wed Oct  2 19:07:50 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -229,9 +229,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdialog/doc/C/gdialog-C.omf gnome-utils-1.4
 -    <identifier url="gdiskfree.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -244,9 +244,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdialog/doc/C/gdialog-C.omf gnome-utils-1.4
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/C/gdict-C.omf gnome-utils-1.4.1.2/gdictsrc/doc/C/gdict-C.omf
---- gnome-utils-1.4.1.2.orig/gdictsrc/doc/C/gdict-C.omf	Thu Feb 15 05:04:37 2001
-+++ gnome-utils-1.4.1.2/gdictsrc/doc/C/gdict-C.omf	Wed Oct  2 19:08:12 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gdictsrc/doc/C/gdict-C.omf gnome-utils-1.4.1.3/gdictsrc/doc/C/gdict-C.omf
+--- gnome-utils-1.4.1.3.orig/gdictsrc/doc/C/gdict-C.omf	Thu Feb 15 05:04:37 2001
++++ gnome-utils-1.4.1.3/gdictsrc/doc/C/gdict-C.omf	Wed Oct  2 19:08:12 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -265,9 +265,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/C/gdict-C.omf gnome-utils-1.4.
 -    <identifier url="gdict.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -280,9 +280,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/C/gdict-C.omf gnome-utils-1.4.
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/es/gdict-es.omf gnome-utils-1.4.1.2/gdictsrc/doc/es/gdict-es.omf
---- gnome-utils-1.4.1.2.orig/gdictsrc/doc/es/gdict-es.omf	Thu Aug  2 21:55:15 2001
-+++ gnome-utils-1.4.1.2/gdictsrc/doc/es/gdict-es.omf	Wed Oct  2 19:08:26 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gdictsrc/doc/es/gdict-es.omf gnome-utils-1.4.1.3/gdictsrc/doc/es/gdict-es.omf
+--- gnome-utils-1.4.1.3.orig/gdictsrc/doc/es/gdict-es.omf	Thu Aug  2 21:55:15 2001
++++ gnome-utils-1.4.1.3/gdictsrc/doc/es/gdict-es.omf	Wed Oct  2 19:08:26 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -301,9 +301,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/es/gdict-es.omf gnome-utils-1.
 -    <identifier url="gdict_util.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -314,9 +314,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/es/gdict-es.omf gnome-utils-1.
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/C/gdiskfree-C.omf gnome-utils-1.4.1.2/gdiskfree/doc/C/gdiskfree-C.omf
---- gnome-utils-1.4.1.2.orig/gdiskfree/doc/C/gdiskfree-C.omf	Sat Mar 24 06:06:52 2001
-+++ gnome-utils-1.4.1.2/gdiskfree/doc/C/gdiskfree-C.omf	Wed Oct  2 19:08:39 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gdiskfree/doc/C/gdiskfree-C.omf gnome-utils-1.4.1.3/gdiskfree/doc/C/gdiskfree-C.omf
+--- gnome-utils-1.4.1.3.orig/gdiskfree/doc/C/gdiskfree-C.omf	Sat Mar 24 06:06:52 2001
++++ gnome-utils-1.4.1.3/gdiskfree/doc/C/gdiskfree-C.omf	Wed Oct  2 19:08:39 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -335,9 +335,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/C/gdiskfree-C.omf gnome-utils
 -    <identifier url="gdiskfree.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -350,9 +350,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/C/gdiskfree-C.omf gnome-utils
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/es/gdiskfree-es.omf gnome-utils-1.4.1.2/gdiskfree/doc/es/gdiskfree-es.omf
---- gnome-utils-1.4.1.2.orig/gdiskfree/doc/es/gdiskfree-es.omf	Fri Aug 24 07:19:35 2001
-+++ gnome-utils-1.4.1.2/gdiskfree/doc/es/gdiskfree-es.omf	Wed Oct  2 19:08:52 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gdiskfree/doc/es/gdiskfree-es.omf gnome-utils-1.4.1.3/gdiskfree/doc/es/gdiskfree-es.omf
+--- gnome-utils-1.4.1.3.orig/gdiskfree/doc/es/gdiskfree-es.omf	Fri Aug 24 07:19:35 2001
++++ gnome-utils-1.4.1.3/gdiskfree/doc/es/gdiskfree-es.omf	Wed Oct  2 19:08:52 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -371,9 +371,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/es/gdiskfree-es.omf gnome-uti
 -    <identifier url="gdiskfree_util.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -384,9 +384,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/es/gdiskfree-es.omf gnome-uti
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/it/gdiskfree-it.omf gnome-utils-1.4.1.2/gdiskfree/doc/it/gdiskfree-it.omf
---- gnome-utils-1.4.1.2.orig/gdiskfree/doc/it/gdiskfree-it.omf	Sat Mar 24 06:06:53 2001
-+++ gnome-utils-1.4.1.2/gdiskfree/doc/it/gdiskfree-it.omf	Wed Oct  2 19:09:07 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gdiskfree/doc/it/gdiskfree-it.omf gnome-utils-1.4.1.3/gdiskfree/doc/it/gdiskfree-it.omf
+--- gnome-utils-1.4.1.3.orig/gdiskfree/doc/it/gdiskfree-it.omf	Sat Mar 24 06:06:53 2001
++++ gnome-utils-1.4.1.3/gdiskfree/doc/it/gdiskfree-it.omf	Wed Oct  2 19:09:07 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -405,9 +405,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/it/gdiskfree-it.omf gnome-uti
 -    <identifier url="gdiskfree.sgml"/>
 -    <language code="it"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -420,9 +420,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/it/gdiskfree-it.omf gnome-uti
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/C/gfloppy-C.omf gnome-utils-1.4.1.2/gfloppy/doc/C/gfloppy-C.omf
---- gnome-utils-1.4.1.2.orig/gfloppy/doc/C/gfloppy-C.omf	Thu Feb 15 05:04:38 2001
-+++ gnome-utils-1.4.1.2/gfloppy/doc/C/gfloppy-C.omf	Wed Oct  2 19:09:25 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gfloppy/doc/C/gfloppy-C.omf gnome-utils-1.4.1.3/gfloppy/doc/C/gfloppy-C.omf
+--- gnome-utils-1.4.1.3.orig/gfloppy/doc/C/gfloppy-C.omf	Thu Feb 15 05:04:38 2001
++++ gnome-utils-1.4.1.3/gfloppy/doc/C/gfloppy-C.omf	Wed Oct  2 19:09:25 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -441,9 +441,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/C/gfloppy-C.omf gnome-utils-1.4
 -    <identifier url="gfloppy.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -456,9 +456,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/C/gfloppy-C.omf gnome-utils-1.4
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/es/gfloppy-es.omf gnome-utils-1.4.1.2/gfloppy/doc/es/gfloppy-es.omf
---- gnome-utils-1.4.1.2.orig/gfloppy/doc/es/gfloppy-es.omf	Thu Aug  2 21:59:27 2001
-+++ gnome-utils-1.4.1.2/gfloppy/doc/es/gfloppy-es.omf	Wed Oct  2 19:09:43 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gfloppy/doc/es/gfloppy-es.omf gnome-utils-1.4.1.3/gfloppy/doc/es/gfloppy-es.omf
+--- gnome-utils-1.4.1.3.orig/gfloppy/doc/es/gfloppy-es.omf	Thu Aug  2 21:59:27 2001
++++ gnome-utils-1.4.1.3/gfloppy/doc/es/gfloppy-es.omf	Wed Oct  2 19:09:43 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -477,9 +477,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/es/gfloppy-es.omf gnome-utils-1
 -    <identifier url="gfloppy_util.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -490,9 +490,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/es/gfloppy-es.omf gnome-utils-1
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/ja/gfloppy-ja.omf gnome-utils-1.4.1.2/gfloppy/doc/ja/gfloppy-ja.omf
---- gnome-utils-1.4.1.2.orig/gfloppy/doc/ja/gfloppy-ja.omf	Tue Dec 18 00:41:29 2001
-+++ gnome-utils-1.4.1.2/gfloppy/doc/ja/gfloppy-ja.omf	Wed Oct  2 19:09:55 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gfloppy/doc/ja/gfloppy-ja.omf gnome-utils-1.4.1.3/gfloppy/doc/ja/gfloppy-ja.omf
+--- gnome-utils-1.4.1.3.orig/gfloppy/doc/ja/gfloppy-ja.omf	Tue Dec 18 00:41:29 2001
++++ gnome-utils-1.4.1.3/gfloppy/doc/ja/gfloppy-ja.omf	Wed Oct  2 19:09:55 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -511,9 +511,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/ja/gfloppy-ja.omf gnome-utils-1
 -    <identifier url="gfloppy.sgml"/>
 -    <language code="ja"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -524,9 +524,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/ja/gfloppy-ja.omf gnome-utils-1
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/C/gsearchtool-C.omf gnome-utils-1.4.1.2/gsearchtool/help/C/gsearchtool-C.omf
---- gnome-utils-1.4.1.2.orig/gsearchtool/help/C/gsearchtool-C.omf	Thu Feb 15 04:54:39 2001
-+++ gnome-utils-1.4.1.2/gsearchtool/help/C/gsearchtool-C.omf	Wed Oct  2 19:10:08 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gsearchtool/help/C/gsearchtool-C.omf gnome-utils-1.4.1.3/gsearchtool/help/C/gsearchtool-C.omf
+--- gnome-utils-1.4.1.3.orig/gsearchtool/help/C/gsearchtool-C.omf	Thu Feb 15 04:54:39 2001
++++ gnome-utils-1.4.1.3/gsearchtool/help/C/gsearchtool-C.omf	Wed Oct  2 19:10:08 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -545,9 +545,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/C/gsearchtool-C.omf gnome-
 -    <identifier url="gsearchtool.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -560,9 +560,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/C/gsearchtool-C.omf gnome-
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/es/gsearchtool-es.omf gnome-utils-1.4.1.2/gsearchtool/help/es/gsearchtool-es.omf
---- gnome-utils-1.4.1.2.orig/gsearchtool/help/es/gsearchtool-es.omf	Thu Feb 15 04:54:39 2001
-+++ gnome-utils-1.4.1.2/gsearchtool/help/es/gsearchtool-es.omf	Wed Oct  2 19:10:24 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gsearchtool/help/es/gsearchtool-es.omf gnome-utils-1.4.1.3/gsearchtool/help/es/gsearchtool-es.omf
+--- gnome-utils-1.4.1.3.orig/gsearchtool/help/es/gsearchtool-es.omf	Thu Feb 15 04:54:39 2001
++++ gnome-utils-1.4.1.3/gsearchtool/help/es/gsearchtool-es.omf	Wed Oct  2 19:10:24 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -581,9 +581,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/es/gsearchtool-es.omf gnom
 -    <identifier url="gsearchtool.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -596,9 +596,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/es/gsearchtool-es.omf gnom
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/it/gsearchtool-it.omf gnome-utils-1.4.1.2/gsearchtool/help/it/gsearchtool-it.omf
---- gnome-utils-1.4.1.2.orig/gsearchtool/help/it/gsearchtool-it.omf	Thu Feb 15 04:54:39 2001
-+++ gnome-utils-1.4.1.2/gsearchtool/help/it/gsearchtool-it.omf	Wed Oct  2 19:10:41 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gsearchtool/help/it/gsearchtool-it.omf gnome-utils-1.4.1.3/gsearchtool/help/it/gsearchtool-it.omf
+--- gnome-utils-1.4.1.3.orig/gsearchtool/help/it/gsearchtool-it.omf	Thu Feb 15 04:54:39 2001
++++ gnome-utils-1.4.1.3/gsearchtool/help/it/gsearchtool-it.omf	Wed Oct  2 19:10:41 2002
 @@ -1,13 +1,22 @@
 +<?xml version="1.0" encoding="UTF-8" ?>
 +<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
@@ -616,9 +616,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/it/gsearchtool-it.omf gnom
 -    <identifier url="gsearchtool.sgml"/>
 -    <language code="it"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -631,9 +631,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/it/gsearchtool-it.omf gnom
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/C/gtt-C.omf gnome-utils-1.4.1.2/gtt/doc/C/gtt-C.omf
---- gnome-utils-1.4.1.2.orig/gtt/doc/C/gtt-C.omf	Thu Feb 15 04:54:40 2001
-+++ gnome-utils-1.4.1.2/gtt/doc/C/gtt-C.omf	Wed Oct  2 19:10:55 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gtt/doc/C/gtt-C.omf gnome-utils-1.4.1.3/gtt/doc/C/gtt-C.omf
+--- gnome-utils-1.4.1.3.orig/gtt/doc/C/gtt-C.omf	Thu Feb 15 04:54:40 2001
++++ gnome-utils-1.4.1.3/gtt/doc/C/gtt-C.omf	Wed Oct  2 19:10:55 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -652,9 +652,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/C/gtt-C.omf gnome-utils-1.4.1.2/gtt
 -    <identifier url="gtt.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -667,9 +667,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/C/gtt-C.omf gnome-utils-1.4.1.2/gtt
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/es/gtt-C.omf gnome-utils-1.4.1.2/gtt/doc/es/gtt-C.omf
---- gnome-utils-1.4.1.2.orig/gtt/doc/es/gtt-C.omf	Sun Jun  3 20:06:37 2001
-+++ gnome-utils-1.4.1.2/gtt/doc/es/gtt-C.omf	Wed Oct  2 19:11:10 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/gtt/doc/es/gtt-C.omf gnome-utils-1.4.1.3/gtt/doc/es/gtt-C.omf
+--- gnome-utils-1.4.1.3.orig/gtt/doc/es/gtt-C.omf	Sun Jun  3 20:06:37 2001
++++ gnome-utils-1.4.1.3/gtt/doc/es/gtt-C.omf	Wed Oct  2 19:11:10 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -688,9 +688,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/es/gtt-C.omf gnome-utils-1.4.1.2/gt
 -    <identifier url="gtt.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -701,9 +701,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/es/gtt-C.omf gnome-utils-1.4.1.2/gt
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/logview/doc/C/logview-C.omf gnome-utils-1.4.1.2/logview/doc/C/logview-C.omf
---- gnome-utils-1.4.1.2.orig/logview/doc/C/logview-C.omf	Wed Oct  3 05:25:01 2001
-+++ gnome-utils-1.4.1.2/logview/doc/C/logview-C.omf	Wed Oct  2 19:15:44 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/logview/doc/C/logview-C.omf gnome-utils-1.4.1.3/logview/doc/C/logview-C.omf
+--- gnome-utils-1.4.1.3.orig/logview/doc/C/logview-C.omf	Wed Oct  3 05:25:01 2001
++++ gnome-utils-1.4.1.3/logview/doc/C/logview-C.omf	Wed Oct  2 19:15:44 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -722,9 +722,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/logview/doc/C/logview-C.omf gnome-utils-1.4
 -    <identifier url="logview.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -737,9 +737,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/logview/doc/C/logview-C.omf gnome-utils-1.4
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/meat-grinder/help/C/meat-grinder-C.omf gnome-utils-1.4.1.2/meat-grinder/help/C/meat-grinder-C.omf
---- gnome-utils-1.4.1.2.orig/meat-grinder/help/C/meat-grinder-C.omf	Sun Jun 17 07:16:32 2001
-+++ gnome-utils-1.4.1.2/meat-grinder/help/C/meat-grinder-C.omf	Wed Oct  2 18:34:11 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/meat-grinder/help/C/meat-grinder-C.omf gnome-utils-1.4.1.3/meat-grinder/help/C/meat-grinder-C.omf
+--- gnome-utils-1.4.1.3.orig/meat-grinder/help/C/meat-grinder-C.omf	Sun Jun 17 07:16:32 2001
++++ gnome-utils-1.4.1.3/meat-grinder/help/C/meat-grinder-C.omf	Wed Oct  2 18:34:11 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -758,9 +758,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/meat-grinder/help/C/meat-grinder-C.omf gnom
 -    <identifier url="meat-grinder.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -773,9 +773,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/meat-grinder/help/C/meat-grinder-C.omf gnom
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf gnome-utils-1.4.1.2/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf	Thu Feb 15 06:11:18 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf	Wed Oct  2 18:53:10 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf gnome-utils-1.4.1.3/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf	Thu Feb 15 06:11:18 2001
++++ gnome-utils-1.4.1.3/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf	Wed Oct  2 18:53:10 2002
 @@ -1,16 +1,24 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -796,9 +796,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf 
 -    <identifier url="gcolorsel.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <subject category="Applications|Multimedia|Graphics|Other" />
 +    <subject category="GNOME|Graphics" />
@@ -813,9 +813,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf 
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf gnome-utils-1.4.1.2/mini-utils/gfontsel/help/C/gfontsel-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf	Thu Feb 15 03:43:20 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gfontsel/help/C/gfontsel-C.omf	Wed Oct  2 18:55:33 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf gnome-utils-1.4.1.3/mini-utils/gfontsel/help/C/gfontsel-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf	Thu Feb 15 03:43:20 2001
++++ gnome-utils-1.4.1.3/mini-utils/gfontsel/help/C/gfontsel-C.omf	Wed Oct  2 18:55:33 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -834,9 +834,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf g
 -    <identifier url="gfontsel.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -849,9 +849,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf g
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf gnome-utils-1.4.1.2/mini-utils/gfontsel/help/es/gfontsel-es.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf	Thu Feb 15 03:43:21 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gfontsel/help/es/gfontsel-es.omf	Wed Oct  2 18:58:01 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf gnome-utils-1.4.1.3/mini-utils/gfontsel/help/es/gfontsel-es.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf	Thu Feb 15 03:43:21 2001
++++ gnome-utils-1.4.1.3/mini-utils/gfontsel/help/es/gfontsel-es.omf	Wed Oct  2 18:58:01 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -870,9 +870,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf
 -    <identifier url="gfontsel.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -885,9 +885,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gless/doc/C/gless-C.omf gnome-utils-1.4.1.2/mini-utils/gless/doc/C/gless-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gless/doc/C/gless-C.omf	Thu Feb 15 03:43:22 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gless/doc/C/gless-C.omf	Wed Oct  2 18:41:11 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gless/doc/C/gless-C.omf gnome-utils-1.4.1.3/mini-utils/gless/doc/C/gless-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gless/doc/C/gless-C.omf	Thu Feb 15 03:43:22 2001
++++ gnome-utils-1.4.1.3/mini-utils/gless/doc/C/gless-C.omf	Wed Oct  2 18:41:11 2002
 @@ -1,14 +1,23 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -906,9 +906,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gless/doc/C/gless-C.omf gnome-ut
 -    <identifier url="gless.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -922,9 +922,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gless/doc/C/gless-C.omf gnome-ut
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/C/gshutdown-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf	Thu Feb 15 03:43:24 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/C/gshutdown-C.omf	Wed Oct  2 18:44:05 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf gnome-utils-1.4.1.3/mini-utils/gshutdown/doc/C/gshutdown-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf	Thu Feb 15 03:43:24 2001
++++ gnome-utils-1.4.1.3/mini-utils/gshutdown/doc/C/gshutdown-C.omf	Wed Oct  2 18:44:05 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -943,9 +943,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf 
 -    <identifier url="gshutdown.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -958,9 +958,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf 
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/es/gshutdown-es.omf gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/es/gshutdown-es.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/es/gshutdown-es.omf	Sun Aug  5 09:38:30 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/es/gshutdown-es.omf	Wed Oct  2 18:47:55 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gshutdown/doc/es/gshutdown-es.omf gnome-utils-1.4.1.3/mini-utils/gshutdown/doc/es/gshutdown-es.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gshutdown/doc/es/gshutdown-es.omf	Sun Aug  5 09:38:30 2001
++++ gnome-utils-1.4.1.3/mini-utils/gshutdown/doc/es/gshutdown-es.omf	Wed Oct  2 18:47:55 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -979,9 +979,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/es/gshutdown-es.om
 -    <identifier url="gshutdown_util.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
@@ -992,9 +992,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/es/gshutdown-es.om
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/guname/doc/C/guname-C.omf gnome-utils-1.4.1.2/mini-utils/guname/doc/C/guname-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/guname/doc/C/guname-C.omf	Thu Feb 15 03:43:25 2001
-+++ gnome-utils-1.4.1.2/mini-utils/guname/doc/C/guname-C.omf	Wed Oct  2 18:50:19 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/guname/doc/C/guname-C.omf gnome-utils-1.4.1.3/mini-utils/guname/doc/C/guname-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/guname/doc/C/guname-C.omf	Thu Feb 15 03:43:25 2001
++++ gnome-utils-1.4.1.3/mini-utils/guname/doc/C/guname-C.omf	Wed Oct  2 18:50:19 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -1013,9 +1013,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/guname/doc/C/guname-C.omf gnome-
 -    <identifier url="guname.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -1028,9 +1028,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/guname/doc/C/guname-C.omf gnome-
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gw/doc/C/gw-C.omf gnome-utils-1.4.1.2/mini-utils/gw/doc/C/gw-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/gw/doc/C/gw-C.omf	Thu Feb 15 03:53:29 2001
-+++ gnome-utils-1.4.1.2/mini-utils/gw/doc/C/gw-C.omf	Wed Oct  2 18:35:59 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/gw/doc/C/gw-C.omf gnome-utils-1.4.1.3/mini-utils/gw/doc/C/gw-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gw/doc/C/gw-C.omf	Thu Feb 15 03:53:29 2001
++++ gnome-utils-1.4.1.3/mini-utils/gw/doc/C/gw-C.omf	Wed Oct  2 18:35:59 2002
 @@ -1,14 +1,23 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -1049,9 +1049,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gw/doc/C/gw-C.omf gnome-utils-1.
 -    <identifier url="gw.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -1065,9 +1065,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gw/doc/C/gw-C.omf gnome-utils-1.
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/idetool/doc/C/idetool-C.omf gnome-utils-1.4.1.2/mini-utils/idetool/doc/C/idetool-C.omf
---- gnome-utils-1.4.1.2.orig/mini-utils/idetool/doc/C/idetool-C.omf	Thu Feb 15 03:43:27 2001
-+++ gnome-utils-1.4.1.2/mini-utils/idetool/doc/C/idetool-C.omf	Wed Oct  2 18:59:46 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/mini-utils/idetool/doc/C/idetool-C.omf gnome-utils-1.4.1.3/mini-utils/idetool/doc/C/idetool-C.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/idetool/doc/C/idetool-C.omf	Thu Feb 15 03:43:27 2001
++++ gnome-utils-1.4.1.3/mini-utils/idetool/doc/C/idetool-C.omf	Wed Oct  2 18:59:46 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -1086,9 +1086,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/idetool/doc/C/idetool-C.omf gnom
 -    <identifier url="idetool.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -1101,9 +1101,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/idetool/doc/C/idetool-C.omf gnom
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/C/stripchart-C.omf gnome-utils-1.4.1.2/stripchart/doc/C/stripchart-C.omf
---- gnome-utils-1.4.1.2.orig/stripchart/doc/C/stripchart-C.omf	Thu Feb 15 05:04:37 2001
-+++ gnome-utils-1.4.1.2/stripchart/doc/C/stripchart-C.omf	Wed Oct  2 19:02:04 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/stripchart/doc/C/stripchart-C.omf gnome-utils-1.4.1.3/stripchart/doc/C/stripchart-C.omf
+--- gnome-utils-1.4.1.3.orig/stripchart/doc/C/stripchart-C.omf	Thu Feb 15 05:04:37 2001
++++ gnome-utils-1.4.1.3/stripchart/doc/C/stripchart-C.omf	Wed Oct  2 19:02:04 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -1122,9 +1122,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/C/stripchart-C.omf gnome-uti
 -    <identifier url="stripchart.sgml"/>
 -    <language code="C"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilities" />
 +    <description/>
 +    <type/>
@@ -1137,9 +1137,9 @@ diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/C/stripchart-C.omf gnome-uti
 -</omf>
 \ No newline at end of file
 +</omf>
-diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/es/stripchart-es.omf gnome-utils-1.4.1.2/stripchart/doc/es/stripchart-es.omf
---- gnome-utils-1.4.1.2.orig/stripchart/doc/es/stripchart-es.omf	Sat Apr  7 11:11:10 2001
-+++ gnome-utils-1.4.1.2/stripchart/doc/es/stripchart-es.omf	Wed Oct  2 19:19:02 2002
+diff -Nuard gnome-utils-1.4.1.3.orig/stripchart/doc/es/stripchart-es.omf gnome-utils-1.4.1.3/stripchart/doc/es/stripchart-es.omf
+--- gnome-utils-1.4.1.3.orig/stripchart/doc/es/stripchart-es.omf	Sat Apr  7 11:11:10 2001
++++ gnome-utils-1.4.1.3/stripchart/doc/es/stripchart-es.omf	Wed Oct  2 19:19:02 2002
 @@ -1,14 +1,22 @@
 -<?xml version="1.0" standalone="no"?>
 +<?xml version="1.0" encoding="UTF-8" ?>
@@ -1158,16 +1158,468 @@ diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/es/stripchart-es.omf gnome-u
 -    <identifier url="stripchart.sgml"/>
 -    <language code="es"/>
 +    <date>
-+       2002-10-02
++       2002-12-24
 +    </date>
-+    <version identifier="1.4.1.2" date="2002-10-02" />
++    <version identifier="1.4.1.3" date="2002-12-24" />
 +    <subject category="GNOME|Utilidades" />
 +    <description/>
 +    <type/>
 +    <format mime="text/sgml" />
 +    <identifier url="stripchart.sgml" />
 +    <language code="es" />
-+    <relation seriesid="f932ff50-d62a-11d6-990d-c6d3ca86127d" />
++    <relation seriesid="d0286e5a-7648-4208-af45-d38b90151fd1" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gcalc/doc/eu/gcalc-eu.omf gnome-utils-1.4.1.3/gcalc/doc/eu/gcalc-eu.omf
+--- gnome-utils-1.4.1.3.orig/gcalc/doc/eu/gcalc-eu.omf	Thu Feb 28 03:01:19 2002
++++ gnome-utils-1.4.1.3/gcalc/doc/eu/gcalc-eu.omf	Thu Jan 22 01:50:14 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gcalc-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gcalc.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="a5742f9a-2cd0-4758-9842-bed509642af1" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gcharmap/doc/eu/gcharmap-eu.omf gnome-utils-1.4.1.3/gcharmap/doc/eu/gcharmap-eu.omf
+--- gnome-utils-1.4.1.3.orig/gcharmap/doc/eu/gcharmap-eu.omf	Thu Feb 28 03:01:21 2002
++++ gnome-utils-1.4.1.3/gcharmap/doc/eu/gcharmap-eu.omf	Thu Jan 22 01:49:57 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gcharmap-en eskuliburua
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gcharmap.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="3c9554d8-5d1e-4d2d-84bd-d431081abb2f" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gdictsrc/doc/eu/gdict-eu.omf gnome-utils-1.4.1.3/gdictsrc/doc/eu/gdict-eu.omf
+--- gnome-utils-1.4.1.3.orig/gdictsrc/doc/eu/gdict-eu.omf	Thu Feb 28 03:01:24 2002
++++ gnome-utils-1.4.1.3/gdictsrc/doc/eu/gdict-eu.omf	Thu Jan 22 01:50:11 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gdict-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gdict.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="b76eb475-2ec6-4254-8b65-eebd8c9d7701" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gdiskfree/doc/eu/gdiskfree-eu.omf gnome-utils-1.4.1.3/gdiskfree/doc/eu/gdiskfree-eu.omf
+--- gnome-utils-1.4.1.3.orig/gdiskfree/doc/eu/gdiskfree-eu.omf	Thu Feb 28 03:01:26 2002
++++ gnome-utils-1.4.1.3/gdiskfree/doc/eu/gdiskfree-eu.omf	Thu Jan 22 01:49:54 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gdiskfree-ren eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gdiskfree.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="e4b16d5e-6c22-4042-8b1d-7aa998bfc67e" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gfloppy/doc/eu/gfloppy-eu.omf gnome-utils-1.4.1.3/gfloppy/doc/eu/gfloppy-eu.omf
+--- gnome-utils-1.4.1.3.orig/gfloppy/doc/eu/gfloppy-eu.omf	Thu Feb 28 03:01:28 2002
++++ gnome-utils-1.4.1.3/gfloppy/doc/eu/gfloppy-eu.omf	Thu Jan 22 01:50:08 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gfloppy-ren eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gfloppy.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="091c56b3-ecf8-4f12-b9d4-49d12731c22f" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gsearchtool/help/eu/gsearchtool-eu.omf gnome-utils-1.4.1.3/gsearchtool/help/eu/gsearchtool-eu.omf
+--- gnome-utils-1.4.1.3.orig/gsearchtool/help/eu/gsearchtool-eu.omf	Thu Feb 28 03:01:30 2002
++++ gnome-utils-1.4.1.3/gsearchtool/help/eu/gsearchtool-eu.omf	Thu Jan 22 01:49:52 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gsearchtool-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gsearchtool.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="b981922d-f64c-4478-98a1-5fe5a4f0af47" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/gtt/doc/eu/gtt-eu.omf gnome-utils-1.4.1.3/gtt/doc/eu/gtt-eu.omf
+--- gnome-utils-1.4.1.3.orig/gtt/doc/eu/gtt-eu.omf	Thu Feb 28 03:01:34 2002
++++ gnome-utils-1.4.1.3/gtt/doc/eu/gtt-eu.omf	Thu Jan 22 01:50:03 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gnome Time Tracker-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gtt.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="8cfd4ef0-1752-48af-841a-aad611e6d765" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/gcolorsel/doc/eu/gcolorsel-eu.omf gnome-utils-1.4.1.3/mini-utils/gcolorsel/doc/eu/gcolorsel-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gcolorsel/doc/eu/gcolorsel-eu.omf	Thu Feb 28 03:02:55 2002
++++ gnome-utils-1.4.1.3/mini-utils/gcolorsel/doc/eu/gcolorsel-eu.omf	Thu Jan 22 01:51:01 2004
+@@ -1,16 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gcolorsel-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-      <category>Aplikazioak|Multimedia|Grafikoak|Bestelakoak</category>
+-      <category>GNOME|Grafikoak</category>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <subject category="Aplikazioak|Multimedia|Grafikoak|Bestelakoak" />
++    <subject category="GNOME|Grafikoak" />
+     </subject>
+     <format mime="text/sgml"/>
+     <identifier url="gcolorsel.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="6a43625b-c0a6-4c5b-9103-fe9712cda954" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/gfontsel/help/eu/gfontsel-eu.omf gnome-utils-1.4.1.3/mini-utils/gfontsel/help/eu/gfontsel-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gfontsel/help/eu/gfontsel-eu.omf	Thu Feb 28 03:02:57 2002
++++ gnome-utils-1.4.1.3/mini-utils/gfontsel/help/eu/gfontsel-eu.omf	Thu Jan 22 01:50:49 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNOMEren letra-tipoaren hautatzailearen eskuliburua
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gfontsel.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="e018b41a-d5fd-4a32-9823-fd542c5fc42e" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/gless/doc/eu/gless-eu.omf gnome-utils-1.4.1.3/mini-utils/gless/doc/eu/gless-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gless/doc/eu/gless-eu.omf	Thu Feb 28 03:03:00 2002
++++ gnome-utils-1.4.1.3/mini-utils/gless/doc/eu/gless-eu.omf	Thu Jan 22 01:50:58 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gless-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gless.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="8253392d-2daf-4703-8b61-ccc326cf7b4d" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/gshutdown/doc/eu/gshutdown-eu.omf gnome-utils-1.4.1.3/mini-utils/gshutdown/doc/eu/gshutdown-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gshutdown/doc/eu/gshutdown-eu.omf	Thu Feb 28 03:03:02 2002
++++ gnome-utils-1.4.1.3/mini-utils/gshutdown/doc/eu/gshutdown-eu.omf	Thu Jan 22 01:50:41 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gshutdown-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gshutdown.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="a40ed022-55d0-4793-a632-b59df06b7e72" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/guname/doc/eu/guname-eu.omf gnome-utils-1.4.1.3/mini-utils/guname/doc/eu/guname-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/guname/doc/eu/guname-eu.omf	Thu Feb 28 03:03:05 2002
++++ gnome-utils-1.4.1.3/mini-utils/guname/doc/eu/guname-eu.omf	Thu Jan 22 01:50:55 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Guname-ren eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="guname.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="611da629-8e4d-40c6-9ba4-9e26f06fef4b" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/gw/doc/eu/gw-eu.omf gnome-utils-1.4.1.3/mini-utils/gw/doc/eu/gw-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/gw/doc/eu/gw-eu.omf	Thu Feb 28 03:03:32 2002
++++ gnome-utils-1.4.1.3/mini-utils/gw/doc/eu/gw-eu.omf	Thu Jan 22 01:50:37 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Gw-ren eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gw.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="39472a57-879c-4bee-9cc1-3166b776c8dd" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/mini-utils/idetool/doc/eu/idetool-eu.omf gnome-utils-1.4.1.3/mini-utils/idetool/doc/eu/idetool-eu.omf
+--- gnome-utils-1.4.1.3.orig/mini-utils/idetool/doc/eu/idetool-eu.omf	Thu Feb 28 03:03:57 2002
++++ gnome-utils-1.4.1.3/mini-utils/idetool/doc/eu/idetool-eu.omf	Thu Jan 22 01:50:52 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Idetool-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="idetool.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="ce90fec8-3c12-4e16-b0fe-d63a9c17f428" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -ur gnome-utils-1.4.1.3.orig/stripchart/doc/eu/stripchart-eu.omf gnome-utils-1.4.1.3/stripchart/doc/eu/stripchart-eu.omf
+--- gnome-utils-1.4.1.3.orig/stripchart/doc/eu/stripchart-eu.omf	Thu Feb 28 03:04:37 2002
++++ gnome-utils-1.4.1.3/stripchart/doc/eu/stripchart-eu.omf	Thu Jan 22 01:50:00 2004
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Stripchart-en eskuliburua 
+     </title>
+-    <subject>
+-      <category>GNOME|Utilitateak</category>
+-    </subject>
++    <date>
++       2002-12-24
++    </date>
++    <version identifier="1.4.1.3" date="2002-12-24" />
++    <subject category="GNOME|Utilitateak" />
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="stripchart.sgml"/>
+     <language code="eu"/>
++    <relation seriesid="d9d38a34-30d5-4665-86c7-7e7bdfa8c941" />
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
    </resource>
  </omf>
