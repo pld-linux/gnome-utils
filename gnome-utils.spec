@@ -21,6 +21,13 @@ BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel
 BuildRequires:	ORBit-devel
 BuildRequires:	XFree86-devel
+BuildRequires:	gnome-libs-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	esound-devel
+BuildRequires:	xpm-devel
+BuildRequires:	libpng-devel
+BuildRequires:	zlib-devel
+BuildRequires:	gdbm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	gnome
 
