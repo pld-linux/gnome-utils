@@ -5,13 +5,14 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.5.0
+Version:	2.5.1
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	1fa82174ad4f71d8463d0f262ae7e9fe
+# Source0-md5:	5e95e7d81685f73f5cb8a23c73908b4f
+Patch0:		%{name}-kdev_t.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.4.0
@@ -64,6 +65,7 @@ Programy u©ytkowe GNOME'a.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
