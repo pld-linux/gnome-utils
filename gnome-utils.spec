@@ -10,7 +10,7 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/2.0.1/releases/final/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/pre-gnome2/sources/%{name}/%{name}-%{version}.tar.bz2
 Source1:	xmldocs.make
 Source2:	omf.make
 Icon:		gnome-utils.xpm
@@ -19,15 +19,15 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	GConf2-devel >= 1.2.0
-BuildRequires:	gnome-panel-devel >= 2.0.0
-BuildRequires:	gnome-vfs2-devel >= 2.0.0
-BuildRequires:	libbonoboui-devel >= 2.0.0
+BuildRequires:	GConf2-devel >= 1.2.1
+BuildRequires:	gnome-panel-devel >= 2.0.6
+BuildRequires:	gnome-vfs2-devel >= 2.0.2
+BuildRequires:	libbonoboui-devel >= 2.0.1
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnome-devel >= 2.0.1
-BuildRequires:	libgnomeui-devel >= 2.0.1
+BuildRequires:	libgnome-devel >= 2.0.2
+BuildRequires:	libgnomeui-devel >= 2.0.3
 BuildRequires:	popt-devel
-BuildRequires:	scrollkeeper >= 0.3.6
+BuildRequires:	scrollkeeper >= 0.3.11
 Prereq:		scrollkeeper
 Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
