@@ -13,22 +13,22 @@ Patch2:		gnome-utils-sparkle.patch
 Patch3:		gnome-utils-DESTDIR.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
+BuildRequires:	ORBit-devel
+BuildRequires:	bonobo-devel
+BuildRequires:	e2fsprogs-devel
+BuildRequires:	esound-devel
+BuildRequires:	gdbm-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gettext-devel
-BuildRequires:	libgtop-devel >= 1.0.0
-BuildRequires:	ncurses-devel >= 5.0
-BuildRequires:	libglade-devel >= 0.11
-BuildRequires:	bonobo-devel
-BuildRequires:	readline-devel
-BuildRequires:	ORBit-devel
 BuildRequires:	gnome-libs-devel
-BuildRequires:	libstdc++-devel
-BuildRequires:	esound-devel
-BuildRequires:	xpm-devel
+BuildRequires:	libglade-devel >= 0.11
+BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	readline-devel
+BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
-BuildRequires:	gdbm-devel
-BuildRequires:	e2fsprogs-devel
 BuildRequires:	jade
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
@@ -73,7 +73,7 @@ gzip -9nf AUTHORS ChangeLog NEWS README
 
 install gstripchart/gstripchart.conf $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -82,31 +82,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README}.gz
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/*.desktop
 %{_applnkdir}/*/*.desktop
 %{_datadir}/applets/Monitors/*
 %{_datadir}/pixmaps/*
+%{_datadir}/mime-info/*
+%{_datadir}/gcolorsel
+%{_datadir}/gfloppy
 %dir %{_datadir}/gstripchart/
 %config %{_datadir}/gstripchart/gstripchart.conf
-
-%dir %{_datadir}/gnome/help/gdiskfree
-%{_datadir}/gnome/help/gdiskfree/C
-
-%dir %{_datadir}/gnome/help/gfontsel
-%{_datadir}/gnome/help/gfontsel/C
-
-%dir %{_datadir}/gnome/help/gsearchtool
-%{_datadir}/gnome/help/gsearchtool/C
-
-%dir %{_datadir}/gnome/help/gshutdown
-%lang(en) %{_datadir}/gnome/help/gshutdown/C
-%lang(es) %{_datadir}/gnome/help/gshutdown/es
-%lang(no) %{_datadir}/gnome/help/gshutdown/no
-
-%dir %{_datadir}/gnome/help/gstripchart
-%{_datadir}/gnome/help/gstripchart/C
-
-%dir %{_datadir}/gnome/help/gtt
-%{_datadir}/gnome/help/gtt/C
-%lang(de) %{_datadir}/gnome/help/gtt/de
-%lang(es) %{_datadir}/gnome/help/gtt/es
