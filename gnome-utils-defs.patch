@@ -1,0 +1,23 @@
+--- gnome-utils-1.4.0.2/mini-utils/guname/Makefile.am~	Sun Nov 25 01:17:53 2001
++++ gnome-utils-1.4.0.2/mini-utils/guname/Makefile.am	Sun Nov 25 01:18:15 2001
+@@ -7,16 +7,17 @@
+ endif
+ 
+ if GUNAME_CAPPLET
+-DEFS =	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
++EXTRA_FLAGS =	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+ 	-DGUNAME_CAPPLET
+ else
+-DEFS =	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"
++EXTRA_FLAGS =	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"
+ endif
+ 
+ INCLUDES = 			\
+ 	-I$(includedir)		\
+ 	-I$(top_srcdir)		\
+-	$(GNOME_INCLUDEDIR) $(LIBGTOP_NAMES_INCS)
++	$(GNOME_INCLUDEDIR) $(LIBGTOP_NAMES_INCS) \
++	$(EXTRA_FLAGS)
+ 
+ bin_PROGRAMS = guname
+ 

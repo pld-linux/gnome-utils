@@ -12,6 +12,9 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{vers
 Patch0:		%{name}-am_fixes.patch
 Patch1:		%{name}-configure.patch
 Patch2:		%{name}-use_AM_GNU_GETTEXT.patch
+Patch3:		%{name}-am_conditional.patch
+Patch4:		%{name}-defs.patch
+Patch5:		%{name}-glade_cflags.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -61,6 +64,9 @@ Programy u¿ytkowe GNOME'a.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
 
 %build
 aclocal -I macros
