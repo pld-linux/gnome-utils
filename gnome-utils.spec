@@ -2,7 +2,7 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -20,6 +20,7 @@ BuildRequires:	gdbm-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
+BuildRequires:	gnome-core-devel
 BuildRequires:	libglade-devel >= 0.11
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng-devel
