@@ -38,7 +38,7 @@ Obsoletes:	gnome-admin
 %define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11/GNOME2
 %define		_localstatedir	/var
-%define		_serverdir	/usr/lib/bonobo/servers
+%define		_bonobo_server_dir	/usr/lib/bonobo/servers
 
 %description
 GNOME utility programs.
@@ -79,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	omf_dest_dir=%{_omf_dest_dir}/%{name} \
-	serverdir=%{_serverdir}
+	serverdir=%{_bonobo_server_dir}
 
 mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
-%{_serverdir}/*
+%{_bonobo_server_dir}/*
 %{_libdir}/gdict-applet
 %{_datadir}/applications/*
 %{_datadir}/gnome-2.0/ui/*
