@@ -26,7 +26,7 @@ BuildRequires:	gnome-panel-devel >= 2.6.1
 BuildRequires:	gnome-vfs2-devel >= 2.6.1.1
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libbonoboui-devel >= 2.6.0
-BuildRequires:	libglade2-devel >= 2.3.6
+BuildRequires:	libglade2-devel >= 1:2.3.6
 BuildRequires:	libgnome-devel >= 2.6.1
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libtool
