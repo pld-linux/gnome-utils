@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.6.1
+Version:	2.6.2
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	522cd062e1f3e516390ae61fda2a5f55
+# Source0-md5:	b2325307fd311c8ba1bd045d7432830e
 Patch0:		%{name}-kdev_t.patch
 Patch1: 	%{name}-locale-names.patch
 Icon:		gnome-utils.xpm
