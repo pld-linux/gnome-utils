@@ -14,11 +14,11 @@ Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
+BuildRequires:	GConf2-devel >= 2.3.2
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	GConf2-devel >= 2.3.2
 BuildRequires:	gnome-panel-devel >= 2.3.1
 BuildRequires:	gnome-vfs2-devel >= 2.3.1
 BuildRequires:	libbonoboui-devel >= 2.2.0
@@ -26,11 +26,11 @@ BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnome-devel >= 2.3.0
 BuildRequires:	libgnomeui-devel >= 2.3.0
 BuildRequires:	popt-devel
-BuildRequires:	scrollkeeper >= 0.3.11
 BuildRequires:	rpm-build >= 4.1-10
+BuildRequires:	scrollkeeper >= 0.3.11
+Requires(post):	scrollkeeper
+Requires(post):	GConf2
 Requires:	gnome-vfs2 >= 2.2.0
-Prereq:		scrollkeeper
-Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
@@ -97,9 +97,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
+%{_desktopdir}/*
 %{_libdir}/bonobo/servers/*
 %{_libdir}/gdict-applet
-%{_datadir}/applications/*
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
 %{_datadir}/gnome-system-log
