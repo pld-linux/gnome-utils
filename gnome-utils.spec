@@ -1,23 +1,22 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.0.50
-Release:	3
+Version:	1.0.51
+Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}-%{version}.tar.gz
+Source:		ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		gnome-utils-applnk.patch
-Patch1:		gnome-utils-automake.patch
-Patch2:		gnome-utils-gstripchart_help.patch
-Patch3:		gnome-utils-fixdistr.patch
-Patch4:		gnome-utils-sparkle.patch
+Patch1:		gnome-utils-fixdistr.patch
+Patch2:		gnome-utils-sparkle.patch
+Patch3:		gnome-utils-DESTDIR.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	gettext-devel
-BuildRequires:	libgtop-devel
+BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel
 BuildRequires:	ORBit-devel
@@ -47,7 +46,6 @@ Programy u¿ytkowe GNOME'a.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
-%patch4 -p1
 
 %build
 autoconf
@@ -81,17 +79,22 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 %{_applnkdir}/*.desktop
 %{_applnkdir}/*/*.desktop
+%{_datadir}/applets/Monitors/*
 %{_datadir}/pixmaps/*
 %dir %{_datadir}/gstripchart/
 %config %{_datadir}/gstripchart/gstripchart.conf
 
-%dir %{_datadir}/gnome/help/ghex
-%{_datadir}/gnome/help/ghex/C
-%lang(es) %{_datadir}/gnome/help/ghex/es
-%lang(sv) %{_datadir}/gnome/help/ghex/sv
+%dir %{_datadir}/gnome/help/gdiskfree
+%{_datadir}/gnome/help/gdiskfree/C
+
+%dir %{_datadir}/gnome/help/gfontsel
+%{_datadir}/gnome/help/gfontsel/C
+
+%dir %{_datadir}/gnome/help/gsearchtool
+%{_datadir}/gnome/help/gsearchtool/C
 
 %dir %{_datadir}/gnome/help/gshutdown
-%{_datadir}/gnome/help/gshutdown/C
+%lang(en) %{_datadir}/gnome/help/gshutdown/C
 %lang(es) %{_datadir}/gnome/help/gshutdown/es
 %lang(no) %{_datadir}/gnome/help/gshutdown/no
 
