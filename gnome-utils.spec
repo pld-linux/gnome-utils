@@ -32,6 +32,7 @@ BuildRequires:	jade
 BuildRequires:	docbook-dsssl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
+Obsoletes:	gnome-admin
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
