@@ -5,48 +5,38 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	1.4.1.2
-Release:	3
+Version:	2.0.5
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
-Patch0:		%{name}-am_fixes.patch
-Patch1:		%{name}-configure.patch
-Patch2:		%{name}-am_conditional.patch
-Patch3:		%{name}-defs.patch
+Source0:	http://ftp.gnome.org/pub/GNOME/2.0.1/sources/%{name}/%{name}-%{version}.tar.bz2
+Source1:	xmldocs.make
+Source2:	omf.make
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
-BuildRequires:	bonobo-devel
-BuildRequires:	docbook-style-dsssl
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	esound-devel
-BuildRequires:	flex
-BuildRequires:	gnome-libs-devel
-BuildRequires:	gnome-core-devel
-BuildRequires:	guile-devel >= 1.4.1
-BuildRequires:	openjade
-BuildRequires:	libglade-devel >= 0.11
-BuildRequires:	libgtop-devel >= 1.0.0
-BuildRequires:	libpng >= 1.0.8
-BuildRequires:	libstdc++-devel
-BuildRequires:	ncurses-devel >= 5.0
-BuildRequires:	oaf-devel >= 0.6.5
-BuildRequires:	readline-devel
-BuildRequires:	scrollkeeper
-BuildRequires:	zlib-devel
+BuildRequires:	GConf2-devel >= 1.2.1
+BuildRequires:	gnome-panel-devel >= 2.0.7
+BuildRequires:	gnome-vfs2-devel >= 2.0.3
+BuildRequires:	libbonoboui-devel >= 2.0.2
+BuildRequires:	libglade2-devel >= 2.0.1
+BuildRequires:	libgnome-devel >= 2.0.4
+BuildRequires:	libgnomeui-devel >= 2.0.5
+BuildRequires:	popt-devel
+BuildRequires:	scrollkeeper >= 0.3.11
 Prereq:		scrollkeeper
+Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
-%define		_sysconfdir	/etc/X11/GNOME
+%define		_sysconfdir	/etc/X11/GNOME2
 %define		_localstatedir	/var
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 
@@ -77,38 +67,38 @@ Programy u©ytkowe GNOME'a.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 %build
-sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
-mv -f configure.in.tmp configure.in
+install -m644 %{SOURCE1} xmldocs.make
+install -m644 %{SOURCE2} omf.make
 rm -f missing
-libtoolize --copy --force
-aclocal -I %{_aclocaldir}/gnome
+%{__libtoolize}
+%{__aclocal} -I %{_aclocaldir}/gnome2-macros
 %{__autoconf}
 %{__automake}
 %configure \
-	--with-messages=/var/log/messages
+	--disable-console-helper \
+	--enable-gdialog
 
-%{__make} LIBS="-ltinfo"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install \
-	Utilitiesdir=%{_applnkdir}/Utilities \
-	gdictappdir=%{_applnkdir}/Utilities \
-	Systemdir=%{_applnkdir}/System \
-	Productivitydir=%{_applnkdir}/Utilities \
-	desktopdir=%{_applnkdir}/Utilities \
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
-%find_lang %{name} --with-gnome --all-name
+sed "s@http://basil.ireland.sun.com:8080/docbook/docbookx.dtd@http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd@" $RPM_BUILD_ROOT%{_datadir}/gnome/help/gnome-system-log/C/gnome-system-log.xml > dupa
+mv -f dupa $RPM_BUILD_ROOT%{_datadir}/gnome/help/gnome-system-log/C/gnome-system-log.xml
 
-%post   -p /usr/bin/scrollkeeper-update
+mv ChangeLog main-ChangeLog
+%find_lang %{name} --with-gnome --all-name
+find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
+
+%post
+/usr/bin/scrollkeeper-update
+GCONF_CONFIG_SOURCE="`%{_bindir}/gconftool-2 --get-default-source`" %{_bindir}/gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/*.schemas > /dev/null
+
 %postun -p /usr/bin/scrollkeeper-update
 
 %clean
@@ -116,19 +106,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS *ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_sysconfdir}/CORBA/servers/*
-%{_applnkdir}/*/*.desktop
-%{_datadir}/application-registry
-%{_datadir}/applets/*/*
-%{_datadir}/gcolorsel
-%{_datadir}/gnome-utils
-%{_datadir}/gtt
-%{_datadir}/idl/*
-%{_datadir}/logview
-%{_datadir}/mime-info/*
-%{_mandir}/man*/*
-%{_datadir}/stripchart
+%{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
+%{_libdir}/bonobo/servers/*
+%{_libdir}/gdict-applet
+%{_datadir}/applications/*
+%{_datadir}/gnome-2.0/ui/*
+%{_datadir}/%{name}
+%{_datadir}/gnome-system-log
+#%{_datadir}/idl/*
+%{_datadir}/mime-info/*
 %{_omf_dest_dir}/%{name}
+%{_mandir}/man1/*
