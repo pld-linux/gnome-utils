@@ -1,7 +1,7 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.3.1
+Version:	1.4.0
 Release:	1
 Epoch:		1
 License:	GPL
@@ -84,8 +84,6 @@ install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
-install gstripchart/gstripchart.conf $RPM_BUILD_ROOT%{_datadir}/gstripchart
-
 %find_lang %{name} --with-gnome --all-name
 
 %clean
@@ -95,17 +93,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README}.gz
 %attr(755,root,root) %{_bindir}/*
+%{_sysconfdir}/CORBA/servers/*
 %{_applnkdir}/*/*.desktop
-%{_datadir}/applets/Monitors/*
-%{_datadir}/applets/Utility/*
+%{_datadir}/applets/*/*
 %{_datadir}/idl/*
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
-%{_datadir}/gfloppy
 %{_datadir}/logview
-%dir %{_datadir}/gstripchart/
-%config %{_datadir}/gstripchart/gstripchart.conf
+%{_datadir}/%{name}
+%{_datadir}/omf/%{name}
 %dir %{_datadir}/stripchart/
 %config %{_datadir}/stripchart/stripchart.conf
 %{_datadir}/stripchart/stripchart.params
