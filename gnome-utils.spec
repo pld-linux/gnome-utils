@@ -28,13 +28,12 @@ BuildRequires:	xpm-devel
 BuildRequires:	libpng-devel
 BuildRequires:	zlib-devel
 BuildRequires:	gdbm-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		/usr/X11R6/man
 %define		_sysconfdir	/etc/X11/GNOME
-%define		_applnkdir	%{_datadir}/applnk
 %define		_localstatedir	/var
 
 %description
