@@ -5,37 +5,37 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.8.1
+Version:	2.9.90
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	048224275454781c7eebc5afd4004069
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	2ac9749d8cd94715208582239f7e927e
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.8.0.1
+BuildRequires:	GConf2-devel >= 2.9.2
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-desktop-devel >= 2.8.0
-BuildRequires:	gnome-panel-devel >= 2.8.0
-BuildRequires:	gnome-vfs2-devel >= 2.8.0
+BuildRequires:	gnome-desktop-devel >= 2.9.90
+BuildRequires:	gnome-panel-devel >= 2.9.90
+BuildRequires:	gnome-vfs2-devel >= 2.9.90
+BuildRequires:	hal-devel >= 0.4.7
 BuildRequires:	intltool >= 0.31.3
-BuildRequires:	libbonoboui-devel >= 2.6.1
-BuildRequires:	libglade2-devel >= 1:2.4.0
-BuildRequires:	libgnome-devel >= 2.8.0
-BuildRequires:	libgnomeui-devel >= 2.8.0
+BuildRequires:	libglade2-devel >= 1:2.5.0
+BuildRequires:	libgnomeprintui-devel >= 2.8.2
+BuildRequires:	libgnomeui-devel >= 2.9.1
 BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post):	GConf2
 Requires(post):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.8.1
+Requires:	gnome-vfs2 >= 2.9.90
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -120,6 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/gdict-applet
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
+%{_datadir}/gnome-screenshot
 %{_datadir}/gnome-system-log
 %{_omf_dest_dir}/%{name}
 %{_mandir}/man1/*
