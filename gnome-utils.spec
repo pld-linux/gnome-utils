@@ -80,7 +80,7 @@ install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 	Utilitiesdir=%{_applnkdir}/Utilities \
 	gdictappdir=%{_applnkdir}/Utilities \
 	Systemdir=%{_applnkdir}/System \
-	Productivitydir=%{_applnkdir}/Applications \
+	Productivitydir=%{_applnkdir}/Utilities \
 	desktopdir=%{_applnkdir}/Utilities 
 
 gzip -9nf AUTHORS ChangeLog NEWS README
