@@ -25,7 +25,7 @@ BuildRequires:	flex
 BuildRequires:	gdbm-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-core-devel
-BuildRequires:	jade
+BuildRequires:	openjade
 BuildRequires:	libglade-devel >= 0.11
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng >= 1.0.8
