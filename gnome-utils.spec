@@ -88,13 +88,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install \
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
-for i in `find $RPM_BUILD_ROOT -name "*\.xml" | grep help`
-do
-	sed s@http://www.oasis-open.org/docbook/xml/4.1.2@/usr/share/sgml/docbook/xml-dtd-4.1.2@ $i > $i-
-	# there's no such host
-	sed s@http://basil.ireland.sun.com:8080/docbook@/usr/share/sgml/docbook/xml-dtd-4.1.2@ $i- > $i
-	rm -f $i-
-done
+sed "s@http://basil.ireland.sun.com:8080/docbook/docbookx.dtd@http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd@" $RPM_BUILD_ROOT%{_datadir}/gnome/help/gnome-system-log/C/gnome-system-log.xml > dupa
+mv -f dupa $RPM_BUILD_ROOT%{_datadir}/gnome/help/gnome-system-log/C/gnome-system-log.xml
 
 mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
