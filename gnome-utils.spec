@@ -106,7 +106,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/*/*.desktop
 %{_datadir}/application-registry
 %{_datadir}/applets/*/*
-%{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
 %{_datadir}/gnome-utils
 %{_datadir}/gtt
