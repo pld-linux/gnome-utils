@@ -1,41 +1,41 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.4.0
-Release:	2
+Version:	1.4.0.1
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
-Patch0:		%{name}-fixdistr.patch
-Patch1:		%{name}-sparkle.patch
-Patch2:		%{name}-errordialog.patch
-Patch3:		%{name}-configure.patch
-Patch4:		%{name}-use_AM_GNU_GETTEXT.patch
+Patch0:		%{name}-am_fixes.patch
+Patch1:		%{name}-configure.patch
+Patch2:		%{name}-use_AM_GNU_GETTEXT.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	bison
 BuildRequires:	bonobo-devel
+BuildRequires:	docbook-style-dsssl
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	esound-devel
+BuildRequires:	flex
 BuildRequires:	gdbm-devel
-BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-core-devel
+BuildRequires:	jade
 BuildRequires:	libglade-devel >= 0.11
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel
+BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
-BuildRequires:	jade
-BuildRequires:	docbook-style-dsssl
-BuildRequires:	flex
-BuildRequires:	bison
+Prereq:		scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
@@ -43,6 +43,7 @@ Obsoletes:	gnome-admin
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_localstatedir	/var
+%define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 
 %description
 GNOME utility programs.
@@ -59,15 +60,11 @@ Programy u¿ytkowe GNOME'a.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
-%patch4 -p1
 
 %build
-gettextize --copy --force
-automake -a -c
 aclocal -I macros
 autoconf
-#(cd gfloppy; gettextize --copy --force)
+automake -a -c
 %configure
 
 %{__make} LIBS="-ltinfo"
@@ -81,11 +78,15 @@ install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 	gdictappdir=%{_applnkdir}/Utilities \
 	Systemdir=%{_applnkdir}/System \
 	Productivitydir=%{_applnkdir}/Utilities \
-	desktopdir=%{_applnkdir}/Utilities 
+	desktopdir=%{_applnkdir}/Utilities \
+	omf_dest_dir=%{_omf_dest_dir}/omf/%{name}
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
 %find_lang %{name} --with-gnome --all-name
+
+%post   -p /usr/bin/scrollkeeper-update
+%postun -p /usr/bin/scrollkeeper-update
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -97,13 +98,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/CORBA/servers/*
 %{_applnkdir}/*/*.desktop
 %{_datadir}/applets/*/*
-%{_datadir}/idl/*
 %{_pixmapsdir}/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
 %{_datadir}/logview
 %{_datadir}/%{name}
-%{_datadir}/omf/%{name}
+%{_omf_dest_dir}/omf/%{name}
 %dir %{_datadir}/stripchart/
 %config %{_datadir}/stripchart/stripchart.conf
 %{_datadir}/stripchart/stripchart.params
