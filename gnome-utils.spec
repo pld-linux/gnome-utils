@@ -2,7 +2,7 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.4.1.2
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -22,9 +22,9 @@ BuildRequires:	docbook-style-dsssl
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	esound-devel
 BuildRequires:	flex
-BuildRequires:	gdbm-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-core-devel
+BuildRequires:	guile-devel >= 1.4.1
 BuildRequires:	openjade
 BuildRequires:	libglade-devel >= 0.11
 BuildRequires:	libgtop-devel >= 1.0.0
@@ -87,8 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 	desktopdir=%{_applnkdir}/Utilities \
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
-gzip -9nf AUTHORS ChangeLog NEWS README
-
 %find_lang %{name} --with-gnome --all-name
 
 %post   -p /usr/bin/scrollkeeper-update
@@ -99,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
 %{_applnkdir}/*/*.desktop
