@@ -30,6 +30,7 @@ BuildRequires:	flex
 BuildRequires:	gdk-pixbuf-gnome-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-core-devel
+BuildRequires:	gnome-objc-devel
 BuildRequires:	guile-devel >= 1.4.1
 BuildRequires:	openjade
 BuildRequires:	libglade-gnome-devel >= 0.11
