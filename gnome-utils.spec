@@ -2,14 +2,17 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.0.50
-Release:	2
-Copyright:	LGPL
+Release:	3
+License:	GPL
 Group:		X11/GNOME
+Group(pl):	X11/GNOME
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}-%{version}.tar.gz
 Patch0:		gnome-utils-applnk.patch
 Patch1:		gnome-utils-automake.patch
 Patch2:		gnome-utils-gstripchart_help.patch
-Icon:		gnome-utils.gif
+Patch3:		gnome-utils-fixdistr.patch
+Patch4:		gnome-utils-sparkle.patch
+Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	glib-devel >= 1.2.0
@@ -31,9 +34,9 @@ Obsoletes:	gnome
 %description
 GNOME utility programs.
 
-GNOME is the GNU Network Object Model Environment.  That's a fancy
-name but really GNOME is a nice GUI desktop environment.  It makes
-using your computer easy, powerful, and easy to configure.
+GNOME is the GNU Network Object Model Environment. That's a fancy name but
+really GNOME is a nice GUI desktop environment. It makes using your computer
+easy, powerful, and easy to configure.
 
 %description -l pl
 Programy u¿ytkowe GNOME'a.
@@ -43,6 +46,8 @@ Programy u¿ytkowe GNOME'a.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 autoconf
