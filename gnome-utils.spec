@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-utils/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		gnome-utils-applnk.patch
 Patch1:		gnome-utils-fixdistr.patch
 Patch2:		gnome-utils-sparkle.patch
@@ -49,7 +49,7 @@ Programy u¿ytkowe GNOME'a.
 
 %prep
 %setup -q
-%patch0 -p1 -b .wiget
+%patch0 -p1
 %patch1 -p1
 %patch2 -p1
 
@@ -57,6 +57,7 @@ Programy u¿ytkowe GNOME'a.
 autoconf
 automake
 gettextize --copy --force
+(cd gfloppy; gettextize --copy --force)
 LDFLAGS="-s"; export LDFLAGS
 %configure
 
@@ -83,9 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/*/*.desktop
 %{_datadir}/applets/Monitors/*
+%{_datadir}/applets/Utility/*
 %{_datadir}/pixmaps/*
 %{_datadir}/mime-info/*
 %{_datadir}/gcolorsel
 %{_datadir}/gfloppy
+%{_datadir}/logview
 %dir %{_datadir}/gstripchart/
 %config %{_datadir}/gstripchart/gstripchart.conf
