@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.3.3
-Release:	2
+Version:	2.3.4
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-# Source0-md5:	73a8d71bd409146c4a99f3443369c419
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
+# Source0-md5:	b3c255b5624518ec907d72f77a24000b
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.3.2
@@ -19,8 +19,8 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-panel-devel >= 2.3.4.1-2
-BuildRequires:	gnome-vfs2-devel >= 2.3.1
+BuildRequires:	gnome-panel-devel >= 2.3.6
+BuildRequires:	gnome-vfs2-devel >= 2.3.6
 BuildRequires:	libbonoboui-devel >= 2.3.3-2
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnome-devel >= 2.3.0
@@ -30,7 +30,7 @@ BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post):	scrollkeeper
 Requires(post):	GConf2
-Requires:	gnome-vfs2 >= 2.2.0
+Requires:	gnome-vfs2 >= 2.3.6
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
