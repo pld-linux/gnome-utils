@@ -55,11 +55,14 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
 make DESTDIR=$RPM_BUILD_ROOT install
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	AUTHORS ChangeLog NEWS README
+
+install gstripchart/gstripchart.conf $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
 %find_lang %{name}
 
@@ -74,6 +77,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/*.desktop
 %{_applnkdir}/*/*.desktop
 %{_datadir}/pixmaps/*
+%dir %{_datadir}/gstripchart/
+%config %{_datadir}/gstripchart/gstripchart.conf
 
 %dir %{_datadir}/gnome/help/ghex
 %{_datadir}/gnome/help/ghex/C
