@@ -6,7 +6,7 @@ Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	1.4.1.3
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
