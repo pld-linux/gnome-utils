@@ -6,7 +6,7 @@ Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
 Version:	2.1.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -18,15 +18,16 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	gnome-panel-devel >= 2.1.0
-BuildRequires:	gnome-vfs2-devel >= 2.0.4-3
+BuildRequires:	gnome-panel-devel >= 2.1.2-2
+BuildRequires:	gnome-vfs2-devel >= 2.1.3-3
 BuildRequires:	libbonoboui-devel >= 2.1.0
 BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	libgnome-devel >= 2.0.4
+BuildRequires:	libgnome-devel >= 2.1.1-2
 BuildRequires:	libgnomeui-devel >= 2.0.5
 BuildRequires:	popt-devel
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires:	gnome-vfs2 >= 2.1.3
+BuildRequires:	rpm-build >= 4.1-7
+Requires:	gnome-vfs2 >= 2.1.3-3
 Prereq:		scrollkeeper
 Prereq:		GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,6 +38,7 @@ Obsoletes:	gnome-admin
 %define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11/GNOME2
 %define		_localstatedir	/var
+%define		_serverdir	/usr/lib/bonobo/servers
 
 %description
 GNOME utility programs.
@@ -74,8 +76,10 @@ Programy u¿ytkowe GNOME'a.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install \
-	omf_dest_dir=%{_omf_dest_dir}/%{name}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	omf_dest_dir=%{_omf_dest_dir}/%{name} \
+	serverdir=%{_serverdir}
 
 mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
@@ -96,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
-%{_libdir}/bonobo/servers/*
+%{_serverdir}/*
 %{_libdir}/gdict-applet
 %{_datadir}/applications/*
 %{_datadir}/gnome-2.0/ui/*
