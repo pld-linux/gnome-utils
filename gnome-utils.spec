@@ -2,7 +2,7 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.4.1.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 	Systemdir=%{_applnkdir}/System \
 	Productivitydir=%{_applnkdir}/Utilities \
 	desktopdir=%{_applnkdir}/Utilities \
-	omf_dest_dir=%{_omf_dest_dir}/omf/%{name}
+	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
@@ -114,4 +114,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man*/*
 %{_datadir}/stripchart
 %{_pixmapsdir}/*
-%{_omf_dest_dir}/omf/%{name}
+%{_omf_dest_dir}/%{name}
