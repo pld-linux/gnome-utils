@@ -6,11 +6,12 @@ Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	1.4.1.2
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
+# Source0-md5:	02bd79a6c5d7f89c2485f3a4258d22fd
 Patch0:		%{name}-am_fixes.patch
 Patch1:		%{name}-configure.patch
 Patch2:		%{name}-am_conditional.patch
