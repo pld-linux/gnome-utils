@@ -21,17 +21,20 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
+BuildRequires:	gnome-desktop-devel >= 2.5.90
 BuildRequires:	gnome-panel-devel >= 2.5.91
 BuildRequires:	gnome-vfs2-devel >= 2.5.90
+BuildRequires:	intltool >= 0.29
 BuildRequires:	libbonoboui-devel >= 2.5.3
 BuildRequires:	libglade2-devel >= 2.3.2
 BuildRequires:	libgnome-devel >= 2.5.90
 BuildRequires:	libgnomeui-devel >= 2.5.90
+BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires(post):	scrollkeeper
 Requires(post):	GConf2
+Requires(post):	scrollkeeper
 Requires:	gnome-vfs2 >= 2.5.90
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
@@ -72,7 +75,10 @@ Programy u¿ytkowe GNOME'a.
 mv po/{no,nb}.po
 
 %build
+%{__libtoolize}
+%{__aclocal}
 %{__autoconf}
+%{__automake}
 %configure \
 	--disable-schemas-install
 
