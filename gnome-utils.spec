@@ -88,9 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install \
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
-sed "s@http://basil.ireland.sun.com:8080/docbook/docbookx.dtd@http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd@" $RPM_BUILD_ROOT%{_datadir}/gnome/help/gnome-system-log/C/gnome-system-log.xml > dupa
-mv -f dupa $RPM_BUILD_ROOT%{_datadir}/gnome/help/gnome-system-log/C/gnome-system-log.xml
-
 mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
 find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
