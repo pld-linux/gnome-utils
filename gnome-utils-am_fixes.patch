@@ -1,0 +1,54 @@
+--- gnome-utils-1.4.0.1/mini-utils/gcolorsel/Makefile.am~	Wed Jun  6 23:32:13 2001
++++ gnome-utils-1.4.0.1/mini-utils/gcolorsel/Makefile.am	Sun Jun 24 22:09:53 2001
+@@ -5,12 +5,13 @@
+ gladedir = $(datadir)/gcolorsel/glade
+ Utilitiesdir = $(datadir)/gnome/apps/Utilities
+ 
+-CFLAGS += -DGCOLORSEL_GLADEDIR=\""$(gladedir)/"\" -g
+-CFLAGS += -DXLIBDIR=\""$(XLIBDIR)/"\"
++DEFS =	-DGCOLORSEL_GLADEDIR=\""$(gladedir)/"\"		\
++	-DXLIBDIR=\""$(XLIBDIR)/"\"			\
++	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
++	-DLOCALEDIR=\"$(datadir)/locale\"
+ 
+ INCLUDES = 						\
+-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+-	-DLOCALEDIR=\"$(datadir)/locale\"		\
++	-I$(top_srcdir)					\
+ 	-I$(includedir)					\
+ 	$(GNOME_INCLUDEDIR)
+ 
+--- gnome-utils-1.4.0.1/mini-utils/guname/Makefile.am~	Fri Apr 13 03:34:41 2001
++++ gnome-utils-1.4.0.1/mini-utils/guname/Makefile.am	Sun Jun 24 22:11:48 2001
+@@ -4,12 +4,18 @@
+ 
+ if GUNAME_CAPPLET
+ GUNAME_CAPPLET_LIBS=-lcapplet -lgnorba
+-CFLAGS+=-DGUNAME_CAPPLET
++endif
++
++if GUNAME_CAPPLET
++DEFS =	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
++	-DGUNAME_CAPPLET
++else
++DEFS =	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"
+ endif
+ 
+ INCLUDES = 			\
+ 	-I$(includedir)		\
+-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
++	-I$(top_srcdir)		\
+ 	$(GNOME_INCLUDEDIR) $(LIBGTOP_NAMES_INCS)
+ 
+ bin_PROGRAMS = guname
+--- gnome-utils-1.4.0.1/sgmldocs.make~	Wed Apr 11 17:03:09 2001
++++ gnome-utils-1.4.0.1/sgmldocs.make	Sun Jun 24 22:03:32 2001
+@@ -58,7 +58,7 @@
+ 	-cp $(docname)/index.html .
+ 
+ $(docname).sgml: $(sgml_ents)
+-        -ourdir=`pwd`;  \
++	ourdir=`pwd`;  \
+         cd $(srcdir);   \
+         cp $(sgml_ents) $$ourdir
+ 
