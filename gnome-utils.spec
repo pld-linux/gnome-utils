@@ -11,8 +11,6 @@ Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.1/%{name}-%{version}.tar.bz2
-Source1:	xmldocs.make
-Source2:	omf.make
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
@@ -69,16 +67,7 @@ Programy u¿ytkowe GNOME'a.
 %setup -q
 
 %build
-install -m644 %{SOURCE1} xmldocs.make
-install -m644 %{SOURCE2} omf.make
-rm -f missing
-%{__libtoolize}
-%{__aclocal} -I %{_aclocaldir}/gnome2-macros
-%{__autoconf}
-%{__automake}
-%configure \
-	--disable-console-helper \
-	--enable-gdialog
+%configure 
 
 %{__make}
 
@@ -113,7 +102,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
 %{_datadir}/gnome-system-log
-#%{_datadir}/idl/*
 %{_datadir}/mime-info/*
 %{_omf_dest_dir}/%{name}
 %{_mandir}/man1/*
