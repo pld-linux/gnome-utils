@@ -1,5 +1,9 @@
 Summary:	GNOME utility programs
+Summary(ja):	GNOME ╔Ф║╪╔ф╔ё╔Й╔ф╔ё╔в╔М╔╟╔И╔Ю╫╦
 Summary(pl):	Programy u©ytkowe GNOME
+Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
+Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
+Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	1.4.1.2
 Release:	3
@@ -53,8 +57,23 @@ GNOME is the GNU Network Object Model Environment. That's a fancy name
 but really GNOME is a nice GUI desktop environment. It makes using
 your computer easy, powerful, and easy to configure.
 
+%description -l ja
+GNOME (GNU Network Object Model Environment) ╓о║╒ X Window System ╓н
+╔╕╔ё╔С╔и╔╕╔ч╔м║╪╔╦╔Ц╓х╤╗д╢╓╥╓фф╟╓╞╔Ф║╪╔╤╔у╔Л╔С╔и╔Й║╪╓й GUI
+╔╒╔в╔Й╔╠║╪╔╥╔Г╔С ╓х╔г╔╧╔╞╔х╔ц╔в╔д║╪╔К╫╦╓г╓╧║ё gnome-utils
+╔я╔ц╔╠║╪╔╦╓о║╒ GNOME ╓н ╔Ф║╪╔ф╔ё╔Й╔ф╔ё╫╦╓г╓╧║ё
+Gcalc,Gdialog,Gdiskfree, ╓╫╓╥╓ф╓╫╓нб╬ ╓╓╓М╓╓╓М╓й╔д║╪╔К╓╛╢ч╓ч╓Л╓ч╓╧║ё
+
 %description -l pl
 Programy u©ytkowe GNOME'a.
+
+%description -l ru
+Этот пакет содержит некоторые утилиты для GNOME, такие как инструмент
+для поиска файлов, калькулятор, редактор 16-ричного кода и т.п.
+
+%description -l uk
+Цей пакет м╕стить деяк╕ утил╕ти для GNOME, так╕ як ╕нструмент для
+пошуку файл╕в, калькулятор, редактор 16-кового коду, тощо.
 
 %prep
 %setup -q
