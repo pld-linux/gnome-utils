@@ -14,7 +14,6 @@ Patch3:		gnome-utils-DESTDIR.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	gettext-devel
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	ncurses-devel >= 5.0
@@ -22,7 +21,6 @@ BuildRequires:	libglade-devel >= 0.11
 BuildRequires:	bonobo-devel
 BuildRequires:	readline-devel
 BuildRequires:	ORBit-devel
-BuildRequires:	XFree86-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	esound-devel
