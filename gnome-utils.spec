@@ -6,7 +6,7 @@ Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
 Version:	2.6.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -14,6 +14,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.t
 # Source0-md5:	b2325307fd311c8ba1bd045d7432830e
 Patch0:		%{name}-kdev_t.patch
 Patch1: 	%{name}-locale-names.patch
+Patch2: 	%{name}-desktop.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.6.1
@@ -71,6 +72,7 @@ Programy u¿ytkowe GNOME'a.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 mv po/{no,nb}.po
 
