@@ -85,3 +85,14 @@
  lang = es
  omffile = gdiskfree-es.omf
  sgml_ents = gdiskfree.sgml \
+--- gnome-utils-1.4.1.2/Makefile.am~	Wed Dec  3 00:08:48 2003
++++ gnome-utils-1.4.1.2/Makefile.am	Wed Dec  3 00:09:16 2003
+@@ -5,6 +5,8 @@
+ if GUILE
+ if FALSE
+ guile_extra_DIRS = cromagnon
++else
++guile_extra_DIRS = 
+ endif
+ guile_DIRS = $(gtt) $(guile_extra_DIRS)
+ endif
