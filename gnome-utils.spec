@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source:		ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-utils/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		gnome-utils-applnk.patch
 Patch1:		gnome-utils-fixdistr.patch
 Patch2:		gnome-utils-sparkle.patch
@@ -41,9 +41,9 @@ Obsoletes:	gnome
 %description
 GNOME utility programs.
 
-GNOME is the GNU Network Object Model Environment. That's a fancy name but
-really GNOME is a nice GUI desktop environment. It makes using your computer
-easy, powerful, and easy to configure.
+GNOME is the GNU Network Object Model Environment. That's a fancy name
+but really GNOME is a nice GUI desktop environment. It makes using
+your computer easy, powerful, and easy to configure.
 
 %description -l pl
 Programy u¿ytkowe GNOME'a.
