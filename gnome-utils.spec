@@ -5,12 +5,12 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.0.5
+Version:	2.1.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/2.0.1/sources/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.1/%{name}-%{version}.tar.bz2
 Source1:	xmldocs.make
 Source2:	omf.make
 Icon:		gnome-utils.xpm
@@ -20,7 +20,7 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	gnome-panel-devel >= 2.0.7
+BuildRequires:	gnome-panel-devel >= 2.1.0
 BuildRequires:	gnome-vfs2-devel >= 2.0.3
 BuildRequires:	libbonoboui-devel >= 2.0.2
 BuildRequires:	libglade2-devel >= 2.0.1
