@@ -21,6 +21,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
+BuildRequires:	gnome-common >= 2.8.0-2
 BuildRequires:	gnome-desktop-devel >= 2.9.91
 BuildRequires:	gnome-panel-devel >= 2.9.91
 BuildRequires:	gnome-vfs2-devel >= 2.9.90
@@ -39,8 +40,6 @@ Requires:	gnome-vfs2 >= 2.9.90
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_localstatedir	/var
 
 %description
 GNOME utility programs.
@@ -73,6 +72,7 @@ Programy u¿ytkowe GNOME'a.
 %patch1 -p1
 
 %build
+cp /usr/share/gnome-common/data/omf.make .
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
