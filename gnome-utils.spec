@@ -76,12 +76,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/*
 
 %dir %{_datadir}/gnome/help/ghex
-%dir %{_datadir}/gnome/help/ghex/C
+%{_datadir}/gnome/help/ghex/C
 %lang(es) %{_datadir}/gnome/help/ghex/es
 %lang(sv) %{_datadir}/gnome/help/ghex/sv
 
 %dir %{_datadir}/gnome/help/gshutdown
-%dir %{_datadir}/gnome/help/gshutdown/C
+%{_datadir}/gnome/help/gshutdown/C
 %lang(es) %{_datadir}/gnome/help/gshutdown/es
 %lang(no) %{_datadir}/gnome/help/gshutdown/no
 
@@ -89,6 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome/help/gstripchart/C
 
 %dir %{_datadir}/gnome/help/gtt
-%dir %{_datadir}/gnome/help/gtt/C
+%{_datadir}/gnome/help/gtt/C
 %lang(de) %{_datadir}/gnome/help/gtt/de
 %lang(es) %{_datadir}/gnome/help/gtt/es
