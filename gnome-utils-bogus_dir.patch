@@ -1,0 +1,10 @@
+--- gnome-utils-1.4.1.3/configure.in~	Wed Dec 17 01:09:37 2003
++++ gnome-utils-1.4.1.3/configure.in	Wed Dec 17 01:09:37 2003
+@@ -480,7 +480,6 @@
+ gtt/doc/de/Makefile
+ gtt/doc/es/Makefile
+ gtt/doc/eu/Makefile
+-gtt/doc/eu/man/Makefile
+ gtt/glade/Makefile
+ gtt/ghtml/Makefile
+ gtt/ghtml/C/Makefile
