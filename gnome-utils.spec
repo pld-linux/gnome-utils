@@ -13,6 +13,7 @@ Patch0:		%{name}-fixdistr.patch
 Patch1:		%{name}-sparkle.patch
 Patch2:		%{name}-errordialog.patch
 Patch3:		%{name}-configure.patch
+Patch4:		%{name}-use_AM_GNU_GETTEXT.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -59,13 +60,13 @@ Programy u¿ytkowe GNOME'a.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 gettextize --copy --force
 automake -a -c
 aclocal -I macros
 autoconf
-gettextize --copy --force
 (cd gfloppy; gettextize --copy --force)
 %configure
 
@@ -91,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,NEWS,README}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/CORBA/servers/*
 %{_applnkdir}/*/*.desktop
