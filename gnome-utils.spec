@@ -69,8 +69,8 @@ mv -f configure.in.tmp configure.in
 rm -f missing
 libtoolize --copy --force
 aclocal -I %{_aclocaldir}/gnome
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure \
 	--with-messages=/var/log/messages
 
