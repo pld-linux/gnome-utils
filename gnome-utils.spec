@@ -17,6 +17,8 @@ Patch1:		%{name}-configure.patch
 Patch2:		%{name}-am_conditional.patch
 Patch3:		%{name}-defs.patch
 Patch4:		%{name}-omf.patch
+Patch5:		%{name}-ac.patch
+Patch6:		%{name}-desktop.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -85,6 +87,8 @@ Programy u¿ytkowe GNOME'a.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
+%patch6 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
