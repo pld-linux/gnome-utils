@@ -69,7 +69,7 @@ gettextize --copy --force
 (cd gfloppy; gettextize --copy --force)
 %configure
 
-%{__make}
+%{__make} LIBS="-ltinfo"
 
 %install
 rm -rf $RPM_BUILD_ROOT
