@@ -1,0 +1,1173 @@
+diff -Nuard gnome-utils-1.4.1.2.orig/exe-handler/help/C/gnome-exe-handler-C.omf gnome-utils-1.4.1.2/exe-handler/help/C/gnome-exe-handler-C.omf
+--- gnome-utils-1.4.1.2.orig/exe-handler/help/C/gnome-exe-handler-C.omf	Sat Jun 16 06:23:23 2001
++++ gnome-utils-1.4.1.2/exe-handler/help/C/gnome-exe-handler-C.omf	Wed Oct  2 15:57:38 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd"> 
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      GNOME-exe-handler
++       GNOME-exe-handler
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gnome-exe-handler.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />    
++    <subject category="GNOME|Utilities" /> 
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gnome-exe-handler.sgml" />
++    <language code="C" />
++    <relation seriesid="beef78be-d60c-11d6-8292-eef106022d9a" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" /> 
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/C/gcalc-C.omf gnome-utils-1.4.1.2/gcalc/doc/C/gcalc-C.omf
+--- gnome-utils-1.4.1.2.orig/gcalc/doc/C/gcalc-C.omf	Thu Feb 15 04:54:36 2001
++++ gnome-utils-1.4.1.2/gcalc/doc/C/gcalc-C.omf	Wed Oct  2 19:04:38 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gcalc Manual
++       The Gcalc Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gcalc.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gcalc.sgml" />
++    <language code="C" />
++    <relation seriesid="840279e2-d60f-11d6-8756-85e13738dc79" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/de/gcalc-de.omf gnome-utils-1.4.1.2/gcalc/doc/de/gcalc-de.omf
+--- gnome-utils-1.4.1.2.orig/gcalc/doc/de/gcalc-de.omf	Tue May 29 15:50:08 2001
++++ gnome-utils-1.4.1.2/gcalc/doc/de/gcalc-de.omf	Wed Oct  2 19:05:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Die Gcalc-Dokumentation
++       Die Gcalc-Dokumentation
+     </title>
+-    <subject>
+-      <category>GNOME|Werkzeuge</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gcalc.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Werkzeuge" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gcalc.sgml" />
++    <language code="de" />
++    <relation seriesid="5691ae90-d611-11d6-8b70-c511a40e8533" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/es/gcalc-es.omf gnome-utils-1.4.1.2/gcalc/doc/es/gcalc-es.omf
+--- gnome-utils-1.4.1.2.orig/gcalc/doc/es/gcalc-es.omf	Wed Mar 21 05:12:23 2001
++++ gnome-utils-1.4.1.2/gcalc/doc/es/gcalc-es.omf	Wed Oct  2 19:06:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Manual de la Calculadora de GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Utilidades</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gcalc.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gcalc.sgml" />
++    <language code="es" />
++    <relation seriesid="6e4c5fca-d612-11d6-9ddd-e3bd8ca15bd7" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gcalc/doc/it/gcalc-it.omf gnome-utils-1.4.1.2/gcalc/doc/it/gcalc-it.omf
+--- gnome-utils-1.4.1.2.orig/gcalc/doc/it/gcalc-it.omf	Thu Feb 15 04:54:36 2001
++++ gnome-utils-1.4.1.2/gcalc/doc/it/gcalc-it.omf	Wed Oct  2 19:07:14 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+        Manuale della Calcolatrice de GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gcalc.sgml"/>
+-    <language code="it"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gcalc.sgml" />
++    <language code="it" />
++    <relation seriesid="1ffaa934-d613-11d6-8d34-aeceda4b3f1e" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gcharmap/doc/C/gcharmap-C.omf gnome-utils-1.4.1.2/gcharmap/doc/C/gcharmap-C.omf
+--- gnome-utils-1.4.1.2.orig/gcharmap/doc/C/gcharmap-C.omf	Thu Feb 15 04:54:37 2001
++++ gnome-utils-1.4.1.2/gcharmap/doc/C/gcharmap-C.omf	Wed Oct  2 19:07:32 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gcharmap Manual
++       The Gcharmap Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gcharmap.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gcharmap.sgml" />
++    <language code="C" />
++    <relation seriesid="a4c0d0b2-d613-11d6-8398-e7c5e2081c7e" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gdialog/doc/C/gdialog-C.omf gnome-utils-1.4.1.2/gdialog/doc/C/gdialog-C.omf
+--- gnome-utils-1.4.1.2.orig/gdialog/doc/C/gdialog-C.omf	Sat Aug 25 19:58:20 2001
++++ gnome-utils-1.4.1.2/gdialog/doc/C/gdialog-C.omf	Wed Oct  2 19:07:50 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gdialog Manual
++       The Gdialog Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gdiskfree.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gdiskfree.sgml" />
++    <language code="C" />
++    <relation seriesid="3ec5bbbe-d614-11d6-97e2-840ae603d01a" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/C/gdict-C.omf gnome-utils-1.4.1.2/gdictsrc/doc/C/gdict-C.omf
+--- gnome-utils-1.4.1.2.orig/gdictsrc/doc/C/gdict-C.omf	Thu Feb 15 05:04:37 2001
++++ gnome-utils-1.4.1.2/gdictsrc/doc/C/gdict-C.omf	Wed Oct  2 19:08:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gdict Manual
++       The Gdict Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gdict.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gdict.sgml" />
++    <language code="C" />
++    <relation seriesid="9ca3f93a-d614-11d6-936d-e50c978ae77b" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gdictsrc/doc/es/gdict-es.omf gnome-utils-1.4.1.2/gdictsrc/doc/es/gdict-es.omf
+--- gnome-utils-1.4.1.2.orig/gdictsrc/doc/es/gdict-es.omf	Thu Aug  2 21:55:15 2001
++++ gnome-utils-1.4.1.2/gdictsrc/doc/es/gdict-es.omf	Wed Oct  2 19:08:26 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      El Manual de Gdict
++       El Manual de Gdict
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gdict_util.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gdict_util.sgml" />
++    <language code="es" />
++    <relation seriesid="e430c936-d619-11d6-8470-a2aa44c21de2" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/C/gdiskfree-C.omf gnome-utils-1.4.1.2/gdiskfree/doc/C/gdiskfree-C.omf
+--- gnome-utils-1.4.1.2.orig/gdiskfree/doc/C/gdiskfree-C.omf	Sat Mar 24 06:06:52 2001
++++ gnome-utils-1.4.1.2/gdiskfree/doc/C/gdiskfree-C.omf	Wed Oct  2 19:08:39 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gdiskfree Manual
++       The Gdiskfree Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gdiskfree.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gdiskfree.sgml" />
++    <language code="C" />
++    <relation seriesid="2ec836d2-d61a-11d6-9b87-ad002cde973c" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/es/gdiskfree-es.omf gnome-utils-1.4.1.2/gdiskfree/doc/es/gdiskfree-es.omf
+--- gnome-utils-1.4.1.2.orig/gdiskfree/doc/es/gdiskfree-es.omf	Fri Aug 24 07:19:35 2001
++++ gnome-utils-1.4.1.2/gdiskfree/doc/es/gdiskfree-es.omf	Wed Oct  2 19:08:52 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Disco libre G
++       Disco libre G
+     </title>
+-    <subject>
+-      <category>GNOME|Utilidades</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gdiskfree_util.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gdiskfree_util.sgml" />
++    <language code="es" />
++    <relation seriesid="9267f74a-d61a-11d6-80ef-88ea1c20b800" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gdiskfree/doc/it/gdiskfree-it.omf gnome-utils-1.4.1.2/gdiskfree/doc/it/gdiskfree-it.omf
+--- gnome-utils-1.4.1.2.orig/gdiskfree/doc/it/gdiskfree-it.omf	Sat Mar 24 06:06:53 2001
++++ gnome-utils-1.4.1.2/gdiskfree/doc/it/gdiskfree-it.omf	Wed Oct  2 19:09:07 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Manuale di GDiskFree
++       Manuale di GDiskFree
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gdiskfree.sgml"/>
+-    <language code="it"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gdiskfree.sgml" />
++    <language code="it" />
++    <relation seriesid="d85c2532-d61a-11d6-8e0a-89f8d1a79d1f" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/C/gfloppy-C.omf gnome-utils-1.4.1.2/gfloppy/doc/C/gfloppy-C.omf
+--- gnome-utils-1.4.1.2.orig/gfloppy/doc/C/gfloppy-C.omf	Thu Feb 15 05:04:38 2001
++++ gnome-utils-1.4.1.2/gfloppy/doc/C/gfloppy-C.omf	Wed Oct  2 19:09:25 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gfloppy Manual
++       The Gfloppy Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gfloppy.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gfloppy.sgml" />
++    <language code="C" />
++    <relation seriesid="1ff37706-d61b-11d6-937b-913c5cc64c84" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/es/gfloppy-es.omf gnome-utils-1.4.1.2/gfloppy/doc/es/gfloppy-es.omf
+--- gnome-utils-1.4.1.2.orig/gfloppy/doc/es/gfloppy-es.omf	Thu Aug  2 21:59:27 2001
++++ gnome-utils-1.4.1.2/gfloppy/doc/es/gfloppy-es.omf	Wed Oct  2 19:09:43 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Manual de Gfloppy
++       Manual de Gfloppy
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gfloppy_util.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gfloppy_util.sgml" />
++    <language code="es" />
++    <relation seriesid="17294952-d620-11d6-93fa-a393bec4345d" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gfloppy/doc/ja/gfloppy-ja.omf gnome-utils-1.4.1.2/gfloppy/doc/ja/gfloppy-ja.omf
+--- gnome-utils-1.4.1.2.orig/gfloppy/doc/ja/gfloppy-ja.omf	Tue Dec 18 00:41:29 2001
++++ gnome-utils-1.4.1.2/gfloppy/doc/ja/gfloppy-ja.omf	Wed Oct  2 19:09:55 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gfloppy Manual
++       The Gfloppy Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gfloppy.sgml"/>
+-    <language code="ja"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gfloppy.sgml" />
++    <language code="ja" />
++    <relation seriesid="9bec97a2-d620-11d6-9358-a721f2fae77b" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/C/gsearchtool-C.omf gnome-utils-1.4.1.2/gsearchtool/help/C/gsearchtool-C.omf
+--- gnome-utils-1.4.1.2.orig/gsearchtool/help/C/gsearchtool-C.omf	Thu Feb 15 04:54:39 2001
++++ gnome-utils-1.4.1.2/gsearchtool/help/C/gsearchtool-C.omf	Wed Oct  2 19:10:08 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gsearchtool Manual
++       The Gsearchtool Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gsearchtool.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gsearchtool.sgml" />
++    <language code="C" />
++    <relation seriesid="0628bbdc-d621-11d6-9f8e-c6178a4ff028" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/es/gsearchtool-es.omf gnome-utils-1.4.1.2/gsearchtool/help/es/gsearchtool-es.omf
+--- gnome-utils-1.4.1.2.orig/gsearchtool/help/es/gsearchtool-es.omf	Thu Feb 15 04:54:39 2001
++++ gnome-utils-1.4.1.2/gsearchtool/help/es/gsearchtool-es.omf	Wed Oct  2 19:10:24 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Herramienta de busqueda de Gnome
++       Herramienta de busqueda de Gnome
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gsearchtool.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gsearchtool.sgml" />
++    <language code="es" />
++    <relation seriesid="6668526e-d621-11d6-9955-f314c39240ea" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gsearchtool/help/it/gsearchtool-it.omf gnome-utils-1.4.1.2/gsearchtool/help/it/gsearchtool-it.omf
+--- gnome-utils-1.4.1.2.orig/gsearchtool/help/it/gsearchtool-it.omf	Thu Feb 15 04:54:39 2001
++++ gnome-utils-1.4.1.2/gsearchtool/help/it/gsearchtool-it.omf	Wed Oct  2 19:10:41 2002
+@@ -1,13 +1,22 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Manuale del Cerca File di GNOME
++       Manuale del Cerca File di GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gsearchtool.sgml"/>
+-    <language code="it"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gsearchtool.sgml" />
++    <language code="it" />
++    <relation seriesid="4bad511c-d622-11d6-9b85-b575d3363cce" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/C/gtt-C.omf gnome-utils-1.4.1.2/gtt/doc/C/gtt-C.omf
+--- gnome-utils-1.4.1.2.orig/gtt/doc/C/gtt-C.omf	Thu Feb 15 04:54:40 2001
++++ gnome-utils-1.4.1.2/gtt/doc/C/gtt-C.omf	Wed Oct  2 19:10:55 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gnome Time Tracker Manual
++       The Gnome Time Tracker Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gtt.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gtt.sgml" />
++    <language code="C" />
++    <relation seriesid="c9398aec-d622-11d6-991d-e04e3d3a31b9" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/gtt/doc/es/gtt-C.omf gnome-utils-1.4.1.2/gtt/doc/es/gtt-C.omf
+--- gnome-utils-1.4.1.2.orig/gtt/doc/es/gtt-C.omf	Sun Jun  3 20:06:37 2001
++++ gnome-utils-1.4.1.2/gtt/doc/es/gtt-C.omf	Wed Oct  2 19:11:10 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Manual de la Herramienta del Supervisor de Tiempos de GNOME
++       Manual de la Herramienta del Supervisor de Tiempos de GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gtt.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gtt.sgml" />
++    <language code="es" />
++    <relation seriesid="0f63308a-d624-11d6-897f-fb1f6956101a" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/logview/doc/C/logview-C.omf gnome-utils-1.4.1.2/logview/doc/C/logview-C.omf
+--- gnome-utils-1.4.1.2.orig/logview/doc/C/logview-C.omf	Wed Oct  3 05:25:01 2001
++++ gnome-utils-1.4.1.2/logview/doc/C/logview-C.omf	Wed Oct  2 19:15:44 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Logview Manual
++       The Logview Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="logview.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="logview.sgml" />
++    <language code="C" />
++    <relation seriesid="6315a938-d624-11d6-9239-b7a4e2ff36ee" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/meat-grinder/help/C/meat-grinder-C.omf gnome-utils-1.4.1.2/meat-grinder/help/C/meat-grinder-C.omf
+--- gnome-utils-1.4.1.2.orig/meat-grinder/help/C/meat-grinder-C.omf	Sun Jun 17 07:16:32 2001
++++ gnome-utils-1.4.1.2/meat-grinder/help/C/meat-grinder-C.omf	Wed Oct  2 18:34:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      GNOME Archive Generator
++       GNOME Archive Generator
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="meat-grinder.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="meat-grinder.sgml" />
++    <language code="C" />
++    <relation seriesid="bcdd7e32-d624-11d6-8726-8e9a59e65858" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf gnome-utils-1.4.1.2/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf	Thu Feb 15 06:11:18 2001
++++ gnome-utils-1.4.1.2/mini-utils/gcolorsel/doc/C/gcolorsel-C.omf	Wed Oct  2 18:53:10 2002
+@@ -1,16 +1,24 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gcolorsel Manual
++       The Gcolorsel Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-      <category>Applications|Multimedia|Graphics|Other</category>
+-      <category>GNOME|Graphics</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gcolorsel.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <subject category="Applications|Multimedia|Graphics|Other" />
++    <subject category="GNOME|Graphics" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gcolorsel.sgml" />
++    <language code="C" />
++    <relation seriesid="6a2d7b9e-d627-11d6-8f5b-bf02115c8b4a" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf gnome-utils-1.4.1.2/mini-utils/gfontsel/help/C/gfontsel-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/C/gfontsel-C.omf	Thu Feb 15 03:43:20 2001
++++ gnome-utils-1.4.1.2/mini-utils/gfontsel/help/C/gfontsel-C.omf	Wed Oct  2 18:55:33 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The GNOME Font Selector Manual
++       The GNOME Font Selector Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gfontsel.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gfontsel.sgml" />
++    <language code="C" />
++    <relation seriesid="bf9b907a-d627-11d6-8c5c-eb8b80fea9a9" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf gnome-utils-1.4.1.2/mini-utils/gfontsel/help/es/gfontsel-es.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gfontsel/help/es/gfontsel-es.omf	Thu Feb 15 03:43:21 2001
++++ gnome-utils-1.4.1.2/mini-utils/gfontsel/help/es/gfontsel-es.omf	Wed Oct  2 18:58:01 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      selector de fuentes GNOME
++       selector de fuentes GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gfontsel.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gfontsel.sgml" />
++    <language code="es" />
++    <relation seriesid="19221772-d628-11d6-8b59-803f16016417" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gless/doc/C/gless-C.omf gnome-utils-1.4.1.2/mini-utils/gless/doc/C/gless-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gless/doc/C/gless-C.omf	Thu Feb 15 03:43:22 2001
++++ gnome-utils-1.4.1.2/mini-utils/gless/doc/C/gless-C.omf	Wed Oct  2 18:41:11 2002
+@@ -1,14 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gless Manual
++       The Gless Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gless.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gless.sgml" />
++    <language code="C" />
++    <relation seriesid="be4c51e8-d625-11d6-9e31-d4df79c0735f" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
++	    
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/C/gshutdown-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/C/gshutdown-C.omf	Thu Feb 15 03:43:24 2001
++++ gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/C/gshutdown-C.omf	Wed Oct  2 18:44:05 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gshutdown Manual
++       The Gshutdown Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gshutdown.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gshutdown.sgml" />
++    <language code="C" />
++    <relation seriesid="23e8958e-d626-11d6-9540-801234d1230e" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/es/gshutdown-es.omf gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/es/gshutdown-es.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gshutdown/doc/es/gshutdown-es.omf	Sun Aug  5 09:38:30 2001
++++ gnome-utils-1.4.1.2/mini-utils/gshutdown/doc/es/gshutdown-es.omf	Wed Oct  2 18:47:55 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      El manual de Gshutdown
++       El manual de Gshutdown
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gshutdown_util.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gshutdown_util.sgml" />
++    <language code="es" />
++    <relation seriesid="aea21fec-d626-11d6-8833-96d0ce81f173" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/guname/doc/C/guname-C.omf gnome-utils-1.4.1.2/mini-utils/guname/doc/C/guname-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/guname/doc/C/guname-C.omf	Thu Feb 15 03:43:25 2001
++++ gnome-utils-1.4.1.2/mini-utils/guname/doc/C/guname-C.omf	Wed Oct  2 18:50:19 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Guname Manual
++       The Guname Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="guname.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="guname.sgml" />
++    <language code="C" />
++    <relation seriesid="02997852-d627-11d6-94f4-d14bd17de8c8" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/gw/doc/C/gw-C.omf gnome-utils-1.4.1.2/mini-utils/gw/doc/C/gw-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/gw/doc/C/gw-C.omf	Thu Feb 15 03:53:29 2001
++++ gnome-utils-1.4.1.2/mini-utils/gw/doc/C/gw-C.omf	Wed Oct  2 18:35:59 2002
+@@ -1,14 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Gw Manual
++       The Gw Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="gw.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="gw.sgml" />
++    <language code="C" />
++    <relation seriesid="02ec3bfc-d625-11d6-944a-b4467a411902" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
++
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/mini-utils/idetool/doc/C/idetool-C.omf gnome-utils-1.4.1.2/mini-utils/idetool/doc/C/idetool-C.omf
+--- gnome-utils-1.4.1.2.orig/mini-utils/idetool/doc/C/idetool-C.omf	Thu Feb 15 03:43:27 2001
++++ gnome-utils-1.4.1.2/mini-utils/idetool/doc/C/idetool-C.omf	Wed Oct  2 18:59:46 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Idetool Manual
++       The Idetool Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="idetool.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="idetool.sgml" />
++    <language code="C" />
++    <relation seriesid="4c844b62-d628-11d6-85e2-c25340127fce" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/C/stripchart-C.omf gnome-utils-1.4.1.2/stripchart/doc/C/stripchart-C.omf
+--- gnome-utils-1.4.1.2.orig/stripchart/doc/C/stripchart-C.omf	Thu Feb 15 05:04:37 2001
++++ gnome-utils-1.4.1.2/stripchart/doc/C/stripchart-C.omf	Wed Oct  2 19:02:04 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      The Stripchart Manual
++       The Stripchart Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="stripchart.sgml"/>
+-    <language code="C"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilities" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="stripchart.sgml" />
++    <language code="C" />
++    <relation seriesid="a9233e3c-d628-11d6-984a-cc1a1878395b" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+-</omf>
+\ No newline at end of file
++</omf>
+diff -Nuard gnome-utils-1.4.1.2.orig/stripchart/doc/es/stripchart-es.omf gnome-utils-1.4.1.2/stripchart/doc/es/stripchart-es.omf
+--- gnome-utils-1.4.1.2.orig/stripchart/doc/es/stripchart-es.omf	Sat Apr  7 11:11:10 2001
++++ gnome-utils-1.4.1.2/stripchart/doc/es/stripchart-es.omf	Wed Oct  2 19:19:02 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8" ?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-      Manual del generador de histogramas
++       Manual del generador de histogramas
+     </title>
+-    <subject>
+-      <category>GNOME|Utilities</category>
+-    </subject>
+-    <format mime="text/sgml"/>
+-    <identifier url="stripchart.sgml"/>
+-    <language code="es"/>
++    <date>
++       2002-10-02
++    </date>
++    <version identifier="1.4.1.2" date="2002-10-02" />
++    <subject category="GNOME|Utilidades" />
++    <description/>
++    <type/>
++    <format mime="text/sgml" />
++    <identifier url="stripchart.sgml" />
++    <language code="es" />
++    <relation seriesid="f932ff50-d62a-11d6-990d-c6d3ca86127d" />
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html" />
+   </resource>
+ </omf>
