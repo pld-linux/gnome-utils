@@ -6,7 +6,7 @@ Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	2.1.3
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -38,7 +38,6 @@ Obsoletes:	gnome-admin
 %define		_mandir		%{_prefix}/man
 %define		_sysconfdir	/etc/X11/GNOME2
 %define		_localstatedir	/var
-%define		_bonobo_server_dir	/usr/lib/bonobo/servers
 
 %description
 GNOME utility programs.
@@ -78,8 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	omf_dest_dir=%{_omf_dest_dir}/%{name} \
-	serverdir=%{_bonobo_server_dir}
+	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
 mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
@@ -100,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_pixmapsdir}/*
-%{_bonobo_server_dir}/*
+%{_libdir}/bonobo/servers/*
 %{_libdir}/gdict-applet
 %{_datadir}/applications/*
 %{_datadir}/gnome-2.0/ui/*
