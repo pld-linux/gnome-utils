@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.3.90
+Version:	2.4.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	9411f8e4e151e9dd3b111e2d98b61c18
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.4/%{name}-%{version}.tar.bz2
+# Source0-md5:	6986c0b7b5898f1f515add00b946ae48
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.3.3
@@ -24,7 +24,7 @@ BuildRequires:	gnome-vfs2-devel >= 2.3.90
 BuildRequires:	libbonoboui-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnome-devel >= 2.4.0
-BuildRequires:	libgnomeui-devel >= 2.3.7
+BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
