@@ -1,12 +1,12 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.0.51
-Release:	2
+Version:	1.1.0
+Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source:		ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
+Source:		ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		gnome-utils-applnk.patch
 Patch1:		gnome-utils-fixdistr.patch
 Patch2:		gnome-utils-sparkle.patch
@@ -18,6 +18,8 @@ BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	gettext-devel
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	libglade-devel >= 0.11
+BuildRequires:	bonobo-devel
 BuildRequires:	readline-devel
 BuildRequires:	ORBit-devel
 BuildRequires:	XFree86-devel
@@ -28,11 +30,11 @@ BuildRequires:	xpm-devel
 BuildRequires:	libpng-devel
 BuildRequires:	zlib-devel
 BuildRequires:	gdbm-devel
+BuildRequires:	e2fsprogs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
-%define		_mandir		/usr/X11R6/man
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_localstatedir	/var
 
@@ -48,7 +50,7 @@ Programy u¿ytkowe GNOME'a.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch0 -p1 -b .wiget
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
@@ -68,8 +70,7 @@ install -d $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
 make DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	AUTHORS ChangeLog NEWS README
+gzip -9nf AUTHORS ChangeLog NEWS README
 
 install gstripchart/gstripchart.conf $RPM_BUILD_ROOT%{_datadir}/gstripchart
 
@@ -82,7 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README}.gz
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
 %{_applnkdir}/*.desktop
 %{_applnkdir}/*/*.desktop
 %{_datadir}/applets/Monitors/*
