@@ -1,19 +1,32 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.0.1
+Version:	1.0.50
 Release:	1
 Copyright:	LGPL
 Group:		X11/GNOME
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}-%{version}.tar.gz
-URL:		http://www.gnome.org
-Icon:		%{name}.gif
-Requires:	gtk+ >= 1.2.0, glib >= 1.2.0
+Patch0:		gnome-utils-applnk.patch
+Patch1:		gnome-utils-automake.patch
+Patch2:		gnome-utils-gstripchart_help.patch
+Icon:		gnome-utils.gif
+URL:		http://www.gnome.org/
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	glib-devel >= 1.2.0
+BuildRequires:	gettext-devel
+BuildRequires:	libgtop-devel
+BuildRequires:	ncurses-devel
+BuildRequires:	readline-devel
+BuildRequires:	ORBit-devel
+BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	gnome
 
-%define		_prefix	/usr/X11R6
-%define		_mandir	/usr/X11R6/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		/usr/X11R6/man
+%define		_sysconfdir	/etc/X11/GNOME
+%define		_applnkdir	%{_datadir}/applnk
+%define		_localstatedir	/var
 
 %description
 GNOME utility programs.
@@ -23,28 +36,29 @@ name but really GNOME is a nice GUI desktop environment.  It makes
 using your computer easy, powerful, and easy to configure.
 
 %description -l pl
-Programy u¿ytkowe GNOME'a 
+Programy u¿ytkowe GNOME'a.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" \
-./configure %{_target_platform} \
-	--prefix=/usr/X11R6 \
-	--sysconfdir=/etc/X11/GNOME \
-	--localstatedir=/var
+autoconf
+automake
+gettextize --copy --force
+LDFLAGS="-s"; export LDFLAGS
+%configure
 
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make prefix=$RPM_BUILD_ROOT/usr/X11R6 install
+make DESTDIR=$RPM_BUILD_ROOT install
 
-strip $RPM_BUILD_ROOT/usr/X11R6/bin/*
-
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	AUTHORS ChangeLog NEWS README
 
 %find_lang %{name}
@@ -55,12 +69,26 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README}.gz
-%attr(755,root,root) /usr/X11R6/bin/*
-/usr/X11R6/man/man1/*
-/usr/X11R6/share/gnome/apps/Applications/*
-/usr/X11R6/share/gnome/apps/Settings/*
-/usr/X11R6/share/gnome/apps/Utilities/*
-/usr/X11R6/share/gnome/apps/*.desktop
-/usr/X11R6/share/gnome/help/*
-/usr/X11R6/share/gstripchart/*
-/usr/X11R6/share/pixmaps/*
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
+%{_applnkdir}/*.desktop
+%{_applnkdir}/*/*.desktop
+%{_datadir}/pixmaps/*
+
+%dir %{_datadir}/gnome/help/ghex
+%dir %{_datadir}/gnome/help/ghex/C
+%lang(es) %{_datadir}/gnome/help/ghex/es
+%lang(sv) %{_datadir}/gnome/help/ghex/sv
+
+%dir %{_datadir}/gnome/help/gshutdown
+%dir %{_datadir}/gnome/help/gshutdown/C
+%lang(es) %{_datadir}/gnome/help/gshutdown/es
+%lang(no) %{_datadir}/gnome/help/gshutdown/no
+
+%dir %{_datadir}/gnome/help/gstripchart
+%{_datadir}/gnome/help/gstripchart/C
+
+%dir %{_datadir}/gnome/help/gtt
+%dir %{_datadir}/gnome/help/gtt/C
+%lang(de) %{_datadir}/gnome/help/gtt/de
+%lang(es) %{_datadir}/gnome/help/gtt/es
