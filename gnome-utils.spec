@@ -2,10 +2,11 @@ Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
 Version:	1.2.1
-Release:	5
+Release:	6
 License:	GPL
-Group:		X11/GNOME
-Group(pl):	X11/GNOME
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-fixdistr.patch
@@ -60,7 +61,6 @@ autoconf
 automake
 gettextize --copy --force
 (cd gfloppy; gettextize --copy --force)
-LDFLAGS="-s"; export LDFLAGS
 %configure
 
 %{__make}
