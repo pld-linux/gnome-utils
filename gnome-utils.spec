@@ -1,7 +1,7 @@
 Summary:	GNOME utility programs
 Summary(pl):	Programy u¿ytkowe GNOME
 Name:		gnome-utils
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 License:	GPL
 Group:		X11/GNOME
@@ -10,7 +10,6 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-utils/%{name}-%{ve
 Patch0:		gnome-utils-applnk.patch
 Patch1:		gnome-utils-fixdistr.patch
 Patch2:		gnome-utils-sparkle.patch
-Patch3:		gnome-utils-DESTDIR.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -53,7 +52,6 @@ Programy u¿ytkowe GNOME'a.
 %patch0 -p1 -b .wiget
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 %build
 autoconf
