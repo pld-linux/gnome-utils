@@ -6,7 +6,7 @@ Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	2.4.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*
 %{_desktopdir}/*
 %{_libdir}/bonobo/servers/*
-%{_libdir}/gdict-applet
+%attr(755,root,root) %{_libdir}/gdict-applet
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/%{name}
 %{_datadir}/gnome-system-log
