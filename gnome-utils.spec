@@ -30,7 +30,7 @@ BuildRequires:	readline-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
 BuildRequires:	jade
-BuildRequires:	docbook-dtd
+BuildRequires:	docbook-dsssl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
