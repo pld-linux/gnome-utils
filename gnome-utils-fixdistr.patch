@@ -1,0 +1,16 @@
+--- gnome-utils-1.0.12/mini-utils/guname/info.c.fixdistr	Thu Mar 25 15:37:22 1999
++++ gnome-utils-1.0.12/mini-utils/guname/info.c	Thu Mar 25 15:37:38 1999
+@@ -154,12 +154,7 @@
+     f = fopen("/etc/redhat-release", "r");
+     if (f) {
+       fgets(buf, 79, f);
+-/* drmike - this seems unecessary in RH 5.2 and later
+-      if (strchr(buf, ' '))
+-        info[si_distribution_version] = g_strdup(strchr(buf, ' ')+1);
+-      else
+-*/
+-        info[si_distribution_version] = g_strdup(buf);
++      info[si_distribution_version] = g_strdup(buf);
+       fclose(f);
+     }
+   } else if (g_file_exists("/etc/SuSE-release")) {
