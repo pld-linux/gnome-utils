@@ -8,7 +8,7 @@ Name:		gnome-utils
 Version:	2.9.91
 Release:	1
 Epoch:		1
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.9/%{name}-%{version}.tar.bz2
 # Source0-md5:	7b73c083f8c0d54678059972be18bc67
