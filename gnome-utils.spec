@@ -6,12 +6,6 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(fr):	X11/Applications
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-utils/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am_fixes.patch
 Patch1:		%{name}-configure.patch
