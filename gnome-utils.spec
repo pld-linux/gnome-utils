@@ -43,9 +43,9 @@ strip $RPM_BUILD_ROOT/usr/X11R6/bin/*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755, root, root) /usr/X11R6/bin/*
+%attr(755,root,root) /usr/X11R6/bin/*
 /usr/X11R6/man/man1/*
 /usr/X11R6/share/apps/Applications/*
 /usr/X11R6/share/apps/Productivity/*
