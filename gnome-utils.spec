@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 - changed Buildroot to /tmp/%%{name}-%%{version}-root,
 - added using %%{name} and %%{version} in Source,
 - added full %attr description in %files,
-- added %lang macros for /usr/share/locale/*/LC_MESSAGES/gnome-utils.mo
+- added %lang macros for %{_datadir}/locale/*/LC_MESSAGES/gnome-utils.mo
   files.
 
 * Mon Apr 6 1998 Marc Ewing <marc@redhat.com>
