@@ -52,3 +52,36 @@
          cd $(srcdir);   \
          cp $(sgml_ents) $$ourdir
  
+--- gnome-utils-1.4.1.1/mini-utils/gshutdown/doc/es/Makefile.am~	Mon Jan 28 04:33:28 2002
++++ gnome-utils-1.4.1.1/mini-utils/gshutdown/doc/es/Makefile.am	Mon Jan 28 04:33:28 2002
+@@ -2,7 +2,7 @@
+ 	figures/gshutdown-advanced.png  \
+ 	figures/gshutdown-preferences.png  \
+ 	figures/gshutdown.png
+-docname = gshutdown_util
++docname = gshutdown
+ lang = es
+ omffile = gshutdown-es.omf
+ sgml_ents = gshutdown.sgml \
+--- gnome-utils-1.4.1.1/gdictsrc/doc/es/Makefile.am~	Mon Jan 28 03:48:46 2002
++++ gnome-utils-1.4.1.1/gdictsrc/doc/es/Makefile.am	Mon Jan 28 03:48:46 2002
+@@ -3,7 +3,7 @@
+ 	figures/gdict-spell.png \
+ 	figures/gdictmain.png
+ 
+-docname = gdict_util
++docname = gdict
+ lang = es
+ omffile = gdict-es.omf
+ sgml_ents = gdict.sgml \
+--- gnome-utils-1.4.1.1/gdiskfree/doc/es/Makefile.am~	Mon Jan 28 03:14:59 2002
++++ gnome-utils-1.4.1.1/gdiskfree/doc/es/Makefile.am	Mon Jan 28 03:14:59 2002
+@@ -1,7 +1,7 @@
+ figs = \
+ 	figures/gdiskfree-prefs.png  \
+ 	figures/gdiskfree.png
+-docname = gdiskfree_util
++docname = gdiskfree
+ lang = es
+ omffile = gdiskfree-es.omf
+ sgml_ents = gdiskfree.sgml \
