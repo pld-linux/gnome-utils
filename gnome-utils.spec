@@ -5,32 +5,37 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.4.1
+Version:	2.6.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	8512eed7ce0d291d4d8a9ddabceaa23b
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	358b2576fb07d62e5b1dc0a12eb32223
+Patch0:		%{name}-kdev_t.patch
+Patch1: 	%{name}-locale-names.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.3.3
+BuildRequires:	GConf2-devel >= 2.5.90
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-panel-devel >= 2.3.90
-BuildRequires:	gnome-vfs2-devel >= 2.3.90
-BuildRequires:	libbonoboui-devel >= 2.4.0
-BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	libgnome-devel >= 2.4.0
-BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	gnome-desktop-devel >= 2.5.90
+BuildRequires:	gnome-panel-devel >= 2.5.91
+BuildRequires:	gnome-vfs2-devel >= 2.6.0
+BuildRequires:	intltool >= 0.29
+BuildRequires:	libbonoboui-devel >= 2.5.4
+BuildRequires:	libglade2-devel >= 2.3.6
+BuildRequires:	libgnome-devel >= 2.6.0
+BuildRequires:	libgnomeui-devel >= 2.6.0
+BuildRequires:	libtool
 BuildRequires:	popt-devel
 BuildRequires:	rpm-build >= 4.1-10
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires(post):	scrollkeeper
 Requires(post):	GConf2
-Requires:	gnome-vfs2 >= 2.3.90
+Requires(post):	scrollkeeper
+Requires:	gnome-vfs2 >= 2.6.0
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -64,8 +69,16 @@ Programy u©ytkowe GNOME'a.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+
+mv po/{no,nb}.po
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure \
 	--disable-schemas-install
 
@@ -97,7 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS *ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
-%{_pixmapsdir}/*
 %{_desktopdir}/*
 %{_libdir}/bonobo/servers/*
 %attr(755,root,root) %{_libdir}/gdict-applet
