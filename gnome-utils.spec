@@ -5,24 +5,24 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.9.90
+Version:	2.9.91
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	2ac9749d8cd94715208582239f7e927e
+# Source0-md5:	7b73c083f8c0d54678059972be18bc67
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.9.2
+BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-desktop-devel >= 2.9.90
-BuildRequires:	gnome-panel-devel >= 2.9.90
+BuildRequires:	gnome-desktop-devel >= 2.9.91
+BuildRequires:	gnome-panel-devel >= 2.9.91
 BuildRequires:	gnome-vfs2-devel >= 2.9.90
 BuildRequires:	hal-devel >= 0.4.7
 BuildRequires:	intltool >= 0.31.3
