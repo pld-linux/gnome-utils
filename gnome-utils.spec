@@ -71,7 +71,8 @@ libtoolize --copy --force
 aclocal -I %{_aclocaldir}/gnome
 autoconf
 automake -a -c
-%configure
+%configure \
+	--with-messages=/var/log/messages
 
 %{__make} LIBS="-ltinfo"
 
