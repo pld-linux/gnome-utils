@@ -26,11 +26,12 @@ BuildRequires:	docbook-style-dsssl
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	esound-devel
 BuildRequires:	flex
+BuildRequires:	gdk-pixbuf-gnome-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gnome-core-devel
 BuildRequires:	guile-devel >= 1.4.1
 BuildRequires:	openjade
-BuildRequires:	libglade-devel >= 0.11
+BuildRequires:	libglade-gnome-devel >= 0.11
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libstdc++-devel
@@ -108,11 +109,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name} --with-gnome --all-name
 
-%post   -p /usr/bin/scrollkeeper-update
-%postun -p /usr/bin/scrollkeeper-update
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /usr/bin/scrollkeeper-update
+%postun -p /usr/bin/scrollkeeper-update
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
