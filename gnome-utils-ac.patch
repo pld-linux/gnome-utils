@@ -1,0 +1,11 @@
+--- gnome-utils-1.4.1.2/configure.in~	Wed Dec  3 00:21:08 2003
++++ gnome-utils-1.4.1.2/configure.in	Wed Dec  3 00:21:08 2003
+@@ -380,7 +380,7 @@
+ AC_CHECK_LIB(shadow, main)
+ 
+ AC_EGREP_HEADER(sp_pwdp, shadow.h,
+-		AC_CHECK_FUNC(getspnam, AC_DEFINE(HAVE_SHADOW_H)))
++		[AC_CHECK_FUNC(getspnam, [AC_DEFINE(HAVE_SHADOW_H)], [])], [])
+ 
+ AC_CHECK_FUNCS(crypt)
+ if test $ac_cv_func_crypt = no; then
