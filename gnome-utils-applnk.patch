@@ -1,31 +1,45 @@
---- gnome-utils-1.1.0/gfloppy/Makefile.am.wiget	Sun Apr 23 07:55:02 2000
-+++ gnome-utils-1.1.0/gfloppy/Makefile.am	Wed Apr 26 08:51:06 2000
-@@ -1,6 +1,6 @@
- ## Process this file with automake to produce Makefile.in
+diff -Nru gnome-utils-1.2.0/cromagnon/Makefile.am gnome-utils-1.2.0.new/cromagnon/Makefile.am
+--- gnome-utils-1.2.0/cromagnon/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/cromagnon/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -1,4 +1,4 @@
+-Utilitiesdir = $(datadir)/gnome/apps/Utilities
++Utilitiesdir = $(datadir)/applnk/Utilities
+ GNOMEG = $(bindir)/gnomeg
  
--appsdir = $(datadir)/gnome/apps
-+appsdir = $(datadir)/applnk
- Utilitiesdir = $(appsdir)/Utilities
- Mimedir = $(datadir)/mime-info
- 
---- gnome-utils-1.1.0/gcalc/Makefile.am.wiget	Thu Feb 18 00:27:29 1999
-+++ gnome-utils-1.1.0/gcalc/Makefile.am	Wed Apr 26 08:50:17 2000
+ bin_SCRIPTS = cromagnon
+diff -Nru gnome-utils-1.2.0/gcalc/Makefile.am gnome-utils-1.2.0.new/gcalc/Makefile.am
+--- gnome-utils-1.2.0/gcalc/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gcalc/Makefile.am	Mon Jun 12 10:55:28 2000
 @@ -1,4 +1,4 @@
 -Utilitiesdir = $(datadir)/gnome/apps/Utilities
 +Utilitiesdir = $(datadir)/applnk/Utilities
  
  INCLUDES = 						\
  	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
---- gnome-utils-1.1.0/gsearchtool/Makefile.am.wiget	Mon Feb  7 23:54:05 2000
-+++ gnome-utils-1.1.0/gsearchtool/Makefile.am	Wed Apr 26 08:50:17 2000
-@@ -1,4 +1,4 @@
+diff -Nru gnome-utils-1.2.0/gcharmap/Makefile.am gnome-utils-1.2.0.new/gcharmap/Makefile.am
+--- gnome-utils-1.2.0/gcharmap/Makefile.am	Fri May 19 20:57:44 2000
++++ gnome-utils-1.2.0.new/gcharmap/Makefile.am	Mon Jun 12 10:56:29 2000
+@@ -1,6 +1,6 @@
+ # Process this file with automake to produce Makefile.in
+ 
 -Utilitiesdir = $(datadir)/gnome/apps/Utilities
 +Utilitiesdir = $(datadir)/applnk/Utilities
  
- SUBDIRS = help
+ EXTRA_DIST = AUTHORS README TODO BUGS gcharmap.desktop 
+ SUBDIRS = src doc pixmaps
+diff -Nru gnome-utils-1.2.0/gdictsrc/Makefile.am gnome-utils-1.2.0.new/gdictsrc/Makefile.am
+--- gnome-utils-1.2.0/gdictsrc/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gdictsrc/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -36,5 +36,5 @@
+ gdictappletdir  = $(datadir)/applets/Utility
+ gdictapplet_DATA = gdict.desktop
  
---- gnome-utils-1.1.0/gdiskfree/Makefile.am.wiget	Sun Apr 16 21:29:00 2000
-+++ gnome-utils-1.1.0/gdiskfree/Makefile.am	Wed Apr 26 08:50:42 2000
+-gdictappdir  = $(datadir)/gnome/apps/Utilities
++gdictappdir  = $(datadir)/applnk/Utilities
+ gdictapp_DATA = GDict.desktop
+diff -Nru gnome-utils-1.2.0/gdiskfree/Makefile.am gnome-utils-1.2.0.new/gdiskfree/Makefile.am
+--- gnome-utils-1.2.0/gdiskfree/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gdiskfree/Makefile.am	Mon Jun 12 10:55:28 2000
 @@ -21,6 +21,6 @@
  
  EXTRA_DIST = gdiskfree.desktop
@@ -34,8 +48,29 @@
 +Systemdir = $(datadir)/applnk/System
  System_DATA = gdiskfree.desktop
  
---- gnome-utils-1.1.0/gstripchart/Makefile.am.wiget	Sat Apr 22 20:46:35 2000
-+++ gnome-utils-1.1.0/gstripchart/Makefile.am	Wed Apr 26 08:50:17 2000
+diff -Nru gnome-utils-1.2.0/gfloppy/Makefile.am gnome-utils-1.2.0.new/gfloppy/Makefile.am
+--- gnome-utils-1.2.0/gfloppy/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gfloppy/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-appsdir = $(datadir)/gnome/apps
++appsdir = $(datadir)/applnk
+ Utilitiesdir = $(appsdir)/Utilities
+ Mimedir = $(datadir)/mime-info
+ 
+diff -Nru gnome-utils-1.2.0/gsearchtool/Makefile.am gnome-utils-1.2.0.new/gsearchtool/Makefile.am
+--- gnome-utils-1.2.0/gsearchtool/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gsearchtool/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -1,4 +1,4 @@
+-Utilitiesdir = $(datadir)/gnome/apps/Utilities
++Utilitiesdir = $(datadir)/applnk/Utilities
+ 
+ SUBDIRS = help
+ 
+diff -Nru gnome-utils-1.2.0/gstripchart/Makefile.am gnome-utils-1.2.0.new/gstripchart/Makefile.am
+--- gnome-utils-1.2.0/gstripchart/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gstripchart/Makefile.am	Mon Jun 12 10:55:28 2000
 @@ -25,7 +25,7 @@
  confdir = $(datadir)/gstripchart
  conf_DATA = gstripchart.conf
@@ -45,88 +80,33 @@
  Utilities_DATA = gstripchart.desktop
  
  if BUILD_GSTRIPCHART_APPLET
---- gnome-utils-1.1.0/gtt/Makefile.am.wiget	Thu Apr 20 00:43:49 2000
-+++ gnome-utils-1.1.0/gtt/Makefile.am	Wed Apr 26 08:50:17 2000
+diff -Nru gnome-utils-1.2.0/gtt/Makefile.am gnome-utils-1.2.0.new/gtt/Makefile.am
+--- gnome-utils-1.2.0/gtt/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/gtt/Makefile.am	Mon Jun 12 10:55:28 2000
 @@ -38,7 +38,7 @@
  EXTRA_DIST = \
  	gtt.desktop
  
 -Productivitydir = $(datadir)/gnome/apps/Applications
-+Productivitydir = $(datadir)/applnk/Applications
++Productivitydir = $(datadir)/applnk/Office
  Productivity_DATA = gtt.desktop
  
  
---- gnome-utils-1.1.0/gdictsrc/Makefile.am.wiget	Sat Apr  8 17:34:56 2000
-+++ gnome-utils-1.1.0/gdictsrc/Makefile.am	Wed Apr 26 08:55:42 2000
-@@ -34,5 +34,5 @@
- gdictappletdir  = $(datadir)/applets/Utility
- gdictapplet_DATA = gdict.desktop
+diff -Nru gnome-utils-1.2.0/logview/Makefile.am gnome-utils-1.2.0.new/logview/Makefile.am
+--- gnome-utils-1.2.0/logview/Makefile.am	Fri May  5 07:36:31 2000
++++ gnome-utils-1.2.0.new/logview/Makefile.am	Mon Jun 12 10:57:49 2000
+@@ -2,7 +2,7 @@
  
--gdictappdir  = $(datadir)/gnome/apps/Utilities
-+gdictappdir  = $(datadir)/applnk/Utilities
- gdictapp_DATA = GDict.desktop
---- gnome-utils-1.1.0/cromagnon/Makefile.am.wiget	Thu Feb 18 00:27:24 1999
-+++ gnome-utils-1.1.0/cromagnon/Makefile.am	Wed Apr 26 08:50:17 2000
-@@ -1,4 +1,4 @@
--Utilitiesdir = $(datadir)/gnome/apps/Utilities
-+Utilitiesdir = $(datadir)/applnk/Utilities
- GNOMEG = $(bindir)/gnomeg
+ SUBDIRS = pixmaps
  
- bin_SCRIPTS = cromagnon
---- gnome-utils-1.1.0/mini-utils/gshutdown/Makefile.am.wiget	Thu Apr 20 03:59:48 2000
-+++ gnome-utils-1.1.0/mini-utils/gshutdown/Makefile.am	Wed Apr 26 08:50:20 2000
-@@ -23,5 +23,5 @@
- pixmapsdir = $(datadir)/pixmaps
- pixmaps_DATA = gnome-shutdown.png
+-Utilitiesdir = $(datadir)/gnome/apps/System
++Utilitiesdir = $(datadir)/applnk/System
+ additionaldir  = $(datadir)/logview
  
--Systemdir = $(datadir)/gnome/apps/System
-+Systemdir = $(datadir)/applnk/System
- System_DATA = gshutdown.desktop
---- gnome-utils-1.1.0/mini-utils/guname/Makefile.am.wiget	Sun Apr 16 21:29:01 2000
-+++ gnome-utils-1.1.0/mini-utils/guname/Makefile.am	Wed Apr 26 08:53:56 2000
-@@ -37,7 +37,7 @@
- 	$(LIBGTOP_EXTRA_LIBS)	\
- 	$(GUNAME_CAPPLET_LIBS)
- 
--Systemdir = $(datadir)/gnome/apps/System
-+Systemdir = $(datadir)/applnk/System
- System_DATA = guname.desktop
- 
- if GUNAME_CAPPLET
---- gnome-utils-1.1.0/mini-utils/gw/Makefile.am.wiget	Mon Apr 24 04:45:47 2000
-+++ gnome-utils-1.1.0/mini-utils/gw/Makefile.am	Wed Apr 26 08:54:18 2000
-@@ -17,7 +17,7 @@
- 	$(GNOMEUI_LIBS) 	\
- 	$(INTLLIBS)
- 
--Systemdir = $(datadir)/gnome/apps/System
-+Systemdir = $(datadir)/applnk/System
- System_DATA = gw.desktop
- 
- pixmapdir = $(datadir)/pixmaps
---- gnome-utils-1.1.0/mini-utils/gless/Makefile.am.wiget	Tue Apr 11 22:43:52 2000
-+++ gnome-utils-1.1.0/mini-utils/gless/Makefile.am	Wed Apr 26 08:50:17 2000
-@@ -18,7 +18,7 @@
- 	$(GNOMEUI_LIBS) 	\
- 	$(INTLLIBS)
- 
--Utilitiesdir = $(datadir)/gnome/apps/Utilities
-+Utilitiesdir = $(datadir)/applnk/Utilities
- Utilities_DATA = gless.desktop
- 
- EXTRA_DIST = gless.desktop
---- gnome-utils-1.1.0/mini-utils/gfontsel/Makefile.am.wiget	Fri Feb  4 03:10:46 2000
-+++ gnome-utils-1.1.0/mini-utils/gfontsel/Makefile.am	Wed Apr 26 08:50:17 2000
-@@ -1,6 +1,6 @@
- SUBDIRS = help
- 
--Utilitiesdir = $(datadir)/gnome/apps/Utilities
-+Utilitiesdir = $(datadir)/applnk/Utilities
- 
- INCLUDES = 						\
- 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
---- gnome-utils-1.1.0/mini-utils/gcolorsel/Makefile.am.wiget	Tue Apr 25 17:32:22 2000
-+++ gnome-utils-1.1.0/mini-utils/gcolorsel/Makefile.am	Wed Apr 26 08:53:04 2000
+ INCLUDES = -DG_LOG_DOMAIN=\"logview\"					\
+diff -Nru gnome-utils-1.2.0/mini-utils/gcolorsel/Makefile.am gnome-utils-1.2.0.new/mini-utils/gcolorsel/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/gcolorsel/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/mini-utils/gcolorsel/Makefile.am	Mon Jun 12 10:55:28 2000
 @@ -3,7 +3,7 @@
  SUBDIRS = glade doc
  
@@ -136,3 +116,70 @@
  
  CFLAGS += -DGCOLORSEL_GLADEDIR=\""$(gladedir)/"\" -g
  
+diff -Nru gnome-utils-1.2.0/mini-utils/gfontsel/Makefile.am gnome-utils-1.2.0.new/mini-utils/gfontsel/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/gfontsel/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/mini-utils/gfontsel/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -1,6 +1,6 @@
+ SUBDIRS = help
+ 
+-Utilitiesdir = $(datadir)/gnome/apps/Utilities
++Utilitiesdir = $(datadir)/applnk/Utilities
+ 
+ INCLUDES = 						\
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+diff -Nru gnome-utils-1.2.0/mini-utils/gless/Makefile.am gnome-utils-1.2.0.new/mini-utils/gless/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/gless/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/mini-utils/gless/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -18,7 +18,7 @@
+ 	$(GNOMEUI_LIBS) 	\
+ 	$(INTLLIBS)
+ 
+-Utilitiesdir = $(datadir)/gnome/apps/Utilities
++Utilitiesdir = $(datadir)/applnk/Utilities
+ Utilities_DATA = gless.desktop
+ 
+ EXTRA_DIST = gless.desktop
+diff -Nru gnome-utils-1.2.0/mini-utils/gshutdown/Makefile.am gnome-utils-1.2.0.new/mini-utils/gshutdown/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/gshutdown/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/mini-utils/gshutdown/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -23,5 +23,5 @@
+ pixmapsdir = $(datadir)/pixmaps
+ pixmaps_DATA = gnome-shutdown.png
+ 
+-Systemdir = $(datadir)/gnome/apps/System
++Systemdir = $(datadir)/applnk/System
+ System_DATA = gshutdown.desktop
+diff -Nru gnome-utils-1.2.0/mini-utils/guname/Makefile.am gnome-utils-1.2.0.new/mini-utils/guname/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/guname/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/mini-utils/guname/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -39,7 +39,7 @@
+ 	$(LIBGTOP_EXTRA_LIBS)	\
+ 	$(GUNAME_CAPPLET_LIBS)
+ 
+-Systemdir = $(datadir)/gnome/apps/System
++Systemdir = $(datadir)/applnk/System
+ System_DATA = guname.desktop
+ 
+ if GUNAME_CAPPLET
+diff -Nru gnome-utils-1.2.0/mini-utils/gw/Makefile.am gnome-utils-1.2.0.new/mini-utils/gw/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/gw/Makefile.am	Mon Jun 12 10:56:03 2000
++++ gnome-utils-1.2.0.new/mini-utils/gw/Makefile.am	Mon Jun 12 10:55:28 2000
+@@ -17,7 +17,7 @@
+ 	$(GNOMEUI_LIBS) 	\
+ 	$(INTLLIBS)
+ 
+-Systemdir = $(datadir)/gnome/apps/System
++Systemdir = $(datadir)/applnk/System
+ System_DATA = gw.desktop
+ 
+ pixmapdir = $(datadir)/pixmaps
+diff -Nru gnome-utils-1.2.0/mini-utils/idetool/Makefile.am gnome-utils-1.2.0.new/mini-utils/idetool/Makefile.am
+--- gnome-utils-1.2.0/mini-utils/idetool/Makefile.am	Thu May 11 03:13:09 2000
++++ gnome-utils-1.2.0.new/mini-utils/idetool/Makefile.am	Mon Jun 12 10:58:41 2000
+@@ -24,5 +24,5 @@
+ 
+ EXTRA_DIST  = $(BITMAPS) idetool.desktop
+ 
+-Utilitiesdir = $(datadir)/gnome/apps/Utilities
++Utilitiesdir = $(datadir)/applnk/Utilities
+ Utilities_DATA = idetool.desktop
