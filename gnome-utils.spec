@@ -67,7 +67,7 @@ gettextize --copy --force
 automake -a -c
 aclocal -I macros
 autoconf
-(cd gfloppy; gettextize --copy --force)
+#(cd gfloppy; gettextize --copy --force)
 %configure
 
 %{__make} LIBS="-ltinfo"
