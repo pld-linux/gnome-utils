@@ -88,6 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install \
 	omf_dest_dir=%{_omf_dest_dir}/%{name}
 
+mv ChangeLog main-ChangeLog
 %find_lang %{name} --with-gnome --all-name
 find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
 
