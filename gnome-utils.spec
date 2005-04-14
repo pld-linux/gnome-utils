@@ -178,6 +178,9 @@ rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name} --all-name
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post dict
 %scrollkeeper_update_post
 %gconf_schema_install gdict.schemas
@@ -228,9 +231,6 @@ EOF
 
 %preun screenshot
 %gconf_schema_uninstall gnome-screeshot.schemas
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
