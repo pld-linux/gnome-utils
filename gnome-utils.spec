@@ -176,7 +176,11 @@ find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst)
 
 rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
-%find_lang %{name} --all-name
+%find_lang %{name}-2.0
+%find_lang gfloppy --with-gnome
+%find_lang gnome-dictionary --with-gnome
+%find_lang gnome-search-tool --with-gnome
+%find_lang gnome-system-log --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -232,14 +236,14 @@ EOF
 %preun screenshot
 %gconf_schema_uninstall gnome-screeshot.schemas
 
-%files -f %{name}.lang
+%files -f %{name}-2.0.lang
 %defattr(644,root,root,755)
 %doc AUTHORS *ChangeLog NEWS README
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/glade
 %dir %{_omf_dest_dir}/%{name}
 
-%files dict
+%files dict -f gnome-dictionary.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gnome-dictionary
 %attr(755,root,root) %{_libdir}/gdict-applet
@@ -251,12 +255,8 @@ EOF
 %{_omf_dest_dir}/%{name}/gnome-dictionary-C.omf
 %lang(ja) %{_omf_dest_dir}/%{name}/gnome-dictionary-ja.omf
 %lang(uk) %{_omf_dest_dir}/%{name}/gnome-dictionary-uk.omf
-%dir %{_gnomehelpdir}/gnome-dictionary
-%{_gnomehelpdir}/gnome-dictionary/C
-%lang(ja) %{_gnomehelpdir}/gnome-dictionary/ja
-%lang(uk) %{_gnomehelpdir}/gnome-dictionary/uk
 
-%files floppy
+%files floppy -f gfloppy.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gfloppy
 %{_sysconfdir}/gconf/schemas/gfloppy.schemas
@@ -266,12 +266,8 @@ EOF
 %{_omf_dest_dir}/%{name}/gfloppy-C.omf
 %lang(ja) %{_omf_dest_dir}/%{name}/gfloppy-ja.omf
 %lang(uk) %{_omf_dest_dir}/%{name}/gfloppy-uk.omf
-%dir %{_gnomehelpdir}/gfloppy
-%{_gnomehelpdir}/gfloppy/C
-%lang(ja) %{_gnomehelpdir}/gfloppy/ja
-%lang(uk) %{_gnomehelpdir}/gfloppy/uk
 
-%files logview
+%files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gnome-system-log
 %{_sysconfdir}/gconf/schemas/logview.schemas
@@ -289,20 +285,8 @@ EOF
 %lang(uk) %{_omf_dest_dir}/%{name}/gnome-system-log-uk.omf
 %lang(zh_CN) %{_omf_dest_dir}/%{name}/gnome-system-log-zh_CN.omf
 %lang(zh_TW) %{_omf_dest_dir}/%{name}/gnome-system-log-zh_TW.omf
-%dir %{_gnomehelpdir}/gnome-system-log
-%{_gnomehelpdir}/gnome-system-log/C
-%lang(de) %{_gnomehelpdir}/gnome-system-log/de
-%lang(es) %{_gnomehelpdir}/gnome-system-log/es
-%lang(fr) %{_gnomehelpdir}/gnome-system-log/fr
-%lang(it) %{_gnomehelpdir}/gnome-system-log/it
-%lang(ja) %{_gnomehelpdir}/gnome-system-log/ja
-%lang(ko) %{_gnomehelpdir}/gnome-system-log/ko
-%lang(sv) %{_gnomehelpdir}/gnome-system-log/sv
-%lang(uk) %{_gnomehelpdir}/gnome-system-log/uk
-%lang(zh_CN) %{_gnomehelpdir}/gnome-system-log/zh_CN
-%lang(zh_TW) %{_gnomehelpdir}/gnome-system-log/zh_TW
 
-%files search-tool
+%files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gnome-search-tool
 %{_sysconfdir}/gconf/schemas/gnome-search-tool.schemas
@@ -320,18 +304,6 @@ EOF
 %lang(zh_CN) %{_omf_dest_dir}/%{name}/gnome-search-tool-zh_CN.omf
 %lang(zh_HK) %{_omf_dest_dir}/%{name}/gnome-search-tool-zh_HK.omf
 %lang(zh_TW) %{_omf_dest_dir}/%{name}/gnome-search-tool-zh_TW.omf
-%dir %{_gnomehelpdir}/gnome-search-tool
-%{_gnomehelpdir}/gnome-search-tool/C
-%lang(es) %{_gnomehelpdir}/gnome-search-tool/es
-%lang(fr) %{_gnomehelpdir}/gnome-search-tool/fr
-%lang(it) %{_gnomehelpdir}/gnome-search-tool/it
-%lang(ja) %{_gnomehelpdir}/gnome-search-tool/ja
-%lang(ko) %{_gnomehelpdir}/gnome-search-tool/ko
-%lang(sv) %{_gnomehelpdir}/gnome-search-tool/sv
-%lang(uk) %{_gnomehelpdir}/gnome-search-tool/uk
-%lang(zh_CN) %{_gnomehelpdir}/gnome-search-tool/zh_CN
-%lang(zh_HK) %{_gnomehelpdir}/gnome-search-tool/zh_HK
-%lang(zh_TW) %{_gnomehelpdir}/gnome-search-tool/zh_TW
 
 %files screenshot
 %defattr(644,root,root,755)
