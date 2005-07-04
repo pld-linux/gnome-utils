@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.10.1
-Release:	2
+Version:	2.11.1
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.10/%{name}-%{version}.tar.bz2
-# Source0-md5:	78c0afdc112757b13d203fe1ad9c04ad
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.11/%{name}-%{version}.tar.bz2
+# Source0-md5:	3596b10758b488fcc3d86b690a3c8509
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
@@ -171,6 +171,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
+# kill it. we got subpackages for each changelog
 mv ChangeLog main-ChangeLog
 find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
 
@@ -294,6 +295,7 @@ EOF
 %{_datadir}/%{name}
 %{_mandir}/man1/gnome-search-tool*
 %{_omf_dest_dir}/%{name}/gnome-search-tool-C.omf
+%{_pixmapsdir}/gsearchtool
 %lang(es) %{_omf_dest_dir}/%{name}/gnome-search-tool-es.omf
 %lang(fr) %{_omf_dest_dir}/%{name}/gnome-search-tool-fr.omf
 %lang(it) %{_omf_dest_dir}/%{name}/gnome-search-tool-it.omf
