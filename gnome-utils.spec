@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.11.1
+Version:	2.11.2
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.11/%{name}-%{version}.tar.bz2
-# Source0-md5:	3596b10758b488fcc3d86b690a3c8509
+# Source0-md5:	45278bdf0450d75a9a221e7beac55c9a
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
@@ -171,10 +171,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
-# kill it. we got subpackages for each changelog
-mv ChangeLog main-ChangeLog
-find . -name ChangeLog |awk '{src=$0; dst=$0;sub("^./","",dst);gsub("/","-",dst); print "cp " src " " dst}'|sh
-
 rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name}-2.0
@@ -239,13 +235,14 @@ EOF
 
 %files -f %{name}-2.0.lang
 %defattr(644,root,root,755)
-%doc AUTHORS *ChangeLog NEWS README
+%doc AUTHORS ChangeLog NEWS README
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/glade
 %dir %{_omf_dest_dir}/%{name}
 
 %files dict -f gnome-dictionary.lang
 %defattr(644,root,root,755)
+%doc gdictsrc/ChangeLog gdictsrc/README
 %attr(755,root,root) %{_bindir}/gnome-dictionary
 %attr(755,root,root) %{_libdir}/gdict-applet
 %{_sysconfdir}/gconf/schemas/gdict.schemas
@@ -259,6 +256,7 @@ EOF
 
 %files floppy -f gfloppy.lang
 %defattr(644,root,root,755)
+%doc gfloppy/AUTHORS gfloppy/ChangeLog gfloppy/NEWS gfloppy/README gfloppy/TODO
 %attr(755,root,root) %{_bindir}/gfloppy
 %{_sysconfdir}/gconf/schemas/gfloppy.schemas
 %{_desktopdir}/gfloppy.desktop
@@ -266,10 +264,12 @@ EOF
 %{_mandir}/man1/gfloppy*
 %{_omf_dest_dir}/%{name}/gfloppy-C.omf
 %lang(ja) %{_omf_dest_dir}/%{name}/gfloppy-ja.omf
+%lang(nl) %{_omf_dest_dir}/%{name}/gfloppy-nl.omf
 %lang(uk) %{_omf_dest_dir}/%{name}/gfloppy-uk.omf
 
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
+%doc logview/ChangeLog logview/TODO
 %attr(755,root,root) %{_bindir}/gnome-system-log
 %{_sysconfdir}/gconf/schemas/logview.schemas
 %{_desktopdir}/gnome-system-log.desktop
@@ -289,6 +289,7 @@ EOF
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
+%doc gsearchtool/AUTHORS gsearchtool/ChangeLog
 %attr(755,root,root) %{_bindir}/gnome-search-tool
 %{_sysconfdir}/gconf/schemas/gnome-search-tool.schemas
 %{_desktopdir}/gnome-search-tool.desktop
@@ -309,6 +310,7 @@ EOF
 
 %files screenshot
 %defattr(644,root,root,755)
+%doc gnome-screenshot/ChangeLog
 %attr(755,root,root) %{_bindir}/gnome-panel-screenshot
 %attr(755,root,root) %{_bindir}/gnome-screenshot
 %{_sysconfdir}/gconf/schemas/gnome-screenshot.schemas
