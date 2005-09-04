@@ -6,7 +6,7 @@ Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
 Version:	2.10.1
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -14,6 +14,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.10/%{name}-%{versi
 # Source0-md5:	78c0afdc112757b13d203fe1ad9c04ad
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
+Patch2:		%{name}-hal.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.10.0
@@ -153,6 +154,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cp /usr/share/gnome-common/data/omf.make .
