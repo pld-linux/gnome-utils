@@ -6,7 +6,7 @@ Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	2.12.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -207,9 +207,6 @@ rm -rf $RPM_BUILD_ROOT
 %post logview
 %scrollkeeper_update_post
 %gconf_schema_install logview.schemas
-%banner %{name} -e << EOF
-For full functionality, set SUID /usr/bin/gnome-system-log binary.
-EOF
 
 %preun logview
 %gconf_schema_uninstall logview.schemas
