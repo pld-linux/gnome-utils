@@ -1,0 +1,1 @@
+- removed banner from system-log-viewer (gtk+ app can't be set suid root)
