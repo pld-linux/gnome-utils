@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.12.0
-Release:	2
+Version:	2.12.1
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	950148f8d30f23185fc3910b2b45d978
+# Source0-md5:	345a330b7a80e09c0d5a6562438b346b
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
