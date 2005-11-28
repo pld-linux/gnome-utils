@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.12.1
+Version:	2.12.2
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	345a330b7a80e09c0d5a6562438b346b
+# Source0-md5:	71d615932e4ddf7182abeb734b8e370c
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
@@ -152,7 +152,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
+#%patch1 -p1
 
 %build
 %{__gnome_doc_common}
