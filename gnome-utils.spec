@@ -13,7 +13,6 @@ Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.12/%{name}-%{version}.tar.bz2
 # Source0-md5:	71d615932e4ddf7182abeb734b8e370c
 Patch0:		%{name}-desktop.patch
-Patch1:		%{name}-omf.patch
 Icon:		gnome-utils.xpm
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.10.0
@@ -152,7 +151,6 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1
 
 %build
 %{__gnome_doc_common}
