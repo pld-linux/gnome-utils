@@ -221,10 +221,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post dictionary
 %scrollkeeper_update_post
-%gconf_schema_install gnome-dictionary
+%gconf_schema_install gnome-dictionary.schemas
 
 %preun dictionary
-%gconf_schema_uninstall gnome-dictionary
+%gconf_schema_uninstall gnome-dictionary.schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
