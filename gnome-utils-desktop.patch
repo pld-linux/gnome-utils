@@ -1,6 +1,6 @@
-diff -aurN gnome-utils-2.13.90.orig/gfloppy/gfloppy.desktop.in gnome-utils-2.13.90/gfloppy/gfloppy.desktop.in
---- gnome-utils-2.13.90.orig/gfloppy/gfloppy.desktop.in	2006-01-22 01:06:50.000000000 +0100
-+++ gnome-utils-2.13.90/gfloppy/gfloppy.desktop.in	2006-01-30 17:15:56.490754000 +0100
+diff -aurN gnome-utils-2.13.91.orig/gfloppy/gfloppy.desktop.in gnome-utils-2.13.91/gfloppy/gfloppy.desktop.in
+--- gnome-utils-2.13.91.orig/gfloppy/gfloppy.desktop.in	2006-01-22 01:06:50.000000000 +0100
++++ gnome-utils-2.13.91/gfloppy/gfloppy.desktop.in	2006-01-30 18:45:04.290754000 +0100
 @@ -7,7 +7,7 @@
  Icon=gnome-dev-floppy
  Type=Application
@@ -10,9 +10,9 @@ diff -aurN gnome-utils-2.13.90.orig/gfloppy/gfloppy.desktop.in gnome-utils-2.13.
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
  X-GNOME-Bugzilla-Component=gfloppy
-diff -aurN gnome-utils-2.13.90.orig/gnome-dictionary/data/gnome-dictionary.desktop.in gnome-utils-2.13.90/gnome-dictionary/data/gnome-dictionary.desktop.in
---- gnome-utils-2.13.90.orig/gnome-dictionary/data/gnome-dictionary.desktop.in	2006-01-22 01:06:44.000000000 +0100
-+++ gnome-utils-2.13.90/gnome-dictionary/data/gnome-dictionary.desktop.in	2006-01-30 17:16:17.090754000 +0100
+diff -aurN gnome-utils-2.13.91.orig/gnome-dictionary/data/gnome-dictionary.desktop.in gnome-utils-2.13.91/gnome-dictionary/data/gnome-dictionary.desktop.in
+--- gnome-utils-2.13.91.orig/gnome-dictionary/data/gnome-dictionary.desktop.in	2006-01-22 01:06:44.000000000 +0100
++++ gnome-utils-2.13.91/gnome-dictionary/data/gnome-dictionary.desktop.in	2006-01-30 18:45:04.290754000 +0100
 @@ -7,7 +7,7 @@
  Type=Application
  Icon=gnome-dictionary.png
@@ -22,9 +22,21 @@ diff -aurN gnome-utils-2.13.90.orig/gnome-dictionary/data/gnome-dictionary.deskt
  X-GNOME-DocPath=gnome-dictionary/gnome-dictionary.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
-diff -aurN gnome-utils-2.13.90.orig/gsearchtool/gnome-search-tool.desktop.in gnome-utils-2.13.90/gsearchtool/gnome-search-tool.desktop.in
---- gnome-utils-2.13.90.orig/gsearchtool/gnome-search-tool.desktop.in	2006-01-21 21:18:47.000000000 +0100
-+++ gnome-utils-2.13.90/gsearchtool/gnome-search-tool.desktop.in	2006-01-30 17:16:51.790754000 +0100
+diff -aurN gnome-utils-2.13.91.orig/gnome-screenshot/gnome-screenshot.desktop.in gnome-utils-2.13.91/gnome-screenshot/gnome-screenshot.desktop.in
+--- gnome-utils-2.13.91.orig/gnome-screenshot/gnome-screenshot.desktop.in	2006-01-22 01:06:50.000000000 +0100
++++ gnome-utils-2.13.91/gnome-screenshot/gnome-screenshot.desktop.in	2006-01-30 18:45:19.420754000 +0100
+@@ -7,7 +7,7 @@
+ Type=Application
+ Icon=applets-screenshooter
+ StartupNotify=true
+-Categories=GTK;GNOME;Application;Utility;
++Categories=GTK;GNOME;Utility;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gnome-utils
+ X-GNOME-Bugzilla-Component=screenshot
+diff -aurN gnome-utils-2.13.91.orig/gsearchtool/gnome-search-tool.desktop.in gnome-utils-2.13.91/gsearchtool/gnome-search-tool.desktop.in
+--- gnome-utils-2.13.91.orig/gsearchtool/gnome-search-tool.desktop.in	2006-01-21 21:18:47.000000000 +0100
++++ gnome-utils-2.13.91/gsearchtool/gnome-search-tool.desktop.in	2006-01-30 18:45:04.290754000 +0100
 @@ -7,7 +7,7 @@
  Terminal=false
  Type=Application
@@ -34,9 +46,9 @@ diff -aurN gnome-utils-2.13.90.orig/gsearchtool/gnome-search-tool.desktop.in gno
  X-GNOME-DocPath=gnome-search-tool/gnome-search-tool.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
-diff -aurN gnome-utils-2.13.90.orig/logview/gnome-system-log.desktop.in gnome-utils-2.13.90/logview/gnome-system-log.desktop.in
---- gnome-utils-2.13.90.orig/logview/gnome-system-log.desktop.in	2006-01-25 17:28:53.000000000 +0100
-+++ gnome-utils-2.13.90/logview/gnome-system-log.desktop.in	2006-01-30 17:17:18.010754000 +0100
+diff -aurN gnome-utils-2.13.91.orig/logview/gnome-system-log.desktop.in gnome-utils-2.13.91/logview/gnome-system-log.desktop.in
+--- gnome-utils-2.13.91.orig/logview/gnome-system-log.desktop.in	2006-01-25 17:28:53.000000000 +0100
++++ gnome-utils-2.13.91/logview/gnome-system-log.desktop.in	2006-01-30 18:45:04.290754000 +0100
 @@ -7,7 +7,7 @@
  Terminal=false
  Type=Application
