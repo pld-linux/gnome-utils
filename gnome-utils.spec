@@ -73,7 +73,6 @@ Programy u¿ytkowe GNOME'a.
 Summary:	libgdict library
 Summary(pl):	Biblioteka libgdict
 Group:		Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description -n libgdict
 libgdict library.
@@ -82,9 +81,9 @@ libgdict library.
 Biblioteka libgdict.
 
 %package -n libgdict-devel
-Summary:        Header files for libgdict library
-Summary(pl):    Pliki nag³ówkowe biblioteki libgdict
-Group:          Development/Libraries
+Summary:	Header files for libgdict library
+Summary(pl):	Pliki nag³ówkowe biblioteki libgdict
+Group:		Development/Libraries
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-devel
@@ -94,10 +93,10 @@ This is the package containing the header files for libgdict library.
 Ten pakiet zawiera pliki nag³ówkowe biblioteki libgdict.
 
 %package -n libgdict-static
-Summary:        Static libgdict library
-Summary(pl):    Statyczna biblioteka libgdict
-Group:          Development/Libraries
-Requires:       libgdict-devel = %{epoch}:%{version}-%{release}
+Summary:	Static libgdict library
+Summary(pl):	Statyczna biblioteka libgdict
+Group:		Development/Libraries
+Requires:	libgdict-devel = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-static
 Static libgdict library.
