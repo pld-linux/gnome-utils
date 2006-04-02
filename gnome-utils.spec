@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.12.2
+Version:	2.14.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	71d615932e4ddf7182abeb734b8e370c
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.14/%{name}-%{version}.tar.bz2
+# Source0-md5:	d1d16ff6bfc1f6ddc110d18ec4dfdbfa
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.10.0
@@ -69,20 +69,56 @@ Programy u©ytkowe GNOME'a.
 Цей пакет м╕стить деяк╕ утил╕ти для GNOME, так╕ як ╕нструмент для
 пошуку файл╕в, калькулятор, редактор 16-кового коду, тощо.
 
-%package dict
+%package -n libgdict
+Summary:	libgdict library
+Summary(pl):	Biblioteka libgdict
+Group:		Libraries
+
+%description -n libgdict
+libgdict library.
+
+%description -n libgdict -l pl
+Biblioteka libgdict.
+
+%package -n libgdict-devel
+Summary:	Header files for libgdict library
+Summary(pl):	Pliki nagЁСwkowe biblioteki libgdict
+Group:		Development/Libraries
+Requires:	libgdict = %{epoch}:%{version}-%{release}
+
+%description -n libgdict-devel
+This is the package containing the header files for libgdict library.
+
+%description -n libgdict-devel -l pl
+Ten pakiet zawiera pliki nagЁСwkowe biblioteki libgdict.
+
+%package -n libgdict-static
+Summary:	Static libgdict library
+Summary(pl):	Statyczna biblioteka libgdict
+Group:		Development/Libraries
+Requires:	libgdict-devel = %{epoch}:%{version}-%{release}
+
+%description -n libgdict-static
+Static libgdict library.
+
+%description -n libgdict-static -l pl
+Statyczna biblioteka libgdict.
+
+%package dictionary
 Summary:	Online dictionary
 Summary(pl):	SЁownik online
 Group:		X11/Applications/Multimedia
 Requires(post,preun):	GConf2
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Obsoletes:	gnome-dict
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
-%description dict
+%description dictionary
 Allows to look up an online dictionary for definitions and correct
 spellings of words.
 
-%description dict -l pl
+%description dictionary -l pl
 Pozwala na wyszukiwanie definicji i poprawnej pisowni sЁСw w sЁowniku
 sieciowym.
 
@@ -152,13 +188,16 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %patch0 -p1
 
 %build
+%{__intltoolize}
 %{__gnome_doc_common}
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \
-	--disable-schemas-install
+	--disable-schemas-install \
+	--disable-scrollkeeper \
+	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
 %install
@@ -167,8 +206,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
-
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name}-2.0
 %find_lang gfloppy --with-gnome
@@ -179,14 +216,17 @@ rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post dict
+%post   -n libgdict -p /sbin/ldconfig
+%postun -n libgdict -p /sbin/ldconfig
+
+%post dictionary
 %scrollkeeper_update_post
-%gconf_schema_install gdict.schemas
+%gconf_schema_install gnome-dictionary.schemas
 
-%preun dict
-%gconf_schema_uninstall gdict.schemas
+%preun dictionary
+%gconf_schema_uninstall gnome-dictionary.schemas
 
-%postun dict
+%postun dictionary
 %scrollkeeper_update_postun
 
 %post floppy
@@ -232,21 +272,38 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/glade
-%dir %{_omf_dest_dir}/%{name}
 
-%files dict -f gnome-dictionary.lang
+%files -n libgdict
 %defattr(644,root,root,755)
-%doc gdictsrc/ChangeLog gdictsrc/README
+%attr(755,root,root) %{_libdir}/libgdict-1.0.so.*.*.*
+%{_datadir}/gdict-1.0
+
+%files -n libgdict-devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libgdict-1.0.so
+%{_libdir}/libgdict-1.0.la
+%{_gtkdocdir}/gdict
+%{_includedir}/gdict-1.0
+%{_pkgconfigdir}/gdict-1.0.pc
+
+%files -n libgdict-static
+%defattr(644,root,root,755)
+%{_libdir}/libgdict-1.0.a
+
+%files dictionary -f gnome-dictionary.lang
+%defattr(644,root,root,755)
+%doc gnome-dictionary/ChangeLog gnome-dictionary/README gnome-dictionary/TODO
 %attr(755,root,root) %{_bindir}/gnome-dictionary
-%attr(755,root,root) %{_libdir}/gdict-applet
-%{_sysconfdir}/gconf/schemas/gdict.schemas
+%attr(755,root,root) %{_libdir}/gnome-dictionary-applet
+%{_sysconfdir}/gconf/schemas/gnome-dictionary.schemas
 %{_desktopdir}/gnome-dictionary.desktop
 %{_libdir}/bonobo/servers/*
 %{_datadir}/gnome-2.0/ui/*
+%{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
-%{_omf_dest_dir}/%{name}/gnome-dictionary-C.omf
-%lang(ja) %{_omf_dest_dir}/%{name}/gnome-dictionary-ja.omf
-%lang(uk) %{_omf_dest_dir}/%{name}/gnome-dictionary-uk.omf
+%{_pixmapsdir}/gnome-dictionary.png
+%{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
+%lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
 
 %files floppy -f gfloppy.lang
 %defattr(644,root,root,755)
@@ -256,10 +313,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gfloppy.desktop
 %{_datadir}/%{name}/glade/gfloppy2.glade
 %{_mandir}/man1/gfloppy*
-%{_omf_dest_dir}/%{name}/gfloppy-C.omf
-%lang(ja) %{_omf_dest_dir}/%{name}/gfloppy-ja.omf
-%lang(nl) %{_omf_dest_dir}/%{name}/gfloppy-nl.omf
-%lang(uk) %{_omf_dest_dir}/%{name}/gfloppy-uk.omf
+%{_omf_dest_dir}/gfloppy/gfloppy-C.omf
 
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
@@ -269,17 +323,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gnome-system-log.desktop
 %{_datadir}/gnome-system-log
 %{_mandir}/man1/gnome-system-log*
-%{_omf_dest_dir}/%{name}/gnome-system-log-C.omf
-%lang(de) %{_omf_dest_dir}/%{name}/gnome-system-log-de.omf
-%lang(es) %{_omf_dest_dir}/%{name}/gnome-system-log-es.omf
-%lang(fr) %{_omf_dest_dir}/%{name}/gnome-system-log-fr.omf
-%lang(it) %{_omf_dest_dir}/%{name}/gnome-system-log-it.omf
-%lang(ja) %{_omf_dest_dir}/%{name}/gnome-system-log-ja.omf
-%lang(ko) %{_omf_dest_dir}/%{name}/gnome-system-log-ko.omf
-%lang(sv) %{_omf_dest_dir}/%{name}/gnome-system-log-sv.omf
-%lang(uk) %{_omf_dest_dir}/%{name}/gnome-system-log-uk.omf
-%lang(zh_CN) %{_omf_dest_dir}/%{name}/gnome-system-log-zh_CN.omf
-%lang(zh_TW) %{_omf_dest_dir}/%{name}/gnome-system-log-zh_TW.omf
+%{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
+%lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
@@ -289,23 +334,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gnome-search-tool.desktop
 %{_datadir}/%{name}
 %{_mandir}/man1/gnome-search-tool*
-%{_omf_dest_dir}/%{name}/gnome-search-tool-C.omf
 %{_pixmapsdir}/gsearchtool
-%lang(es) %{_omf_dest_dir}/%{name}/gnome-search-tool-es.omf
-%lang(fr) %{_omf_dest_dir}/%{name}/gnome-search-tool-fr.omf
-%lang(it) %{_omf_dest_dir}/%{name}/gnome-search-tool-it.omf
-%lang(ja) %{_omf_dest_dir}/%{name}/gnome-search-tool-ja.omf
-%lang(ko) %{_omf_dest_dir}/%{name}/gnome-search-tool-ko.omf
-%lang(sv) %{_omf_dest_dir}/%{name}/gnome-search-tool-sv.omf
-%lang(uk) %{_omf_dest_dir}/%{name}/gnome-search-tool-uk.omf
-%lang(zh_CN) %{_omf_dest_dir}/%{name}/gnome-search-tool-zh_CN.omf
-%lang(zh_HK) %{_omf_dest_dir}/%{name}/gnome-search-tool-zh_HK.omf
-%lang(zh_TW) %{_omf_dest_dir}/%{name}/gnome-search-tool-zh_TW.omf
+%{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
+%lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
+%lang(it) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-it.omf
 
 %files screenshot
 %defattr(644,root,root,755)
 %doc gnome-screenshot/ChangeLog
 %attr(755,root,root) %{_bindir}/gnome-panel-screenshot
 %attr(755,root,root) %{_bindir}/gnome-screenshot
-%{_sysconfdir}/gconf/schemas/gnome-screenshot.schemas
 %{_datadir}/gnome-screenshot
+%{_desktopdir}/gnome-screenshot.desktop
+%{_sysconfdir}/gconf/schemas/gnome-screenshot.schemas
