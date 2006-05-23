@@ -6,7 +6,7 @@ Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
 Version:	2.14.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -111,7 +111,9 @@ Group:		X11/Applications/Multimedia
 Requires(post,preun):	GConf2
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Provides:	gnome-utils-dict
 Obsoletes:	gnome-dict
+Obsoletes:	gnome-utils-dict
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description dictionary
