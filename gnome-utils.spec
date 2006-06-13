@@ -5,40 +5,40 @@ Summary(ru):	õÔÉÌÉÔÙ GNOME, ÔÁËÉÅ ËÁË ÐÏÉÓË ÆÁÊÌÏ× É ËÁÌØËÕÌÑÔÏÒ
 Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
-Version:	2.14.0
-Release:	3
+Version:	2.15.3
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.14/%{name}-%{version}.tar.bz2
-# Source0-md5:	d1d16ff6bfc1f6ddc110d18ec4dfdbfa
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.15/%{name}-%{version}.tar.bz2
+# Source0-md5:	e74f8e3039660da6754e931afbab8619
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-Makefile.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.10.0
+BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-desktop-devel >= 2.10.0-2
-BuildRequires:	gnome-panel-devel >= 2.10.0-2
-BuildRequires:	gnome-vfs2-devel >= 2.10.0-2
-BuildRequires:	hal-devel >= 0.4.7
-BuildRequires:	intltool >= 0.33
+BuildRequires:	gnome-desktop-devel >= 2.15.2
+BuildRequires:	gnome-panel-devel >= 2.14.2
+BuildRequires:	gnome-vfs2-devel >= 2.15.2
+BuildRequires:	hal-devel >= 0.5.7
+BuildRequires:	intltool >= 0.35
 BuildRequires:	libglade2-devel >= 1:2.5.1
 BuildRequires:	libgnomeprintui-devel >= 2.10.2
-BuildRequires:	libgnomeui-devel >= 2.10.0-2
+BuildRequires:	libgnomeui-devel >= 2.15.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
 BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires(post,preun):	GConf2
+Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.10.0-2
-Requires:	gtk+2 >= 2:2.6.4
-Requires:	libgnomeui >= 2.14.0
+Requires:	gnome-vfs2 >= 2.15.1
+Requires:	libgnomeui >= 2.15.1
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -105,11 +105,27 @@ Static libgdict library.
 %description -n libgdict-static -l pl
 Statyczna biblioteka libgdict.
 
+%package baobab
+Summary:	Graphical directory tree analyzer
+Summary(pl):	Graficzny analizator drzew katalogów
+Group:		X11/Applications
+Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,postun):	gtk+2 >= 2:2.9.2
+Requires(post,postun):	scrollkeeper
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+
+%description baobab
+Graphical directory tree analyzer.
+
+%description baobab -l pl
+Graficzny analizator drzew katalogów.
+
 %package dictionary
 Summary:	Online dictionary
 Summary(pl):	S³ownik online
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Group:		X11/Applications
+Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,postun):	gtk+2 >= 2:2.9.2
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
@@ -128,8 +144,8 @@ sieciowym.
 %package floppy
 Summary:	GNOME floppy formatter
 Summary(pl):	Formater dyskietek dla GNOME
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Group:		X11/Applications
+Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
@@ -144,8 +160,8 @@ GFloppy formatuje dyskietki.
 %package logview
 Summary:	System log viewer for GNOME
 Summary(pl):	Przegl±darka logów systemowych dla GNOME
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Group:		X11/Applications
+Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -159,8 +175,8 @@ Pozwala na przegl±danie logów systemowych.
 %package search-tool
 Summary:	GNOME search tool
 Summary(pl):	Narzêdzie wyszukuj±ce dla GNOME
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Group:		X11/Applications
+Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -174,8 +190,8 @@ Pozwala na wyszukiwanie plików w systemie.
 %package screenshot
 Summary:	Screenshot utility
 Summary(pl):	Narzêdzie do robienia zrzutów ekranu
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Group:		X11/Applications
+Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -189,6 +205,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__intltoolize}
@@ -211,6 +228,7 @@ rm -rf $RPM_BUILD_ROOT
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 %find_lang %{name}-2.0
+%find_lang baobab --with-gnome
 %find_lang gfloppy --with-gnome
 %find_lang gnome-dictionary --with-gnome
 %find_lang gnome-search-tool --with-gnome
@@ -222,15 +240,29 @@ rm -rf $RPM_BUILD_ROOT
 %post   -n libgdict -p /sbin/ldconfig
 %postun -n libgdict -p /sbin/ldconfig
 
+%post baobab
+%scrollkeeper_update_post
+%gconf_schema_install baobab.schemas
+gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
+
+%preun baobab
+%gconf_schema_uninstall baobab.schemas
+
+%postun baobab
+%scrollkeeper_update_postun
+gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
+
 %post dictionary
 %scrollkeeper_update_post
 %gconf_schema_install gnome-dictionary.schemas
+gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
 
 %preun dictionary
 %gconf_schema_uninstall gnome-dictionary.schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
+gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
 
 %post floppy
 %scrollkeeper_update_post
@@ -293,6 +325,19 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libgdict-1.0.a
 
+%files baobab -f baobab.lang
+%defattr(644,root,root,755)
+%doc baobab/AUTHORS baobab/ChangeLog baobab/README baobab/TODO
+%attr(755,root,root) %{_bindir}/baobab
+%{_sysconfdir}/gconf/schemas/baobab.schemas
+%{_desktopdir}/baobab.desktop
+%{_iconsdir}/hicolor/*/*/baobab.*
+%{_datadir}/baobab
+%{_mandir}/man1/baobab*
+%dir %{_omf_dest_dir}/baobab
+%{_omf_dest_dir}/baobab/baobab-C.omf
+%{_sysconfdir}/gconf/schemas/baobab.schemas
+
 %files dictionary -f gnome-dictionary.lang
 %defattr(644,root,root,755)
 %doc gnome-dictionary/ChangeLog gnome-dictionary/README gnome-dictionary/TODO
@@ -304,9 +349,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
-%{_pixmapsdir}/gnome-dictionary.png
+%{_iconsdir}/hicolor/*/*/gnome-dictionary.*
+%{_iconsdir}/hicolor/*/gnome-dictionary.*
+%dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
+%lang(ru) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ru.omf
+%lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
 
 %files floppy -f gfloppy.lang
 %defattr(644,root,root,755)
@@ -316,7 +365,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gfloppy.desktop
 %{_datadir}/%{name}/glade/gfloppy2.glade
 %{_mandir}/man1/gfloppy*
+%dir %{_omf_dest_dir}/gfloppy
 %{_omf_dest_dir}/gfloppy/gfloppy-C.omf
+%lang(uk) %{_omf_dest_dir}/gfloppy/gfloppy-uk.omf
 
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
@@ -326,8 +377,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gnome-system-log.desktop
 %{_datadir}/gnome-system-log
 %{_mandir}/man1/gnome-system-log*
+%dir %{_omf_dest_dir}/gnome-system-log
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
+%lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
@@ -338,9 +391,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_mandir}/man1/gnome-search-tool*
 %{_pixmapsdir}/gsearchtool
+%dir %{_omf_dest_dir}/gnome-search-tool
 %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
-%lang(it) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-it.omf
+%lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
+%lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
 
 %files screenshot
 %defattr(644,root,root,755)
