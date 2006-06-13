@@ -10,9 +10,9 @@ diff -aurN gnome-utils-2.13.91.orig/gfloppy/gfloppy.desktop.in gnome-utils-2.13.
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
  X-GNOME-Bugzilla-Component=gfloppy
-diff -aurN gnome-utils-2.13.91.orig/gnome-dictionary/data/gnome-dictionary.desktop.in gnome-utils-2.13.91/gnome-dictionary/data/gnome-dictionary.desktop.in
---- gnome-utils-2.13.91.orig/gnome-dictionary/data/gnome-dictionary.desktop.in	2006-01-22 01:06:44.000000000 +0100
-+++ gnome-utils-2.13.91/gnome-dictionary/data/gnome-dictionary.desktop.in	2006-01-30 18:45:04.290754000 +0100
+diff -aurN gnome-utils-2.13.91.orig/gnome-dictionary/data/gnome-dictionary.desktop.in.in gnome-utils-2.13.91/gnome-dictionary/data/gnome-dictionary.desktop.in.in
+--- gnome-utils-2.13.91.orig/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2006-01-22 01:06:44.000000000 +0100
++++ gnome-utils-2.13.91/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2006-01-30 18:45:04.290754000 +0100
 @@ -7,7 +7,7 @@
  Type=Application
  Icon=gnome-dictionary.png
@@ -46,9 +46,9 @@ diff -aurN gnome-utils-2.13.91.orig/gsearchtool/gnome-search-tool.desktop.in gno
  X-GNOME-DocPath=gnome-search-tool/gnome-search-tool.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
-diff -aurN gnome-utils-2.13.91.orig/logview/gnome-system-log.desktop.in gnome-utils-2.13.91/logview/gnome-system-log.desktop.in
---- gnome-utils-2.13.91.orig/logview/gnome-system-log.desktop.in	2006-01-25 17:28:53.000000000 +0100
-+++ gnome-utils-2.13.91/logview/gnome-system-log.desktop.in	2006-01-30 18:45:04.290754000 +0100
+diff -aurN gnome-utils-2.13.91.orig/logview/gnome-system-log.desktop.in.in gnome-utils-2.13.91/logview/gnome-system-log.desktop.in.in
+--- gnome-utils-2.13.91.orig/logview/gnome-system-log.desktop.in.in	2006-01-25 17:28:53.000000000 +0100
++++ gnome-utils-2.13.91/logview/gnome-system-log.desktop.in.in	2006-01-30 18:45:04.290754000 +0100
 @@ -7,7 +7,7 @@
  Terminal=false
  Type=Application
