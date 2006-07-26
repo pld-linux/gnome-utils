@@ -5,13 +5,13 @@ Summary(ru):	õÔÉÌÉÔÙ GNOME, ÔÁËÉÅ ËÁË ÐÏÉÓË ÆÁÊÌÏ× É ËÁÌØËÕÌÑÔÏÒ
 Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
-Version:	2.15.4
-Release:	2
+Version:	2.15.90
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	a86b4c1b46c5849777e0ae51fbbe11cd
+# Source0-md5:	357c86a994503f9ba74d2c96345555d9
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
@@ -20,24 +20,25 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-desktop-devel >= 2.15.4
-BuildRequires:	gnome-panel-devel >= 2.14.2
-BuildRequires:	gnome-vfs2-devel >= 2.15.3
+BuildRequires:	gnome-desktop-devel >= 2.15.90
+BuildRequires:	gnome-panel-devel >= 2.15.90
+BuildRequires:	gnome-vfs2-devel >= 2.15.90
 BuildRequires:	hal-devel >= 0.5.7
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libglade2-devel >= 1:2.6.0
+BuildRequires:	libgtop-devel >= 2.14.1
 BuildRequires:	libgnomeprintui-devel >= 2.10.2
-BuildRequires:	libgnomeui-devel >= 2.15.2
+BuildRequires:	libgnomeui-devel >= 2.15.90
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
-BuildRequires:	rpmbuild(macros) >= 1.197
+BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.15.3
-Requires:	libgnomeui >= 2.15.2
+Requires:	gnome-vfs2 >= 2.15.90
+Requires:	libgnomeui >= 2.15.90
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -109,7 +110,7 @@ Summary:	Graphical directory tree analyzer
 Summary(pl):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.0
+Requires(post,postun):	gtk+2 >= 2:2.10.1
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -124,7 +125,7 @@ Summary:	Online dictionary
 Summary(pl):	S³ownik online
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.0
+Requires(post,postun):	gtk+2 >= 2:2.10.1
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
@@ -212,7 +213,6 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
-LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure \
 	--disable-schemas-install \
 	--disable-scrollkeeper \
@@ -242,26 +242,26 @@ rm -rf $RPM_BUILD_ROOT
 %post baobab
 %scrollkeeper_update_post
 %gconf_schema_install baobab.schemas
-gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
+%update_icon_cache hicolor
 
 %preun baobab
 %gconf_schema_uninstall baobab.schemas
 
 %postun baobab
 %scrollkeeper_update_postun
-gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
+%update_icon_cache hicolor
 
 %post dictionary
 %scrollkeeper_update_post
 %gconf_schema_install gnome-dictionary.schemas
-gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
+%update_icon_cache hicolor
 
 %preun dictionary
 %gconf_schema_uninstall gnome-dictionary.schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
-gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
+%update_icon_cache hicolor
 
 %post floppy
 %scrollkeeper_update_post
@@ -352,8 +352,10 @@ gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
 %{_iconsdir}/hicolor/*/gnome-dictionary.*
 %dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
+%lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
 %lang(ru) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ru.omf
+%lang(sv) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
 
 %files floppy -f gfloppy.lang
@@ -379,6 +381,7 @@ gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
 %dir %{_omf_dest_dir}/gnome-system-log
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
+%lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
 %files search-tool -f gnome-search-tool.lang
@@ -394,6 +397,7 @@ gtk-update-icon-cache -qf %{_datadir}/icons/hicolor
 %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
 %lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
+%lang(sv) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
 
 %files screenshot
