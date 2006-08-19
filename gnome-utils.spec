@@ -113,6 +113,7 @@ Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	gtk+2 >= 2:2.10.1
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Obsoletes:	baobab
 
 %description baobab
 Graphical directory tree analyzer.
