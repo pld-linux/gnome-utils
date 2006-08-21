@@ -5,13 +5,13 @@ Summary(ru):	õÔÉÌÉÔÙ GNOME, ÔÁËÉÅ ËÁË ÐÏÉÓË ÆÁÊÌÏ× É ËÁÌØËÕÌÑÔÏÒ
 Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
-Version:	2.15.92
+Version:	2.15.93
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	44b7f544e88dd48d8a6d51b61969ac67
+# Source0-md5:	8e2b3cf3599a56a6d3a5247aade7b5a2
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
@@ -22,7 +22,7 @@ BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
 BuildRequires:	gnome-desktop-devel >= 2.15.91
 BuildRequires:	gnome-panel-devel >= 2.15.91
-BuildRequires:	gnome-vfs2-devel >= 2.15.91
+BuildRequires:	gnome-vfs2-devel >= 2.15.92
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libglade2-devel >= 1:2.6.0
@@ -37,7 +37,7 @@ BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.15.91
+Requires:	gnome-vfs2 >= 2.15.92
 Requires:	libgnomeui >= 2.15.91
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
@@ -105,12 +105,24 @@ Static libgdict library.
 %description -n libgdict-static -l pl
 Statyczna biblioteka libgdict.
 
+%package -n libgdict-apidocs
+Summary:	libgdict API documentation
+Summary(pl):	Dokumentacja API libgdict
+Group:		Documentation
+Requires:	gtk-doc-common
+
+%description -n libgdict-apidocs
+libgdict API documentation.
+
+%description -n libgdict-apidocs -l pl
+Dokumentacja API libgdict.
+
 %package baobab
 Summary:	Graphical directory tree analyzer
 Summary(pl):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.1
+Requires(post,postun):	gtk+2 >= 2:2.10.2
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	baobab
@@ -126,7 +138,7 @@ Summary:	Online dictionary
 Summary(pl):	S³ownik online
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.1
+Requires(post,postun):	gtk+2 >= 2:2.10.2
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
@@ -317,13 +329,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgdict-1.0.so
 %{_libdir}/libgdict-1.0.la
-%{_gtkdocdir}/gdict
 %{_includedir}/gdict-1.0
 %{_pkgconfigdir}/gdict-1.0.pc
 
 %files -n libgdict-static
 %defattr(644,root,root,755)
 %{_libdir}/libgdict-1.0.a
+
+%files -n libgdict-apidocs
+%defattr(644,root,root,755)
+%{_gtkdocdir}/gdict
 
 %files baobab -f baobab.lang
 %defattr(644,root,root,755)
@@ -336,6 +351,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/baobab*
 %dir %{_omf_dest_dir}/baobab
 %{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %{_sysconfdir}/gconf/schemas/baobab.schemas
 
 %files dictionary -f gnome-dictionary.lang
@@ -355,6 +371,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
 %lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
+%lang(fr) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-fr.omf
 %lang(ru) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
@@ -382,6 +399,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_omf_dest_dir}/gnome-system-log
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
+%lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
 %lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
@@ -397,6 +415,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_omf_dest_dir}/gnome-search-tool
 %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
+%lang(fr) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-fr.omf
 %lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
