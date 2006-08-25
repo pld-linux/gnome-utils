@@ -5,13 +5,13 @@ Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
 Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
 Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
 Name:		gnome-utils
-Version:	2.15.93
+Version:	2.15.94
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	8e2b3cf3599a56a6d3a5247aade7b5a2
+# Source0-md5:	e9f22a7fb3a7a89380fede42dbb3d97b
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
@@ -366,7 +366,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
 %{_iconsdir}/hicolor/*/*/gnome-dictionary.*
-%{_iconsdir}/hicolor/*/gnome-dictionary.*
 %dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
 %lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
