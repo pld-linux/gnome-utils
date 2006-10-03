@@ -5,13 +5,13 @@ Summary(ru):	õÔÉÌÉÔÙ GNOME, ÔÁËÉÅ ËÁË ÐÏÉÓË ÆÁÊÌÏ× É ËÁÌØËÕÌÑÔÏÒ
 Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
-Version:	2.16.0
+Version:	2.16.1
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	6658f07cc1e7f42fe58cfcd038db1061
+# Source0-md5:	fa07bc6c19468d2a5e7b8713a7ffe9eb
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
@@ -20,13 +20,13 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-desktop-devel >= 2.15.92
-BuildRequires:	gnome-panel-devel >= 2.15.92
-BuildRequires:	gnome-vfs2-devel >= 2.16.0
+BuildRequires:	gnome-desktop-devel >= 2.16.1
+BuildRequires:	gnome-panel-devel >= 2.16.1
+BuildRequires:	gnome-vfs2-devel >= 2.16.1
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgtop-devel >= 2.14.2
+BuildRequires:	libgtop-devel >= 2.14.4
 BuildRequires:	libgnomeprintui-devel >= 2.12.1
 BuildRequires:	libgnomeui-devel >= 2.16.0
 BuildRequires:	libtool
@@ -37,7 +37,7 @@ BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post,preun):	GConf2 >= 2.14.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.16.0
+Requires:	gnome-vfs2 >= 2.16.1
 Requires:	libgnomeui >= 2.16.0
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
@@ -122,7 +122,7 @@ Summary:	Graphical directory tree analyzer
 Summary(pl):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.2
+Requires(post,postun):	gtk+2 >= 2:2.10.5
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	baobab
@@ -138,7 +138,7 @@ Summary:	Online dictionary
 Summary(pl):	S³ownik online
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.2
+Requires(post,postun):	gtk+2 >= 2:2.10.5
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
@@ -399,6 +399,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
+%lang(it) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-it.omf
 %lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
