@@ -5,16 +5,16 @@ Summary(ru):	õÔÉÌÉÔÙ GNOME, ÔÁËÉÅ ËÁË ÐÏÉÓË ÆÁÊÌÏ× É ËÁÌØËÕÌÑÔÏÒ
 Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
 Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
 Name:		gnome-utils
-Version:	2.16.1
+Version:	2.16.2
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	fa07bc6c19468d2a5e7b8713a7ffe9eb
+# Source0-md5:	4e70e667a78fc5bee4a4b8f2f3ae8440
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.14.0
+BuildRequires:	GConf2-devel >= 2.16.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
@@ -22,23 +22,23 @@ BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
 BuildRequires:	gnome-desktop-devel >= 2.16.1
 BuildRequires:	gnome-panel-devel >= 2.16.1
-BuildRequires:	gnome-vfs2-devel >= 2.16.1
+BuildRequires:	gnome-vfs2-devel >= 2.16.2
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libglade2-devel >= 1:2.6.0
 BuildRequires:	libgtop-devel >= 2.14.4
 BuildRequires:	libgnomeprintui-devel >= 2.12.1
-BuildRequires:	libgnomeui-devel >= 2.16.0
+BuildRequires:	libgnomeui-devel >= 2.16.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.16.1
-Requires:	libgnomeui >= 2.16.0
+Requires:	gnome-vfs2 >= 2.16.2
+Requires:	libgnomeui >= 2.16.1
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -121,8 +121,8 @@ Dokumentacja API libgdict.
 Summary:	Graphical directory tree analyzer
 Summary(pl):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.5
+Requires(post,preun):	GConf2 >= 2.16.0
+Requires(post,postun):	gtk+2 >= 2:2.10.6
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	baobab
@@ -137,8 +137,8 @@ Graficzny analizator drzew katalogów.
 Summary:	Online dictionary
 Summary(pl):	S³ownik online
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.14.0
-Requires(post,postun):	gtk+2 >= 2:2.10.5
+Requires(post,preun):	GConf2 >= 2.16.0
+Requires(post,postun):	gtk+2 >= 2:2.10.6
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
@@ -158,7 +158,7 @@ sieciowym.
 Summary:	GNOME floppy formatter
 Summary(pl):	Formater dyskietek dla GNOME
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
@@ -174,7 +174,7 @@ GFloppy formatuje dyskietki.
 Summary:	System log viewer for GNOME
 Summary(pl):	Przegl±darka logów systemowych dla GNOME
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -189,7 +189,7 @@ Pozwala na przegl±danie logów systemowych.
 Summary:	GNOME search tool
 Summary(pl):	Narzêdzie wyszukuj±ce dla GNOME
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -204,7 +204,7 @@ Pozwala na wyszukiwanie plików w systemie.
 Summary:	Screenshot utility
 Summary(pl):	Narzêdzie do robienia zrzutów ekranu
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.14.0
+Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -351,6 +351,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/baobab*
 %dir %{_omf_dest_dir}/baobab
 %{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %{_sysconfdir}/gconf/schemas/baobab.schemas
 
