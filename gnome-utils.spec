@@ -13,6 +13,7 @@ Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.14/%{name}-%{version}.tar.bz2
 # Source0-md5:	d1d16ff6bfc1f6ddc110d18ec4dfdbfa
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-ALL_LINGUAS.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
@@ -21,6 +22,7 @@ BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
 BuildRequires:	gnome-desktop-devel >= 2.14.0
+BuildRequires:	gnome-doc-utils >= 0.3.2
 BuildRequires:	gnome-panel-devel >= 2.14.0
 BuildRequires:	gnome-vfs2-devel >= 2.14.0
 BuildRequires:	hal-devel >= 0.4.7
@@ -189,6 +191,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__intltoolize}
