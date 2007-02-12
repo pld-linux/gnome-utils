@@ -1,9 +1,9 @@
 Summary:	GNOME utility programs
-Summary(ja):	GNOME ¥æ¡¼¥Æ¥£¥ê¥Æ¥£¥×¥í¥°¥é¥à½¸
-Summary(pl):	Programy u¿ytkowe GNOME
-Summary(ru):	õÔÉÌÉÔÙ GNOME, ÔÁËÉÅ ËÁË ÐÏÉÓË ÆÁÊÌÏ× É ËÁÌØËÕÌÑÔÏÒ
-Summary(uk):	õÔÉÌ¦ÔÉ GNOME, ÔÁË¦ ÑË ÐÏÛÕË ÆÁÊÌ¦× ÔÁ ËÁÌØËÕÌÑÔÏÒ
-Summary(zh_CN):	GNOMEÓ¦ÓÃ³ÌÐò¼¯
+Summary(ja.UTF-8):   GNOME ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ãƒ—ãƒ­ã‚°ãƒ©ãƒ é›†
+Summary(pl.UTF-8):   Programy uÅ¼ytkowe GNOME
+Summary(ru.UTF-8):   Ð£Ñ‚Ð¸Ð»Ð¸Ñ‚Ñ‹ GNOME, Ñ‚Ð°ÐºÐ¸Ðµ ÐºÐ°Ðº Ð¿Ð¾Ð¸ÑÐº Ñ„Ð°Ð¹Ð»Ð¾Ð² Ð¸ ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€
+Summary(uk.UTF-8):   Ð£Ñ‚Ð¸Ð»Ñ–Ñ‚Ð¸ GNOME, Ñ‚Ð°ÐºÑ– ÑÐº Ð¿Ð¾ÑˆÑƒÐº Ñ„Ð°Ð¹Ð»Ñ–Ð² Ñ‚Ð° ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€
+Summary(zh_CN.UTF-8):   GNOMEåº”ç”¨ç¨‹åºé›†
 Name:		gnome-utils
 Version:	2.16.2
 Release:	1
@@ -52,74 +52,74 @@ GNOME is the GNU Network Object Model Environment. That's a fancy name
 but really GNOME is a nice GUI desktop environment. It makes using
 your computer easy, powerful, and easy to configure.
 
-%description -l ja
-GNOME (GNU Network Object Model Environment) ¤Ï¡¢ X Window System ¤Î
-¥¦¥£¥ó¥É¥¦¥Þ¥Í¡¼¥¸¥ã¤È¶¨Ä´¤·¤ÆÆ°¤¯¥æ¡¼¥¶¥Õ¥ì¥ó¥É¥ê¡¼¤Ê GUI
-¥¢¥×¥ê¥±¡¼¥·¥ç¥ó ¤È¥Ç¥¹¥¯¥È¥Ã¥×¥Ä¡¼¥ë½¸¤Ç¤¹¡£ gnome-utils
-¥Ñ¥Ã¥±¡¼¥¸¤Ï¡¢ GNOME ¤Î ¥æ¡¼¥Æ¥£¥ê¥Æ¥£½¸¤Ç¤¹¡£
-Gcalc,Gdialog,Gdiskfree, ¤½¤·¤Æ¤½¤ÎÂ¾ ¤¤¤í¤¤¤í¤Ê¥Ä¡¼¥ë¤¬´Þ¤Þ¤ì¤Þ¤¹¡£
+%description -l ja.UTF-8
+GNOME (GNU Network Object Model Environment) ã¯ã€ X Window System ã®
+ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãƒžãƒãƒ¼ã‚¸ãƒ£ã¨å”èª¿ã—ã¦å‹•ããƒ¦ãƒ¼ã‚¶ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ¼ãª GUI
+ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ ã¨ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ãƒ„ãƒ¼ãƒ«é›†ã§ã™ã€‚ gnome-utils
+ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã¯ã€ GNOME ã® ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£é›†ã§ã™ã€‚
+Gcalc,Gdialog,Gdiskfree, ãã—ã¦ãã®ä»– ã„ã‚ã„ã‚ãªãƒ„ãƒ¼ãƒ«ãŒå«ã¾ã‚Œã¾ã™ã€‚
 
-%description -l pl
-Programy u¿ytkowe GNOME'a.
+%description -l pl.UTF-8
+Programy uÅ¼ytkowe GNOME'a.
 
-%description -l ru
-üÔÏÔ ÐÁËÅÔ ÓÏÄÅÒÖÉÔ ÎÅËÏÔÏÒÙÅ ÕÔÉÌÉÔÙ ÄÌÑ GNOME, ÔÁËÉÅ ËÁË ÉÎÓÔÒÕÍÅÎÔ
-ÄÌÑ ÐÏÉÓËÁ ÆÁÊÌÏ×, ËÁÌØËÕÌÑÔÏÒ, ÒÅÄÁËÔÏÒ 16-ÒÉÞÎÏÇÏ ËÏÄÁ É Ô.Ð.
+%description -l ru.UTF-8
+Ð­Ñ‚Ð¾Ñ‚ Ð¿Ð°ÐºÐµÑ‚ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ Ð½ÐµÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ ÑƒÑ‚Ð¸Ð»Ð¸Ñ‚Ñ‹ Ð´Ð»Ñ GNOME, Ñ‚Ð°ÐºÐ¸Ðµ ÐºÐ°Ðº Ð¸Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚
+Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ„Ð°Ð¹Ð»Ð¾Ð², ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€, Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¾Ñ€ 16-Ñ€Ð¸Ñ‡Ð½Ð¾Ð³Ð¾ ÐºÐ¾Ð´Ð° Ð¸ Ñ‚.Ð¿.
 
-%description -l uk
-ãÅÊ ÐÁËÅÔ Í¦ÓÔÉÔØ ÄÅÑË¦ ÕÔÉÌ¦ÔÉ ÄÌÑ GNOME, ÔÁË¦ ÑË ¦ÎÓÔÒÕÍÅÎÔ ÄÌÑ
-ÐÏÛÕËÕ ÆÁÊÌ¦×, ËÁÌØËÕÌÑÔÏÒ, ÒÅÄÁËÔÏÒ 16-ËÏ×ÏÇÏ ËÏÄÕ, ÔÏÝÏ.
+%description -l uk.UTF-8
+Ð¦ÐµÐ¹ Ð¿Ð°ÐºÐµÑ‚ Ð¼Ñ–ÑÑ‚Ð¸Ñ‚ÑŒ Ð´ÐµÑÐºÑ– ÑƒÑ‚Ð¸Ð»Ñ–Ñ‚Ð¸ Ð´Ð»Ñ GNOME, Ñ‚Ð°ÐºÑ– ÑÐº Ñ–Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ
+Ð¿Ð¾ÑˆÑƒÐºÑƒ Ñ„Ð°Ð¹Ð»Ñ–Ð², ÐºÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€, Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¾Ñ€ 16-ÐºÐ¾Ð²Ð¾Ð³Ð¾ ÐºÐ¾Ð´Ñƒ, Ñ‚Ð¾Ñ‰Ð¾.
 
 %package -n libgdict
 Summary:	libgdict library
-Summary(pl):	Biblioteka libgdict
+Summary(pl.UTF-8):   Biblioteka libgdict
 Group:		Libraries
 
 %description -n libgdict
 libgdict library.
 
-%description -n libgdict -l pl
+%description -n libgdict -l pl.UTF-8
 Biblioteka libgdict.
 
 %package -n libgdict-devel
 Summary:	Header files for libgdict library
-Summary(pl):	Pliki nag³ówkowe biblioteki libgdict
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libgdict
 Group:		Development/Libraries
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-devel
 This is the package containing the header files for libgdict library.
 
-%description -n libgdict-devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe biblioteki libgdict.
+%description -n libgdict-devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe biblioteki libgdict.
 
 %package -n libgdict-static
 Summary:	Static libgdict library
-Summary(pl):	Statyczna biblioteka libgdict
+Summary(pl.UTF-8):   Statyczna biblioteka libgdict
 Group:		Development/Libraries
 Requires:	libgdict-devel = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-static
 Static libgdict library.
 
-%description -n libgdict-static -l pl
+%description -n libgdict-static -l pl.UTF-8
 Statyczna biblioteka libgdict.
 
 %package -n libgdict-apidocs
 Summary:	libgdict API documentation
-Summary(pl):	Dokumentacja API libgdict
+Summary(pl.UTF-8):   Dokumentacja API libgdict
 Group:		Documentation
 Requires:	gtk-doc-common
 
 %description -n libgdict-apidocs
 libgdict API documentation.
 
-%description -n libgdict-apidocs -l pl
+%description -n libgdict-apidocs -l pl.UTF-8
 Dokumentacja API libgdict.
 
 %package baobab
 Summary:	Graphical directory tree analyzer
-Summary(pl):	Graficzny analizator drzew katalogów
+Summary(pl.UTF-8):   Graficzny analizator drzew katalogÃ³w
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	gtk+2 >= 2:2.10.6
@@ -130,12 +130,12 @@ Obsoletes:	baobab
 %description baobab
 Graphical directory tree analyzer.
 
-%description baobab -l pl
-Graficzny analizator drzew katalogów.
+%description baobab -l pl.UTF-8
+Graficzny analizator drzew katalogÃ³w.
 
 %package dictionary
 Summary:	Online dictionary
-Summary(pl):	S³ownik online
+Summary(pl.UTF-8):   SÅ‚ownik online
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	gtk+2 >= 2:2.10.6
@@ -150,13 +150,13 @@ Conflicts:	gnome-utils <= 0:2.10.0-1
 Allows to look up an online dictionary for definitions and correct
 spellings of words.
 
-%description dictionary -l pl
-Pozwala na wyszukiwanie definicji i poprawnej pisowni s³ów w s³owniku
+%description dictionary -l pl.UTF-8
+Pozwala na wyszukiwanie definicji i poprawnej pisowni sÅ‚Ã³w w sÅ‚owniku
 sieciowym.
 
 %package floppy
 Summary:	GNOME floppy formatter
-Summary(pl):	Formater dyskietek dla GNOME
+Summary(pl.UTF-8):   Formater dyskietek dla GNOME
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	desktop-file-utils
@@ -167,12 +167,12 @@ Conflicts:	gnome-utils <= 0:2.10.0-1
 %description floppy
 GFloppy formats floppy disks.
 
-%description floppy -l pl
+%description floppy -l pl.UTF-8
 GFloppy formatuje dyskietki.
 
 %package logview
 Summary:	System log viewer for GNOME
-Summary(pl):	Przegl±darka logów systemowych dla GNOME
+Summary(pl.UTF-8):   PrzeglÄ…darka logÃ³w systemowych dla GNOME
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
@@ -182,12 +182,12 @@ Conflicts:	gnome-utils <= 0:2.10.0-1
 %description logview
 Allows to view system logs.
 
-%description logview -l pl
-Pozwala na przegl±danie logów systemowych.
+%description logview -l pl.UTF-8
+Pozwala na przeglÄ…danie logÃ³w systemowych.
 
 %package search-tool
 Summary:	GNOME search tool
-Summary(pl):	Narzêdzie wyszukuj±ce dla GNOME
+Summary(pl.UTF-8):   NarzÄ™dzie wyszukujÄ…ce dla GNOME
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
@@ -197,12 +197,12 @@ Conflicts:	gnome-utils <= 0:2.10.0-1
 %description search-tool
 Allows to search for files on system.
 
-%description search-tool -l pl
-Pozwala na wyszukiwanie plików w systemie.
+%description search-tool -l pl.UTF-8
+Pozwala na wyszukiwanie plikÃ³w w systemie.
 
 %package screenshot
 Summary:	Screenshot utility
-Summary(pl):	Narzêdzie do robienia zrzutów ekranu
+Summary(pl.UTF-8):   NarzÄ™dzie do robienia zrzutÃ³w ekranu
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
@@ -212,7 +212,7 @@ Conflicts:	gnome-utils <= 0:2.10.0-1
 %description screenshot
 Allows to make a desktop screenshot.
 
-%description screenshot -l pl
+%description screenshot -l pl.UTF-8
 Pozwala na zrobienie zrzutu ekranu biurka.
 
 %prep
