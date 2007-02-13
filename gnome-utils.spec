@@ -1,9 +1,9 @@
 Summary:	GNOME utility programs
-Summary(ja.UTF-8):   GNOME ユーティリティプログラム集
-Summary(pl.UTF-8):   Programy użytkowe GNOME
-Summary(ru.UTF-8):   Утилиты GNOME, такие как поиск файлов и калькулятор
-Summary(uk.UTF-8):   Утиліти GNOME, такі як пошук файлів та калькулятор
-Summary(zh_CN.UTF-8):   GNOME应用程序集
+Summary(ja.UTF-8):	GNOME ユーティリティプログラム集
+Summary(pl.UTF-8):	Programy użytkowe GNOME
+Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файлов и калькулятор
+Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
+Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.16.2
 Release:	1
@@ -72,7 +72,7 @@ Programy użytkowe GNOME'a.
 
 %package -n libgdict
 Summary:	libgdict library
-Summary(pl.UTF-8):   Biblioteka libgdict
+Summary(pl.UTF-8):	Biblioteka libgdict
 Group:		Libraries
 
 %description -n libgdict
@@ -83,7 +83,7 @@ Biblioteka libgdict.
 
 %package -n libgdict-devel
 Summary:	Header files for libgdict library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libgdict
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgdict
 Group:		Development/Libraries
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
@@ -95,7 +95,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki libgdict.
 
 %package -n libgdict-static
 Summary:	Static libgdict library
-Summary(pl.UTF-8):   Statyczna biblioteka libgdict
+Summary(pl.UTF-8):	Statyczna biblioteka libgdict
 Group:		Development/Libraries
 Requires:	libgdict-devel = %{epoch}:%{version}-%{release}
 
@@ -107,7 +107,7 @@ Statyczna biblioteka libgdict.
 
 %package -n libgdict-apidocs
 Summary:	libgdict API documentation
-Summary(pl.UTF-8):   Dokumentacja API libgdict
+Summary(pl.UTF-8):	Dokumentacja API libgdict
 Group:		Documentation
 Requires:	gtk-doc-common
 
@@ -119,7 +119,7 @@ Dokumentacja API libgdict.
 
 %package baobab
 Summary:	Graphical directory tree analyzer
-Summary(pl.UTF-8):   Graficzny analizator drzew katalogów
+Summary(pl.UTF-8):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	gtk+2 >= 2:2.10.6
@@ -135,7 +135,7 @@ Graficzny analizator drzew katalogów.
 
 %package dictionary
 Summary:	Online dictionary
-Summary(pl.UTF-8):   Słownik online
+Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	gtk+2 >= 2:2.10.6
@@ -156,7 +156,7 @@ sieciowym.
 
 %package floppy
 Summary:	GNOME floppy formatter
-Summary(pl.UTF-8):   Formater dyskietek dla GNOME
+Summary(pl.UTF-8):	Formater dyskietek dla GNOME
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	desktop-file-utils
@@ -172,7 +172,7 @@ GFloppy formatuje dyskietki.
 
 %package logview
 Summary:	System log viewer for GNOME
-Summary(pl.UTF-8):   Przeglądarka logów systemowych dla GNOME
+Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
@@ -187,7 +187,7 @@ Pozwala na przeglądanie logów systemowych.
 
 %package search-tool
 Summary:	GNOME search tool
-Summary(pl.UTF-8):   Narzędzie wyszukujące dla GNOME
+Summary(pl.UTF-8):	Narzędzie wyszukujące dla GNOME
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
@@ -202,7 +202,7 @@ Pozwala na wyszukiwanie plików w systemie.
 
 %package screenshot
 Summary:	Screenshot utility
-Summary(pl.UTF-8):   Narzędzie do robienia zrzutów ekranu
+Summary(pl.UTF-8):	Narzędzie do robienia zrzutów ekranu
 Group:		X11/Applications
 Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
