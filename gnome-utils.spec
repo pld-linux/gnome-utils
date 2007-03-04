@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файло
 Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.16.2
+Version:	2.17.92
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	4e70e667a78fc5bee4a4b8f2f3ae8440
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.17/%{name}-%{version}.tar.bz2
+# Source0-md5:	c995e302bbf11617dc5be53640eca0de
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.16.0
@@ -41,6 +41,7 @@ Requires:	gnome-vfs2 >= 2.16.2
 Requires:	libgnomeui >= 2.16.1
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
+Obsoletes:	gnome-utils-floppy < %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_gnomehelpdir	%{_datadir}/gnome/help
@@ -154,22 +155,6 @@ spellings of words.
 Pozwala na wyszukiwanie definicji i poprawnej pisowni słów w słowniku
 sieciowym.
 
-%package floppy
-Summary:	GNOME floppy formatter
-Summary(pl.UTF-8):	Formater dyskietek dla GNOME
-Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
-Requires(post,postun):	desktop-file-utils
-Requires(post,postun):	scrollkeeper
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-Conflicts:	gnome-utils <= 0:2.10.0-1
-
-%description floppy
-GFloppy formats floppy disks.
-
-%description floppy -l pl.UTF-8
-GFloppy formatuje dyskietki.
-
 %package logview
 Summary:	System log viewer for GNOME
 Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
@@ -241,7 +226,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}-2.0
 %find_lang baobab --with-gnome
-%find_lang gfloppy --with-gnome
 %find_lang gnome-dictionary --with-gnome
 %find_lang gnome-search-tool --with-gnome
 %find_lang gnome-system-log --with-gnome
@@ -276,18 +260,6 @@ rm -rf $RPM_BUILD_ROOT
 %scrollkeeper_update_postun
 %update_icon_cache hicolor
 
-%post floppy
-%scrollkeeper_update_post
-%update_desktop_database_post
-%gconf_schema_install gfloppy.schemas
-
-%preun floppy
-%gconf_schema_uninstall gfloppy.schemas
-
-%postun floppy
-%scrollkeeper_update_postun
-%update_desktop_database_postun
-
 %post logview
 %scrollkeeper_update_post
 %gconf_schema_install logview.schemas
@@ -317,8 +289,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}-2.0.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%dir %{_datadir}/%{name}
-%dir %{_datadir}/%{name}/glade
 
 %files -n libgdict
 %defattr(644,root,root,755)
@@ -351,6 +321,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/baobab*
 %dir %{_omf_dest_dir}/baobab
 %{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(en_GB) %{_omf_dest_dir}/baobab/baobab-en_GB.omf
+%lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
 %lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %{_sysconfdir}/gconf/schemas/baobab.schemas
@@ -376,18 +348,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
 
-%files floppy -f gfloppy.lang
-%defattr(644,root,root,755)
-%doc gfloppy/AUTHORS gfloppy/ChangeLog gfloppy/NEWS gfloppy/README gfloppy/TODO
-%attr(755,root,root) %{_bindir}/gfloppy
-%{_sysconfdir}/gconf/schemas/gfloppy.schemas
-%{_desktopdir}/gfloppy.desktop
-%{_datadir}/%{name}/glade/gfloppy2.glade
-%{_mandir}/man1/gfloppy*
-%dir %{_omf_dest_dir}/gfloppy
-%{_omf_dest_dir}/gfloppy/gfloppy-C.omf
-%lang(uk) %{_omf_dest_dir}/gfloppy/gfloppy-uk.omf
-
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
 %doc logview/ChangeLog logview/TODO
@@ -400,7 +360,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
-%lang(it) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-it.omf
 %lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
@@ -410,7 +369,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-search-tool
 %{_sysconfdir}/gconf/schemas/gnome-search-tool.schemas
 %{_desktopdir}/gnome-search-tool.desktop
-%{_datadir}/%{name}
 %{_mandir}/man1/gnome-search-tool*
 %{_pixmapsdir}/gsearchtool
 %dir %{_omf_dest_dir}/gnome-search-tool
