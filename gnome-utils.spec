@@ -1,44 +1,46 @@
 Summary:	GNOME utility programs
-Summary(ja):	GNOME ╔Ф║╪╔ф╔ё╔Й╔ф╔ё╔в╔М╔╟╔И╔Ю╫╦
-Summary(pl):	Programy u©ytkowe GNOME
-Summary(ru):	Утилиты GNOME, такие как поиск файлов и калькулятор
-Summary(uk):	Утил╕ти GNOME, так╕ як пошук файл╕в та калькулятор
-Summary(zh_CN):	GNOMEс╕сцЁлпР╪╞
+Summary(ja.UTF-8):	GNOME Ц┐╕Ц┐╪Ц┐├Ц┌ёЦ┐╙Ц┐├Ц┌ёЦ┐≈Ц┐╜Ц┌╟Ц┐╘Ц┐═И⌡├
+Summary(pl.UTF-8):	Programy uе╪ytkowe GNOME
+Summary(ru.UTF-8):	пёя┌п╦п╩п╦я┌я▀ GNOME, я┌п╟п╨п╦п╣ п╨п╟п╨ п©п╬п╦я│п╨ я└п╟п╧п╩п╬п╡ п╦ п╨п╟п╩я▄п╨я┐п╩я▐я┌п╬я─
+Summary(uk.UTF-8):	пёя┌п╦п╩я√я┌п╦ GNOME, я┌п╟п╨я√ я▐п╨ п©п╬я┬я┐п╨ я└п╟п╧п╩я√п╡ я┌п╟ п╨п╟п╩я▄п╨я┐п╩я▐я┌п╬я─
+Summary(zh_CN.UTF-8):	GNOMEЕ╨■Г■╗Г╗▀Е╨▐И⌡├
 Name:		gnome-utils
-Version:	2.14.0
-Release:	3
+Version:	2.17.92
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.14/%{name}-%{version}.tar.bz2
-# Source0-md5:	d1d16ff6bfc1f6ddc110d18ec4dfdbfa
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.17/%{name}-%{version}.tar.bz2
+# Source0-md5:	c995e302bbf11617dc5be53640eca0de
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.10.0
+BuildRequires:	GConf2-devel >= 2.18.0.1
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-desktop-devel >= 2.10.0-2
-BuildRequires:	gnome-panel-devel >= 2.10.0-2
-BuildRequires:	gnome-vfs2-devel >= 2.10.0-2
-BuildRequires:	hal-devel >= 0.4.7
-BuildRequires:	intltool >= 0.33
-BuildRequires:	libglade2-devel >= 1:2.5.1
-BuildRequires:	libgnomeprintui-devel >= 2.10.2
-BuildRequires:	libgnomeui-devel >= 2.10.0-2
+BuildRequires:	gnome-desktop-devel >= 2.17.92
+BuildRequires:	gnome-doc-utils >= 0.9.2
+BuildRequires:	gnome-panel-devel >= 2.17.92
+BuildRequires:	gnome-vfs2-devel >= 2.17.91
+BuildRequires:	gtk+2-devel >= 2:2.10.9
+BuildRequires:	hal-devel >= 0.5.7.1
+BuildRequires:	intltool >= 0.35.5
+BuildRequires:	libbonoboui-devel >= 2.17.94
+BuildRequires:	libglade2-devel >= 1:2.6.0
+BuildRequires:	libgnomeprintui-devel >= 2.17.92
+BuildRequires:	libgnomeui-devel >= 2.17.92
+BuildRequires:	libgtop-devel >= 2.14.8
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	popt-devel
-BuildRequires:	rpmbuild(macros) >= 1.197
+BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires(post,preun):	GConf2
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.10.0-2
-Requires:	gtk+2 >= 2:2.6.4
-Requires:	libgnomeui >= 2.14.0
+Requires(post,preun):	GConf2
+Requires:	gnome-vfs2 >= 2.17.91
+Requires:	libgnomeui >= 2.17.92
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -52,65 +54,96 @@ GNOME is the GNU Network Object Model Environment. That's a fancy name
 but really GNOME is a nice GUI desktop environment. It makes using
 your computer easy, powerful, and easy to configure.
 
-%description -l ja
-GNOME (GNU Network Object Model Environment) ╓о║╒ X Window System ╓н
-╔╕╔ё╔С╔и╔╕╔ч╔м║╪╔╦╔Ц╓х╤╗д╢╓╥╓фф╟╓╞╔Ф║╪╔╤╔у╔Л╔С╔и╔Й║╪╓й GUI
-╔╒╔в╔Й╔╠║╪╔╥╔Г╔С ╓х╔г╔╧╔╞╔х╔ц╔в╔д║╪╔К╫╦╓г╓╧║ё gnome-utils
-╔я╔ц╔╠║╪╔╦╓о║╒ GNOME ╓н ╔Ф║╪╔ф╔ё╔Й╔ф╔ё╫╦╓г╓╧║ё
-Gcalc,Gdialog,Gdiskfree, ╓╫╓╥╓ф╓╫╓нб╬ ╓╓╓М╓╓╓М╓й╔д║╪╔К╓╛╢ч╓ч╓Л╓ч╓╧║ё
+%description -l ja.UTF-8
+GNOME (GNU Network Object Model Environment) Ц│╞Ц─│ X Window System Ц│╝
+Ц┌╕Ц┌ёЦ┐ЁЦ┐┴Ц┌╕Ц┐·Ц┐█Ц┐╪Ц┌╦Ц┐ёЦ│╗Е█■Х╙©Ц│≈Ц│╕Е▀∙Ц│▐Ц┐╕Ц┐╪Ц┌╤Ц┐∙Ц┐╛Ц┐ЁЦ┐┴Ц┐╙Ц┐╪Ц│╙ GUI
+Ц┌╒Ц┐≈Ц┐╙Ц┌╠Ц┐╪Ц┌╥Ц┐╖Ц┐Ё Ц│╗Ц┐┤Ц┌╧Ц┌╞Ц┐┬Ц┐┐Ц┐≈Ц┐└Ц┐╪Ц┐╚И⌡├Ц│╖Ц│≥Ц─┌ gnome-utils
+Ц┐▒Ц┐┐Ц┌╠Ц┐╪Ц┌╦Ц│╞Ц─│ GNOME Ц│╝ Ц┐╕Ц┐╪Ц┐├Ц┌ёЦ┐╙Ц┐├Ц┌ёИ⌡├Ц│╖Ц│≥Ц─┌
+Gcalc,Gdialog,Gdiskfree, Ц│²Ц│≈Ц│╕Ц│²Ц│╝Д╩√ Ц│└Ц┌█Ц│└Ц┌█Ц│╙Ц┐└Ц┐╪Ц┐╚Ц│▄Е░╚Ц│╬Ц┌▄Ц│╬Ц│≥Ц─┌
 
-%description -l pl
-Programy u©ytkowe GNOME'a.
+%description -l pl.UTF-8
+Programy uе╪ytkowe GNOME'a.
 
-%description -l ru
-Этот пакет содержит некоторые утилиты для GNOME, такие как инструмент
-для поиска файлов, калькулятор, редактор 16-ричного кода и т.п.
+%description -l ru.UTF-8
+п╜я┌п╬я┌ п©п╟п╨п╣я┌ я│п╬п╢п╣я─п╤п╦я┌ п╫п╣п╨п╬я┌п╬я─я▀п╣ я┐я┌п╦п╩п╦я┌я▀ п╢п╩я▐ GNOME, я┌п╟п╨п╦п╣ п╨п╟п╨ п╦п╫я│я┌я─я┐п╪п╣п╫я┌
+п╢п╩я▐ п©п╬п╦я│п╨п╟ я└п╟п╧п╩п╬п╡, п╨п╟п╩я▄п╨я┐п╩я▐я┌п╬я─, я─п╣п╢п╟п╨я┌п╬я─ 16-я─п╦я┤п╫п╬пЁп╬ п╨п╬п╢п╟ п╦ я┌.п©.
 
-%description -l uk
-Цей пакет м╕стить деяк╕ утил╕ти для GNOME, так╕ як ╕нструмент для
-пошуку файл╕в, калькулятор, редактор 16-кового коду, тощо.
+%description -l uk.UTF-8
+п╕п╣п╧ п©п╟п╨п╣я┌ п╪я√я│я┌п╦я┌я▄ п╢п╣я▐п╨я√ я┐я┌п╦п╩я√я┌п╦ п╢п╩я▐ GNOME, я┌п╟п╨я√ я▐п╨ я√п╫я│я┌я─я┐п╪п╣п╫я┌ п╢п╩я▐
+п©п╬я┬я┐п╨я┐ я└п╟п╧п╩я√п╡, п╨п╟п╩я▄п╨я┐п╩я▐я┌п╬я─, я─п╣п╢п╟п╨я┌п╬я─ 16-п╨п╬п╡п╬пЁп╬ п╨п╬п╢я┐, я┌п╬я┴п╬.
 
 %package -n libgdict
 Summary:	libgdict library
-Summary(pl):	Biblioteka libgdict
+Summary(pl.UTF-8):	Biblioteka libgdict
 Group:		Libraries
 
 %description -n libgdict
 libgdict library.
 
-%description -n libgdict -l pl
+%description -n libgdict -l pl.UTF-8
 Biblioteka libgdict.
 
 %package -n libgdict-devel
 Summary:	Header files for libgdict library
-Summary(pl):	Pliki nagЁСwkowe biblioteki libgdict
+Summary(pl.UTF-8):	Pliki nagе┌цЁwkowe biblioteki libgdict
 Group:		Development/Libraries
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-devel
 This is the package containing the header files for libgdict library.
 
-%description -n libgdict-devel -l pl
-Ten pakiet zawiera pliki nagЁСwkowe biblioteki libgdict.
+%description -n libgdict-devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagе┌цЁwkowe biblioteki libgdict.
 
 %package -n libgdict-static
 Summary:	Static libgdict library
-Summary(pl):	Statyczna biblioteka libgdict
+Summary(pl.UTF-8):	Statyczna biblioteka libgdict
 Group:		Development/Libraries
 Requires:	libgdict-devel = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-static
 Static libgdict library.
 
-%description -n libgdict-static -l pl
+%description -n libgdict-static -l pl.UTF-8
 Statyczna biblioteka libgdict.
+
+%package -n libgdict-apidocs
+Summary:	libgdict API documentation
+Summary(pl.UTF-8):	Dokumentacja API libgdict
+Group:		Documentation
+Requires:	gtk-doc-common
+
+%description -n libgdict-apidocs
+libgdict API documentation.
+
+%description -n libgdict-apidocs -l pl.UTF-8
+Dokumentacja API libgdict.
+
+%package baobab
+Summary:	Graphical directory tree analyzer
+Summary(pl.UTF-8):	Graficzny analizator drzew katalogцЁw
+Group:		X11/Applications
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
+Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+Obsoletes:	baobab
+
+%description baobab
+Graphical directory tree analyzer.
+
+%description baobab -l pl.UTF-8
+Graficzny analizator drzew katalogцЁw.
 
 %package dictionary
 Summary:	Online dictionary
-Summary(pl):	SЁownik online
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Summary(pl.UTF-8):	Sе┌ownik online
+Group:		X11/Applications
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
 Obsoletes:	gnome-dict
@@ -121,69 +154,68 @@ Conflicts:	gnome-utils <= 0:2.10.0-1
 Allows to look up an online dictionary for definitions and correct
 spellings of words.
 
-%description dictionary -l pl
-Pozwala na wyszukiwanie definicji i poprawnej pisowni sЁСw w sЁowniku
+%description dictionary -l pl.UTF-8
+Pozwala na wyszukiwanie definicji i poprawnej pisowni sе┌цЁw w sе┌owniku
 sieciowym.
 
 %package floppy
 Summary:	GNOME floppy formatter
-Summary(pl):	Formater dyskietek dla GNOME
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Summary(pl.UTF-8):	Formater dyskietek dla GNOME
+Group:		X11/Applications
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description floppy
 GFloppy formats floppy disks.
 
-%description floppy -l pl
+%description floppy -l pl.UTF-8
 GFloppy formatuje dyskietki.
 
 %package logview
 Summary:	System log viewer for GNOME
-Summary(pl):	Przegl╠darka logСw systemowych dla GNOME
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Summary(pl.UTF-8):	Przeglд┘darka logцЁw systemowych dla GNOME
+Group:		X11/Applications
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description logview
 Allows to view system logs.
 
-%description logview -l pl
-Pozwala na przegl╠danie logСw systemowych.
+%description logview -l pl.UTF-8
+Pozwala na przeglд┘danie logцЁw systemowych.
 
 %package search-tool
 Summary:	GNOME search tool
-Summary(pl):	NarzЙdzie wyszukuj╠ce dla GNOME
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Summary(pl.UTF-8):	Narzд≥dzie wyszukujд┘ce dla GNOME
+Group:		X11/Applications
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description search-tool
 Allows to search for files on system.
 
-%description search-tool -l pl
-Pozwala na wyszukiwanie plikСw w systemie.
+%description search-tool -l pl.UTF-8
+Pozwala na wyszukiwanie plikцЁw w systemie.
 
 %package screenshot
 Summary:	Screenshot utility
-Summary(pl):	NarzЙdzie do robienia zrzutСw ekranu
-Group:		X11/Applications/Multimedia
-Requires(post,preun):	GConf2
+Summary(pl.UTF-8):	Narzд≥dzie do robienia zrzutцЁw ekranu
+Group:		X11/Applications
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description screenshot
 Allows to make a desktop screenshot.
 
-%description screenshot -l pl
+%description screenshot -l pl.UTF-8
 Pozwala na zrobienie zrzutu ekranu biurka.
 
 %prep
@@ -198,6 +230,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %{__autoconf}
 %{__automake}
 %configure \
+	--enable-gfloppy \
 	--disable-schemas-install \
 	--disable-scrollkeeper \
 	--with-html-dir=%{_gtkdocdir}
@@ -211,6 +244,7 @@ rm -rf $RPM_BUILD_ROOT
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 %find_lang %{name}-2.0
+%find_lang baobab --with-gnome
 %find_lang gfloppy --with-gnome
 %find_lang gnome-dictionary --with-gnome
 %find_lang gnome-search-tool --with-gnome
@@ -222,15 +256,29 @@ rm -rf $RPM_BUILD_ROOT
 %post   -n libgdict -p /sbin/ldconfig
 %postun -n libgdict -p /sbin/ldconfig
 
+%post baobab
+%scrollkeeper_update_post
+%gconf_schema_install baobab.schemas
+%update_icon_cache hicolor
+
+%preun baobab
+%gconf_schema_uninstall baobab.schemas
+
+%postun baobab
+%scrollkeeper_update_postun
+%update_icon_cache hicolor
+
 %post dictionary
 %scrollkeeper_update_post
 %gconf_schema_install gnome-dictionary.schemas
+%update_icon_cache hicolor
 
 %preun dictionary
 %gconf_schema_uninstall gnome-dictionary.schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
+%update_icon_cache hicolor
 
 %post floppy
 %scrollkeeper_update_post
@@ -285,13 +333,33 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgdict-1.0.so
 %{_libdir}/libgdict-1.0.la
-%{_gtkdocdir}/gdict
 %{_includedir}/gdict-1.0
 %{_pkgconfigdir}/gdict-1.0.pc
 
 %files -n libgdict-static
 %defattr(644,root,root,755)
 %{_libdir}/libgdict-1.0.a
+
+%files -n libgdict-apidocs
+%defattr(644,root,root,755)
+%{_gtkdocdir}/gdict
+
+%files baobab -f baobab.lang
+%defattr(644,root,root,755)
+%doc baobab/AUTHORS baobab/ChangeLog baobab/README baobab/TODO
+%attr(755,root,root) %{_bindir}/baobab
+%{_sysconfdir}/gconf/schemas/baobab.schemas
+%{_desktopdir}/baobab.desktop
+%{_iconsdir}/hicolor/*/*/baobab.*
+%{_datadir}/baobab
+%{_mandir}/man1/baobab*
+%dir %{_omf_dest_dir}/baobab
+%{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(en_GB) %{_omf_dest_dir}/baobab/baobab-en_GB.omf
+%lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
+%lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
+%lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
+%{_sysconfdir}/gconf/schemas/baobab.schemas
 
 %files dictionary -f gnome-dictionary.lang
 %defattr(644,root,root,755)
@@ -304,9 +372,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
-%{_pixmapsdir}/gnome-dictionary.png
+%{_iconsdir}/hicolor/*/*/gnome-dictionary.*
+%dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
+%lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
+%lang(fr) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-fr.omf
+%lang(ru) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ru.omf
+%lang(sv) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-sv.omf
+%lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
 
 %files floppy -f gfloppy.lang
 %defattr(644,root,root,755)
@@ -316,7 +390,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gfloppy.desktop
 %{_datadir}/%{name}/glade/gfloppy2.glade
 %{_mandir}/man1/gfloppy*
+%dir %{_omf_dest_dir}/gfloppy
 %{_omf_dest_dir}/gfloppy/gfloppy-C.omf
+%lang(sv) %{_omf_dest_dir}/gfloppy/gfloppy-sv.omf
+%lang(uk) %{_omf_dest_dir}/gfloppy/gfloppy-uk.omf
 
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
@@ -326,8 +403,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gnome-system-log.desktop
 %{_datadir}/gnome-system-log
 %{_mandir}/man1/gnome-system-log*
+%dir %{_omf_dest_dir}/gnome-system-log
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
+%lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
+%lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
+%lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
@@ -335,12 +416,15 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-search-tool
 %{_sysconfdir}/gconf/schemas/gnome-search-tool.schemas
 %{_desktopdir}/gnome-search-tool.desktop
-%{_datadir}/%{name}
 %{_mandir}/man1/gnome-search-tool*
 %{_pixmapsdir}/gsearchtool
+%dir %{_omf_dest_dir}/gnome-search-tool
 %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
 %lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
-%lang(it) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-it.omf
+%lang(fr) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-fr.omf
+%lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
+%lang(sv) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-sv.omf
+%lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
 
 %files screenshot
 %defattr(644,root,root,755)
