@@ -5,40 +5,42 @@ Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файло
 Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.16.2
+Version:	2.18.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	4e70e667a78fc5bee4a4b8f2f3ae8440
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	33fad81655eed993dea8b5bb7a5789bb
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.16.0
+BuildRequires:	GConf2-devel >= 2.18.0.1
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-desktop-devel >= 2.16.1
-BuildRequires:	gnome-panel-devel >= 2.16.1
-BuildRequires:	gnome-vfs2-devel >= 2.16.2
+BuildRequires:	gnome-desktop-devel >= 2.17.92
+BuildRequires:	gnome-doc-utils >= 0.9.2
+BuildRequires:	gnome-panel-devel >= 2.17.92
+BuildRequires:	gnome-vfs2-devel >= 2.18.0
+BuildRequires:	gtk+2-devel >= 2:2.10.9
 BuildRequires:	hal-devel >= 0.5.7.1
-BuildRequires:	intltool >= 0.35
+BuildRequires:	intltool >= 0.35.5
+BuildRequires:	libbonoboui-devel >= 2.18.0
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgtop-devel >= 2.14.4
-BuildRequires:	libgnomeprintui-devel >= 2.12.1
-BuildRequires:	libgnomeui-devel >= 2.16.1
+BuildRequires:	libgnomeprintui-devel >= 2.17.92
+BuildRequires:	libgnomeui-devel >= 2.18.0
+BuildRequires:	libgtop-devel >= 2.14.8
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	popt-devel
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
-Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-vfs2 >= 2.16.2
-Requires:	libgnomeui >= 2.16.1
+Requires(post,preun):	GConf2
+Requires:	gnome-vfs2 >= 2.18.0
+Requires:	libgnomeui >= 2.18.0
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -121,9 +123,10 @@ Dokumentacja API libgdict.
 Summary:	Graphical directory tree analyzer
 Summary(pl.UTF-8):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
-Requires(post,postun):	gtk+2 >= 2:2.10.6
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	baobab
 
@@ -137,9 +140,10 @@ Graficzny analizator drzew katalogów.
 Summary:	Online dictionary
 Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
-Requires(post,postun):	gtk+2 >= 2:2.10.6
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
 Obsoletes:	gnome-dict
@@ -158,11 +162,10 @@ sieciowym.
 Summary:	GNOME floppy formatter
 Summary(pl.UTF-8):	Formater dyskietek dla GNOME
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description floppy
 GFloppy formats floppy disks.
@@ -174,8 +177,8 @@ GFloppy formatuje dyskietki.
 Summary:	System log viewer for GNOME
 Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
@@ -189,8 +192,8 @@ Pozwala na przeglądanie logów systemowych.
 Summary:	GNOME search tool
 Summary(pl.UTF-8):	Narzędzie wyszukujące dla GNOME
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
@@ -204,8 +207,8 @@ Pozwala na wyszukiwanie plików w systemie.
 Summary:	Screenshot utility
 Summary(pl.UTF-8):	Narzędzie do robienia zrzutów ekranu
 Group:		X11/Applications
-Requires(post,preun):	GConf2 >= 2.16.0
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
@@ -227,6 +230,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %{__autoconf}
 %{__automake}
 %configure \
+	--enable-gfloppy \
 	--disable-schemas-install \
 	--disable-scrollkeeper \
 	--with-html-dir=%{_gtkdocdir}
@@ -351,6 +355,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/baobab*
 %dir %{_omf_dest_dir}/baobab
 %{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(en_GB) %{_omf_dest_dir}/baobab/baobab-en_GB.omf
+%lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
 %lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %{_sysconfdir}/gconf/schemas/baobab.schemas
@@ -372,6 +378,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-fr.omf
+%lang(it) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-it.omf
 %lang(ru) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
@@ -386,6 +393,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/gfloppy*
 %dir %{_omf_dest_dir}/gfloppy
 %{_omf_dest_dir}/gfloppy/gfloppy-C.omf
+%lang(fr) %{_omf_dest_dir}/gfloppy/gfloppy-fr.omf
+%lang(ru) %{_omf_dest_dir}/gfloppy/gfloppy-ru.omf
+%lang(sv) %{_omf_dest_dir}/gfloppy/gfloppy-sv.omf
 %lang(uk) %{_omf_dest_dir}/gfloppy/gfloppy-uk.omf
 
 %files logview -f gnome-system-log.lang
@@ -401,6 +411,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
 %lang(it) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-it.omf
+%lang(ru) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
@@ -410,7 +421,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-search-tool
 %{_sysconfdir}/gconf/schemas/gnome-search-tool.schemas
 %{_desktopdir}/gnome-search-tool.desktop
-%{_datadir}/%{name}
 %{_mandir}/man1/gnome-search-tool*
 %{_pixmapsdir}/gsearchtool
 %dir %{_omf_dest_dir}/gnome-search-tool
