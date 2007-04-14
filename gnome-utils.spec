@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файло
 Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.18.0
+Version:	2.18.1
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.18/%{name}-%{version}.tar.bz2
-# Source0-md5:	33fad81655eed993dea8b5bb7a5789bb
+# Source0-md5:	10e8bd928d099a0d1f70919c8b7b7784
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.18.0.1
@@ -19,18 +19,18 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-common >= 2.12.0
-BuildRequires:	gnome-desktop-devel >= 2.17.92
-BuildRequires:	gnome-doc-utils >= 0.9.2
-BuildRequires:	gnome-panel-devel >= 2.17.92
-BuildRequires:	gnome-vfs2-devel >= 2.18.0
-BuildRequires:	gtk+2-devel >= 2:2.10.9
+BuildRequires:	gnome-common >= 2.18.0
+BuildRequires:	gnome-desktop-devel >= 2.18.1
+BuildRequires:	gnome-doc-utils >= 0.10.3
+BuildRequires:	gnome-panel-devel >= 2.18.1
+BuildRequires:	gnome-vfs2-devel >= 2.18.1
+BuildRequires:	gtk+2-devel >= 2:2.10.10
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.35.5
 BuildRequires:	libbonoboui-devel >= 2.18.0
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgnomeprintui-devel >= 2.17.92
-BuildRequires:	libgnomeui-devel >= 2.18.0
+BuildRequires:	libgnomeprintui-devel >= 2.18.0
+BuildRequires:	libgnomeui-devel >= 2.18.1
 BuildRequires:	libgtop-devel >= 2.14.8
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -39,8 +39,8 @@ BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
-Requires:	gnome-vfs2 >= 2.18.0
-Requires:	libgnomeui >= 2.18.0
+Requires:	gnome-vfs2 >= 2.18.1
+Requires:	libgnomeui >= 2.18.1
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -359,6 +359,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
 %lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
+%lang(uk) %{_omf_dest_dir}/baobab/baobab-uk.omf
 %{_sysconfdir}/gconf/schemas/baobab.schemas
 
 %files dictionary -f gnome-dictionary.lang
