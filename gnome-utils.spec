@@ -5,14 +5,14 @@ Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файло
 Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.18.1
-Release:	1
+Version:	2.19.91
+Release:	0.1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.18/%{name}-%{version}.tar.bz2
-# Source0-md5:	10e8bd928d099a0d1f70919c8b7b7784
-Patch0:		%{name}-desktop.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.19/%{name}-%{version}.tar.bz2
+# Source0-md5:	b1d4fd889d9a556f11f17a06ebb8ef81
+#Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.18.0.1
 BuildRequires:	autoconf
@@ -220,7 +220,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 %{__intltoolize}
@@ -240,8 +240,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}-2.0
 %find_lang baobab --with-gnome
@@ -355,9 +354,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/baobab*
 %dir %{_omf_dest_dir}/baobab
 %{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(ca) %{_omf_dest_dir}/baobab/baobab-ca.omf
 %lang(en_GB) %{_omf_dest_dir}/baobab/baobab-en_GB.omf
 %lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
 %lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
+%lang(oc) %{_omf_dest_dir}/baobab/baobab-oc.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %lang(uk) %{_omf_dest_dir}/baobab/baobab-uk.omf
 %{_sysconfdir}/gconf/schemas/baobab.schemas
@@ -376,7 +377,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/*/gnome-dictionary.*
 %dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ca.omf
 %lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-en_GB.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-fr.omf
 %lang(it) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-it.omf
@@ -394,6 +397,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/gfloppy*
 %dir %{_omf_dest_dir}/gfloppy
 %{_omf_dest_dir}/gfloppy/gfloppy-C.omf
+%lang(ca) %{_omf_dest_dir}/gfloppy/gfloppy-ca.omf
+%lang(es) %{_omf_dest_dir}/gfloppy/gfloppy-es.omf
 %lang(fr) %{_omf_dest_dir}/gfloppy/gfloppy-fr.omf
 %lang(ru) %{_omf_dest_dir}/gfloppy/gfloppy-ru.omf
 %lang(sv) %{_omf_dest_dir}/gfloppy/gfloppy-sv.omf
@@ -409,9 +414,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/gnome-system-log*
 %dir %{_omf_dest_dir}/gnome-system-log
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ca.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-en_GB.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
 %lang(it) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-it.omf
+%lang(ko) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ko.omf
+%lang(oc) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-oc.omf
 %lang(ru) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
@@ -426,8 +435,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/gsearchtool
 %dir %{_omf_dest_dir}/gnome-search-tool
 %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ca.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-en_GB.omf
 %lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-fr.omf
+%lang(ko) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ko.omf
+%lang(oc) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-oc.omf
 %lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
