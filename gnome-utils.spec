@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файло
 Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.19.91
-Release:	0.1
+Version:	2.19.92
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.19/%{name}-%{version}.tar.bz2
-# Source0-md5:	b1d4fd889d9a556f11f17a06ebb8ef81
+# Source0-md5:	87d0ebb61b53f5a5011cb4b380e1cf86
 #Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.18.0.1
@@ -270,14 +270,12 @@ rm -rf $RPM_BUILD_ROOT
 %post dictionary
 %scrollkeeper_update_post
 %gconf_schema_install gnome-dictionary.schemas
-%update_icon_cache hicolor
 
 %preun dictionary
 %gconf_schema_uninstall gnome-dictionary.schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
-%update_icon_cache hicolor
 
 %post floppy
 %scrollkeeper_update_post
@@ -361,7 +359,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(oc) %{_omf_dest_dir}/baobab/baobab-oc.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %lang(uk) %{_omf_dest_dir}/baobab/baobab-uk.omf
-%{_sysconfdir}/gconf/schemas/baobab.schemas
 
 %files dictionary -f gnome-dictionary.lang
 %defattr(644,root,root,755)
@@ -374,7 +371,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
-%{_iconsdir}/hicolor/*/*/gnome-dictionary.*
 %dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
 %lang(ca) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ca.omf
