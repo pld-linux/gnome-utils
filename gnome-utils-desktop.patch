@@ -1,72 +1,48 @@
-diff -urN gnome-utils-2.18.1/baobab/data/baobab.desktop.in.in gnome-utils-2.18.1.new/baobab/data/baobab.desktop.in.in
---- gnome-utils-2.18.1/baobab/data/baobab.desktop.in.in	2007-04-14 13:40:49.000000000 +0200
-+++ gnome-utils-2.18.1.new/baobab/data/baobab.desktop.in.in	2007-04-14 19:47:45.000000000 +0200
+diff -urN gnome-utils-2.19.92/baobab/data/baobab.desktop.in.in gnome-utils-2.19.92.new/baobab/data/baobab.desktop.in.in
+--- gnome-utils-2.19.92/baobab/data/baobab.desktop.in.in	2007-09-04 17:07:22.000000000 +0200
++++ gnome-utils-2.19.92.new/baobab/data/baobab.desktop.in.in	2007-09-08 15:07:13.000000000 +0200
 @@ -9,7 +9,7 @@
  Terminal=false
  Type=Application
  StartupNotify=true
--Categories=GTK;GNOME;Application;System;
+-Categories=GTK;GNOME;System;
 +Categories=GTK;GNOME;System;Filesystem;
+ OnlyShowIn=GNOME
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
- X-GNOME-Bugzilla-Component=baobab
-diff -urN gnome-utils-2.18.1/gfloppy/gfloppy.desktop.in gnome-utils-2.18.1.new/gfloppy/gfloppy.desktop.in
---- gnome-utils-2.18.1/gfloppy/gfloppy.desktop.in	2007-04-14 13:34:53.000000000 +0200
-+++ gnome-utils-2.18.1.new/gfloppy/gfloppy.desktop.in	2007-04-14 19:48:03.000000000 +0200
+diff -urN gnome-utils-2.19.92/gfloppy/gfloppy.desktop.in gnome-utils-2.19.92.new/gfloppy/gfloppy.desktop.in
+--- gnome-utils-2.19.92/gfloppy/gfloppy.desktop.in	2007-09-04 17:08:38.000000000 +0200
++++ gnome-utils-2.19.92.new/gfloppy/gfloppy.desktop.in	2007-09-08 15:07:29.000000000 +0200
 @@ -7,7 +7,7 @@
  Icon=gnome-dev-floppy
  Type=Application
  StartupNotify=true
 -Categories=GTK;GNOME;Application;System;
 +Categories=GTK;GNOME;System;
+ OnlyShowIn=GNOME
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
- X-GNOME-Bugzilla-Component=gfloppy
-diff -urN gnome-utils-2.18.1/gnome-dictionary/data/gnome-dictionary.desktop.in.in gnome-utils-2.18.1.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in
---- gnome-utils-2.18.1/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2007-04-14 13:34:42.000000000 +0200
-+++ gnome-utils-2.18.1.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2007-04-14 19:49:01.000000000 +0200
+diff -urN gnome-utils-2.19.92/gnome-dictionary/data/gnome-dictionary.desktop.in.in gnome-utils-2.19.92.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in
+--- gnome-utils-2.19.92/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2007-09-04 17:07:37.000000000 +0200
++++ gnome-utils-2.19.92.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2007-09-08 15:08:02.000000000 +0200
 @@ -7,7 +7,7 @@
  Type=Application
- Icon=gnome-dictionary.png
+ Icon=accessories-dictionary.png
  StartupNotify=true
--Categories=GNOME;GTK;Application;Utility;
-+Categories=GTK;GNOME;Office;Dictionary;
+-Categories=GNOME;GTK;Utility;
++Categories=GNOME;GTK;Office;Dictionary;
+ OnlyShowIn=GNOME
  X-GNOME-DocPath=gnome-dictionary/gnome-dictionary.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-utils
-diff -urN gnome-utils-2.18.1/gnome-screenshot/gnome-screenshot.desktop.in gnome-utils-2.18.1.new/gnome-screenshot/gnome-screenshot.desktop.in
---- gnome-utils-2.18.1/gnome-screenshot/gnome-screenshot.desktop.in	2007-04-14 13:34:37.000000000 +0200
-+++ gnome-utils-2.18.1.new/gnome-screenshot/gnome-screenshot.desktop.in	2007-04-14 19:49:39.000000000 +0200
-@@ -7,7 +7,7 @@
- Type=Application
- Icon=applets-screenshooter
- StartupNotify=true
--Categories=GTK;GNOME;Application;Utility;
-+Categories=GTK;GNOME;Utility;
- X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-utils
- X-GNOME-Bugzilla-Component=screenshot
-diff -urN gnome-utils-2.18.1/gsearchtool/gnome-search-tool.desktop.in gnome-utils-2.18.1.new/gsearchtool/gnome-search-tool.desktop.in
---- gnome-utils-2.18.1/gsearchtool/gnome-search-tool.desktop.in	2007-04-14 13:34:44.000000000 +0200
-+++ gnome-utils-2.18.1.new/gsearchtool/gnome-search-tool.desktop.in	2007-04-14 19:50:25.000000000 +0200
+diff -urN gnome-utils-2.19.92/logview/gnome-system-log.desktop.in.in gnome-utils-2.19.92.new/logview/gnome-system-log.desktop.in.in
+--- gnome-utils-2.19.92/logview/gnome-system-log.desktop.in.in	2007-09-04 17:08:21.000000000 +0200
++++ gnome-utils-2.19.92.new/logview/gnome-system-log.desktop.in.in	2007-09-08 15:09:01.000000000 +0200
 @@ -7,7 +7,7 @@
  Terminal=false
  Type=Application
  StartupNotify=true
--Categories=GNOME;GTK;Application;Core;
-+Categories=GTK;GNOME;Utility;
- X-GNOME-DocPath=gnome-search-tool/gnome-search-tool.xml
- X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-utils
-diff -urN gnome-utils-2.18.1/logview/gnome-system-log.desktop.in.in gnome-utils-2.18.1.new/logview/gnome-system-log.desktop.in.in
---- gnome-utils-2.18.1/logview/gnome-system-log.desktop.in.in	2007-04-14 13:34:45.000000000 +0200
-+++ gnome-utils-2.18.1.new/logview/gnome-system-log.desktop.in.in	2007-04-14 19:51:12.000000000 +0200
-@@ -7,7 +7,7 @@
- Terminal=false
- Type=Application
- StartupNotify=true
--Categories=GTK;GNOME;Application;System;Monitor;X-Red-Hat-Base;
+-Categories=GTK;GNOME;System;Monitor;X-Red-Hat-Base;
 +Categories=GTK;GNOME;System;Monitor;
+ OnlyShowIn=GNOME
  X-GNOME-DocPath=gnome-system-log/gnome-system-log.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-utils
