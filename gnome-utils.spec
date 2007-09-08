@@ -10,28 +10,28 @@ Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-utils/2.19/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.19/%{name}-%{version}.tar.bz2
 # Source0-md5:	87d0ebb61b53f5a5011cb4b380e1cf86
-#Patch0:		%{name}-desktop.patch
+Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.18.0.1
+BuildRequires:	GConf2-devel >= 2.19.1
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gnome-common >= 2.18.0
-BuildRequires:	gnome-desktop-devel >= 2.18.1
-BuildRequires:	gnome-doc-utils >= 0.10.3
-BuildRequires:	gnome-panel-devel >= 2.18.1
-BuildRequires:	gnome-vfs2-devel >= 2.18.1
-BuildRequires:	gtk+2-devel >= 2:2.10.10
-BuildRequires:	hal-devel >= 0.5.7.1
-BuildRequires:	intltool >= 0.35.5
-BuildRequires:	libbonoboui-devel >= 2.18.0
-BuildRequires:	libglade2-devel >= 1:2.6.0
+BuildRequires:	gnome-desktop-devel >= 2.19.92
+BuildRequires:	gnome-doc-utils >= 0.11.2
+BuildRequires:	gnome-panel-devel >= 2.19.92
+BuildRequires:	gnome-vfs2-devel >= 2.19.91
+BuildRequires:	gtk+2-devel >= 2:2.11.6
+BuildRequires:	hal-devel >= 0.5.9
+BuildRequires:	intltool >= 0.36.1
+BuildRequires:	libbonoboui-devel >= 2.19.6
+BuildRequires:	libglade2-devel >= 1:2.6.2
 BuildRequires:	libgnomeprintui-devel >= 2.18.0
-BuildRequires:	libgnomeui-devel >= 2.18.1
-BuildRequires:	libgtop-devel >= 2.14.8
+BuildRequires:	libgnomeui-devel >= 2.19.1
+BuildRequires:	libgtop-devel >= 2.19.92
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
@@ -39,8 +39,8 @@ BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
-Requires:	gnome-vfs2 >= 2.18.1
-Requires:	libgnomeui >= 2.18.1
+Requires:	gnome-vfs2 >= 2.19.91
+Requires:	libgnomeui >= 2.19.1
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -220,7 +220,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
 %{__intltoolize}
