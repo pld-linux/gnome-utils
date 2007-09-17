@@ -1,0 +1,48 @@
+diff -urN gnome-utils-2.19.92/baobab/data/baobab.desktop.in.in gnome-utils-2.19.92.new/baobab/data/baobab.desktop.in.in
+--- gnome-utils-2.19.92/baobab/data/baobab.desktop.in.in	2007-09-04 17:07:22.000000000 +0200
++++ gnome-utils-2.19.92.new/baobab/data/baobab.desktop.in.in	2007-09-08 15:07:13.000000000 +0200
+@@ -9,7 +9,7 @@
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GTK;GNOME;System;
++Categories=GTK;GNOME;System;Filesystem;
+ OnlyShowIn=GNOME
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gnome-utils
+diff -urN gnome-utils-2.19.92/gfloppy/gfloppy.desktop.in gnome-utils-2.19.92.new/gfloppy/gfloppy.desktop.in
+--- gnome-utils-2.19.92/gfloppy/gfloppy.desktop.in	2007-09-04 17:08:38.000000000 +0200
++++ gnome-utils-2.19.92.new/gfloppy/gfloppy.desktop.in	2007-09-08 15:07:29.000000000 +0200
+@@ -7,7 +7,7 @@
+ Icon=gnome-dev-floppy
+ Type=Application
+ StartupNotify=true
+-Categories=GTK;GNOME;Application;System;
++Categories=GTK;GNOME;System;
+ OnlyShowIn=GNOME
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gnome-utils
+diff -urN gnome-utils-2.19.92/gnome-dictionary/data/gnome-dictionary.desktop.in.in gnome-utils-2.19.92.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in
+--- gnome-utils-2.19.92/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2007-09-04 17:07:37.000000000 +0200
++++ gnome-utils-2.19.92.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in	2007-09-08 15:08:02.000000000 +0200
+@@ -7,7 +7,7 @@
+ Type=Application
+ Icon=accessories-dictionary.png
+ StartupNotify=true
+-Categories=GNOME;GTK;Utility;
++Categories=GNOME;GTK;Office;Dictionary;
+ OnlyShowIn=GNOME
+ X-GNOME-DocPath=gnome-dictionary/gnome-dictionary.xml
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+diff -urN gnome-utils-2.19.92/logview/gnome-system-log.desktop.in.in gnome-utils-2.19.92.new/logview/gnome-system-log.desktop.in.in
+--- gnome-utils-2.19.92/logview/gnome-system-log.desktop.in.in	2007-09-04 17:08:21.000000000 +0200
++++ gnome-utils-2.19.92.new/logview/gnome-system-log.desktop.in.in	2007-09-08 15:09:01.000000000 +0200
+@@ -7,7 +7,7 @@
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+-Categories=GTK;GNOME;System;Monitor;X-Red-Hat-Base;
++Categories=GTK;GNOME;System;Monitor;
+ OnlyShowIn=GNOME
+ X-GNOME-DocPath=gnome-system-log/gnome-system-log.xml
+ X-GNOME-Bugzilla-Bugzilla=GNOME
