@@ -6,7 +6,7 @@ Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів �
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.20.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -141,7 +141,7 @@ Summary:	Online dictionary
 Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
 Requires(post,postun):	gtk+2
-Requires(post,postun):	hicolor-icon-theme
+Requires(post,postun):	hicolor-icon-theme >= 2.20.0
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
@@ -355,12 +355,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/baobab*
 %dir %{_omf_dest_dir}/baobab
 %{_omf_dest_dir}/baobab/baobab-C.omf
+%lang(ca) %{_omf_dest_dir}/baobab/baobab-ca.omf
 %lang(en_GB) %{_omf_dest_dir}/baobab/baobab-en_GB.omf
 %lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
 %lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
+%lang(oc) %{_omf_dest_dir}/baobab/baobab-oc.omf
 %lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
 %lang(uk) %{_omf_dest_dir}/baobab/baobab-uk.omf
-%{_sysconfdir}/gconf/schemas/baobab.schemas
 
 %files dictionary -f gnome-dictionary.lang
 %defattr(644,root,root,755)
@@ -373,10 +374,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
-%{_iconsdir}/hicolor/*/*/gnome-dictionary.*
 %dir %{_omf_dest_dir}/gnome-dictionary
 %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ca.omf
 %lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-en_GB.omf
 %lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-fr.omf
 %lang(it) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-it.omf
@@ -394,6 +396,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/gfloppy*
 %dir %{_omf_dest_dir}/gfloppy
 %{_omf_dest_dir}/gfloppy/gfloppy-C.omf
+%lang(ca) %{_omf_dest_dir}/gfloppy/gfloppy-ca.omf
+%lang(es) %{_omf_dest_dir}/gfloppy/gfloppy-es.omf
 %lang(fr) %{_omf_dest_dir}/gfloppy/gfloppy-fr.omf
 %lang(ru) %{_omf_dest_dir}/gfloppy/gfloppy-ru.omf
 %lang(sv) %{_omf_dest_dir}/gfloppy/gfloppy-sv.omf
@@ -409,9 +413,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/gnome-system-log*
 %dir %{_omf_dest_dir}/gnome-system-log
 %{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ca.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-en_GB.omf
 %lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
 %lang(it) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-it.omf
+%lang(ko) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ko.omf
+%lang(oc) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-oc.omf
 %lang(ru) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
@@ -426,8 +434,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/gsearchtool
 %dir %{_omf_dest_dir}/gnome-search-tool
 %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ca.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-en_GB.omf
 %lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
 %lang(fr) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-fr.omf
+%lang(ko) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ko.omf
+%lang(oc) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-oc.omf
 %lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
 %lang(sv) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-sv.omf
 %lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
