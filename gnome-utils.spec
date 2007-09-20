@@ -6,7 +6,7 @@ Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів �
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.20.0
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -141,7 +141,7 @@ Summary:	Online dictionary
 Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
 Requires(post,postun):	gtk+2
-Requires(post,postun):	hicolor-icon-theme >= 2.20.0
+Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
