@@ -6,7 +6,7 @@ Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів �
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.20.0
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -43,6 +43,8 @@ Requires:	gnome-vfs2 >= 2.18.1
 Requires:	libgnomeui >= 2.18.1
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
+# sr@Latn vs. sr@latin
+Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_gnomehelpdir	%{_datadir}/gnome/help
@@ -243,6 +245,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
+[ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
+	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}-2.0
 %find_lang baobab --with-gnome
 %find_lang gfloppy --with-gnome
