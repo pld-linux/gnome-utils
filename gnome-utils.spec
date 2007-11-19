@@ -6,7 +6,7 @@ Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів �
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.20.0
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
@@ -14,33 +14,35 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.20/%{name}-%{versi
 # Source0-md5:	f58f05a1eac5b04d2ebd66fcc2606251
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.18.0.1
+BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-common >= 2.18.0
-BuildRequires:	gnome-desktop-devel >= 2.18.1
-BuildRequires:	gnome-doc-utils >= 0.10.3
-BuildRequires:	gnome-panel-devel >= 2.18.1
-BuildRequires:	gnome-vfs2-devel >= 2.18.1
-BuildRequires:	gtk+2-devel >= 2:2.10.10
+BuildRequires:	gnome-common >= 2.20.0
+BuildRequires:	gnome-desktop-devel >= 2.20.0
+BuildRequires:	gnome-doc-utils >= 0.12.0
+BuildRequires:	gnome-panel-devel >= 2.20.0
+BuildRequires:	gnome-vfs2-devel >= 2.20.0
+BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	hal-devel >= 0.5.7.1
-BuildRequires:	intltool >= 0.35.5
-BuildRequires:	libbonoboui-devel >= 2.18.0
-BuildRequires:	libglade2-devel >= 1:2.6.0
+BuildRequires:	intltool >= 0.36.2
+BuildRequires:	libbonoboui-devel >= 2.20.0
+BuildRequires:	libglade2-devel >= 1:2.6.2
 BuildRequires:	libgnomeprintui-devel >= 2.18.0
-BuildRequires:	libgnomeui-devel >= 2.18.1
+BuildRequires:	libgnomeui-devel >= 2.20.0
 BuildRequires:	libgtop-devel >= 2.14.8
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+# support for --with-omf in find-lang.sh
+BuildRequires:	rpm-build >= 4.4.9-10
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
-Requires:	gnome-vfs2 >= 2.18.1
-Requires:	libgnomeui >= 2.18.1
+Requires:	gnome-vfs2 >= 2.20.0
+Requires:	libgnomeui >= 2.20.0
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 # sr@Latn vs. sr@latin
@@ -224,6 +226,9 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %setup -q
 %patch0 -p1
 
+sed -i -e s#sr\@Latn#sr\@latin# po/LINGUAS
+mv -f po/sr\@{Latn,latin}.po
+
 %build
 %{__intltoolize}
 %{__gnome_doc_common}
@@ -245,14 +250,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
-[ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
-	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}-2.0
-%find_lang baobab --with-gnome
-%find_lang gfloppy --with-gnome
-%find_lang gnome-dictionary --with-gnome
-%find_lang gnome-search-tool --with-gnome
-%find_lang gnome-system-log --with-gnome
+%find_lang baobab --with-gnome --with-omf
+%find_lang gfloppy --with-gnome --with-omf
+%find_lang gnome-dictionary --with-gnome --with-omf
+%find_lang gnome-search-tool --with-gnome --with-omf
+%find_lang gnome-system-log --with-gnome --with-omf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -357,15 +360,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/*/baobab.*
 %{_datadir}/baobab
 %{_mandir}/man1/baobab*
-%dir %{_omf_dest_dir}/baobab
-%{_omf_dest_dir}/baobab/baobab-C.omf
-%lang(ca) %{_omf_dest_dir}/baobab/baobab-ca.omf
-%lang(en_GB) %{_omf_dest_dir}/baobab/baobab-en_GB.omf
-%lang(es) %{_omf_dest_dir}/baobab/baobab-es.omf
-%lang(fr) %{_omf_dest_dir}/baobab/baobab-fr.omf
-%lang(oc) %{_omf_dest_dir}/baobab/baobab-oc.omf
-%lang(sv) %{_omf_dest_dir}/baobab/baobab-sv.omf
-%lang(uk) %{_omf_dest_dir}/baobab/baobab-uk.omf
 
 %files dictionary -f gnome-dictionary.lang
 %defattr(644,root,root,755)
@@ -378,17 +372,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
-%dir %{_omf_dest_dir}/gnome-dictionary
-%{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-C.omf
-%lang(ca) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ca.omf
-%lang(el) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-el.omf
-%lang(en_GB) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-en_GB.omf
-%lang(es) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-es.omf
-%lang(fr) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-fr.omf
-%lang(it) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-it.omf
-%lang(ru) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-ru.omf
-%lang(sv) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-sv.omf
-%lang(uk) %{_omf_dest_dir}/gnome-dictionary/gnome-dictionary-uk.omf
 
 %files floppy -f gfloppy.lang
 %defattr(644,root,root,755)
@@ -398,14 +381,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gfloppy.desktop
 %{_datadir}/%{name}/glade/gfloppy2.glade
 %{_mandir}/man1/gfloppy*
-%dir %{_omf_dest_dir}/gfloppy
-%{_omf_dest_dir}/gfloppy/gfloppy-C.omf
-%lang(ca) %{_omf_dest_dir}/gfloppy/gfloppy-ca.omf
-%lang(es) %{_omf_dest_dir}/gfloppy/gfloppy-es.omf
-%lang(fr) %{_omf_dest_dir}/gfloppy/gfloppy-fr.omf
-%lang(ru) %{_omf_dest_dir}/gfloppy/gfloppy-ru.omf
-%lang(sv) %{_omf_dest_dir}/gfloppy/gfloppy-sv.omf
-%lang(uk) %{_omf_dest_dir}/gfloppy/gfloppy-uk.omf
 
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
@@ -415,18 +390,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gnome-system-log.desktop
 %{_datadir}/gnome-system-log
 %{_mandir}/man1/gnome-system-log*
-%dir %{_omf_dest_dir}/gnome-system-log
-%{_omf_dest_dir}/gnome-system-log/gnome-system-log-C.omf
-%lang(ca) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ca.omf
-%lang(en_GB) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-en_GB.omf
-%lang(es) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-es.omf
-%lang(fr) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-fr.omf
-%lang(it) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-it.omf
-%lang(ko) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ko.omf
-%lang(oc) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-oc.omf
-%lang(ru) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-ru.omf
-%lang(sv) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-sv.omf
-%lang(uk) %{_omf_dest_dir}/gnome-system-log/gnome-system-log-uk.omf
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
@@ -436,17 +399,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gnome-search-tool.desktop
 %{_mandir}/man1/gnome-search-tool*
 %{_pixmapsdir}/gsearchtool
-%dir %{_omf_dest_dir}/gnome-search-tool
-%{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-C.omf
-%lang(ca) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ca.omf
-%lang(en_GB) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-en_GB.omf
-%lang(es) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-es.omf
-%lang(fr) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-fr.omf
-%lang(ko) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ko.omf
-%lang(oc) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-oc.omf
-%lang(ru) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-ru.omf
-%lang(sv) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-sv.omf
-%lang(uk) %{_omf_dest_dir}/gnome-search-tool/gnome-search-tool-uk.omf
 
 %files screenshot
 %defattr(644,root,root,755)
