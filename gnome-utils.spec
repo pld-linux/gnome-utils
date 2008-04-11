@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файло
 Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.20.0
-Release:	5
+Version:	2.20.0.1
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.20/%{name}-%{version}.tar.bz2
-# Source0-md5:	f58f05a1eac5b04d2ebd66fcc2606251
+# Source0-md5:	2d4385df2fb566b437b283bd2ce70190
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.20.0
