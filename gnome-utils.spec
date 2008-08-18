@@ -1,8 +1,8 @@
 Summary:	GNOME utility programs
 Summary(ja.UTF-8):	GNOME ユーティリティプログラム集
 Summary(pl.UTF-8):	Programy użytkowe GNOME
-Summary(ru.UTF-8):	Утилиты GNOME, такие как поиск файлов и калькулятор
-Summary(uk.UTF-8):	Утиліти GNOME, такі як пошук файлів та калькулятор
+Summary(ru.UTF-8):	Утилиты GNOME
+Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.20.0.1
