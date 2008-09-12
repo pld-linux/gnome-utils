@@ -7,19 +7,7 @@ diff -urN gnome-utils-2.19.92/baobab/data/baobab.desktop.in.in gnome-utils-2.19.
  StartupNotify=true
 -Categories=GTK;GNOME;System;
 +Categories=GTK;GNOME;System;Filesystem;
- OnlyShowIn=GNOME
- X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-utils
-diff -urN gnome-utils-2.19.92/gfloppy/gfloppy.desktop.in gnome-utils-2.19.92.new/gfloppy/gfloppy.desktop.in
---- gnome-utils-2.19.92/gfloppy/gfloppy.desktop.in	2007-09-04 17:08:38.000000000 +0200
-+++ gnome-utils-2.19.92.new/gfloppy/gfloppy.desktop.in	2007-09-08 15:07:29.000000000 +0200
-@@ -7,7 +7,7 @@
- Icon=gnome-dev-floppy
- Type=Application
- StartupNotify=true
--Categories=GTK;GNOME;Application;System;
-+Categories=GTK;GNOME;System;
- OnlyShowIn=GNOME
+ NotShowIn=KDE;
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=gnome-utils
 diff -urN gnome-utils-2.19.92/gnome-dictionary/data/gnome-dictionary.desktop.in.in gnome-utils-2.19.92.new/gnome-dictionary/data/gnome-dictionary.desktop.in.in
@@ -31,7 +19,7 @@ diff -urN gnome-utils-2.19.92/gnome-dictionary/data/gnome-dictionary.desktop.in.
  StartupNotify=true
 -Categories=GNOME;GTK;Utility;
 +Categories=GNOME;GTK;Office;Dictionary;
- OnlyShowIn=GNOME
+ NotShowIn=KDE;
  X-GNOME-DocPath=gnome-dictionary/gnome-dictionary.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
 diff -urN gnome-utils-2.19.92/logview/gnome-system-log.desktop.in.in gnome-utils-2.19.92.new/logview/gnome-system-log.desktop.in.in
@@ -43,6 +31,6 @@ diff -urN gnome-utils-2.19.92/logview/gnome-system-log.desktop.in.in gnome-utils
  StartupNotify=true
 -Categories=GTK;GNOME;System;Monitor;X-Red-Hat-Base;
 +Categories=GTK;GNOME;System;Monitor;
- OnlyShowIn=GNOME
+ NotShowIn=KDE;
  X-GNOME-DocPath=gnome-system-log/gnome-system-log.xml
  X-GNOME-Bugzilla-Bugzilla=GNOME
