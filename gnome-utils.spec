@@ -5,14 +5,14 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.20.0.1
+Version:	2.24.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.20/%{name}-%{version}.tar.bz2
-# Source0-md5:	2d4385df2fb566b437b283bd2ce70190
-Patch0:		%{name}-desktop.patch
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.24/%{name}-%{version}.tar.bz2
+# Source0-md5:	61b145af70c5a61d27037119a31429e5
+# http://bugzilla.gnome.org/show_bug.cgi?id=552054
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf
@@ -222,10 +222,9 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 
 %prep
 %setup -q
-%patch0 -p1
 
-sed -i -e 's#sr\@Latn#sr\@latin#' po/LINGUAS
-mv -f po/sr\@{Latn,latin}.po
+#sed -i -e 's#sr\@Latn#sr\@latin#' po/LINGUAS
+#mv -f po/sr\@{Latn,latin}.po
 
 %build
 %{__intltoolize}
