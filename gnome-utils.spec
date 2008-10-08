@@ -223,9 +223,6 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 
-#sed -i -e 's#sr\@Latn#sr\@latin#' po/LINGUAS
-#mv -f po/sr\@{Latn,latin}.po
-
 %build
 %{__intltoolize}
 %{__gnome_doc_common}
