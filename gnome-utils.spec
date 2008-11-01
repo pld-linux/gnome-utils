@@ -5,44 +5,42 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.24.0
+Version:	2.24.1
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	61b145af70c5a61d27037119a31429e5
-# http://bugzilla.gnome.org/show_bug.cgi?id=552054
+# Source0-md5:	232937a4bf5c9ebb1bbc86793871d843
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.20.0
+BuildRequires:	GConf2-devel >= 2.24.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
-BuildRequires:	gnome-common >= 2.20.0
-BuildRequires:	gnome-desktop-devel >= 2.20.0
-BuildRequires:	gnome-doc-utils >= 0.12.0
-BuildRequires:	gnome-panel-devel >= 2.20.0
-BuildRequires:	gnome-vfs2-devel >= 2.20.0
-BuildRequires:	gtk+2-devel >= 2:2.12.0
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel >= 1:2.18.0
+BuildRequires:	gnome-common >= 2.24.0
+BuildRequires:	gnome-desktop-devel >= 2.24.0
+BuildRequires:	gnome-doc-utils >= 0.14.0
+BuildRequires:	gnome-panel-devel >= 2.24.0
+BuildRequires:	gnome-vfs2-devel >= 2.24.0
+BuildRequires:	gtk+2-devel >= 2:2.14.0
 BuildRequires:	hal-devel >= 0.5.7.1
-BuildRequires:	intltool >= 0.36.2
-BuildRequires:	libbonoboui-devel >= 2.20.0
+BuildRequires:	intltool >= 0.40.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
-BuildRequires:	libgnomeprintui-devel >= 2.18.0
-BuildRequires:	libgnomeui-devel >= 2.20.0
+BuildRequires:	libgnomeui-devel >= 2.24.0
 BuildRequires:	libgtop-devel >= 2.14.8
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
-BuildRequires:	sed >= 4.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
-Requires:	gnome-vfs2 >= 2.20.0
-Requires:	libgnomeui >= 2.20.0
+Requires:	gnome-vfs2 >= 2.24.0
+Requires:	libgnomeui >= 2.24.0
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 # sr@Latn vs. sr@latin
@@ -229,6 +227,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	--enable-gfloppy \
@@ -328,6 +327,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -n libgdict
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgdict-1.0.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgdict-1.0.so.6
 %{_datadir}/gdict-1.0
 
 %files -n libgdict-devel
