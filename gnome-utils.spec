@@ -5,27 +5,27 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.24.1
-Release:	2
+Version:	2.26.0
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	232937a4bf5c9ebb1bbc86793871d843
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.26/%{name}-%{version}.tar.bz2
+# Source0-md5:	667400cfb9bee954028024ac3cf91a09
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.24.0
+BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.18.0
+BuildRequires:	glib2-devel >= 1:2.20.0
 BuildRequires:	gnome-common >= 2.24.0
-BuildRequires:	gnome-desktop-devel >= 2.24.0
+BuildRequires:	gnome-desktop-devel >= 2.26.0
 BuildRequires:	gnome-doc-utils >= 0.14.0
-BuildRequires:	gnome-panel-devel >= 2.24.0
+BuildRequires:	gnome-panel-devel >= 2.26.0
 BuildRequires:	gnome-vfs2-devel >= 2.24.0
-BuildRequires:	gtk+2-devel >= 2:2.14.0
+BuildRequires:	gtk+2-devel >= 2:2.16.0
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.40.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
@@ -36,6 +36,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
+BuildRequires:	zlib-devel
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
@@ -75,7 +76,7 @@ Programy użytkowe GNOME'a.
 %package -n libgdict
 Summary:	libgdict library
 Summary(pl.UTF-8):	Biblioteka libgdict
-Group:		Libraries
+Group:		X11/Libraries
 
 %description -n libgdict
 libgdict library.
@@ -86,7 +87,8 @@ Biblioteka libgdict.
 %package -n libgdict-devel
 Summary:	Header files for libgdict library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgdict
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
+Requires:	gtk+2-devel >= 2:2.16.0
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-devel
@@ -98,7 +100,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki libgdict.
 %package -n libgdict-static
 Summary:	Static libgdict library
 Summary(pl.UTF-8):	Statyczna biblioteka libgdict
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	libgdict-devel = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-static
@@ -294,10 +296,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post logview
 %scrollkeeper_update_post
-%gconf_schema_install logview.schemas
+%gconf_schema_install gnome-system-log.schemas
 
 %preun logview
-%gconf_schema_uninstall logview.schemas
+%gconf_schema_uninstall gnome-system-log.schemas
 
 %postun logview
 %scrollkeeper_update_postun
@@ -380,9 +382,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc logview/ChangeLog logview/TODO
 %attr(755,root,root) %{_bindir}/gnome-system-log
-%{_sysconfdir}/gconf/schemas/logview.schemas
+%{_sysconfdir}/gconf/schemas/gnome-system-log.schemas
 %{_desktopdir}/gnome-system-log.desktop
-%{_datadir}/gnome-system-log
+%{_datadir}/%{name}/logview-toolbar.xml
 %{_mandir}/man1/gnome-system-log*
 
 %files search-tool -f gnome-search-tool.lang
