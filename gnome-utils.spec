@@ -5,27 +5,27 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.25.90
+Version:	2.26.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.25/%{name}-%{version}.tar.bz2
-# Source0-md5:	46ac7e0095a94765e63c2822adf7cbca
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.26/%{name}-%{version}.tar.bz2
+# Source0-md5:	667400cfb9bee954028024ac3cf91a09
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.25.0
+BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.19.7
+BuildRequires:	glib2-devel >= 1:2.20.0
 BuildRequires:	gnome-common >= 2.24.0
-BuildRequires:	gnome-desktop-devel >= 2.25.90
+BuildRequires:	gnome-desktop-devel >= 2.26.0
 BuildRequires:	gnome-doc-utils >= 0.14.0
-BuildRequires:	gnome-panel-devel >= 2.25.90
+BuildRequires:	gnome-panel-devel >= 2.26.0
 BuildRequires:	gnome-vfs2-devel >= 2.24.0
-BuildRequires:	gtk+2-devel >= 2:2.15.0
+BuildRequires:	gtk+2-devel >= 2:2.16.0
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.40.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
@@ -88,7 +88,7 @@ Biblioteka libgdict.
 Summary:	Header files for libgdict library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgdict
 Group:		X11/Development/Libraries
-Requires:	gtk+2-devel >= 2:2.15.0
+Requires:	gtk+2-devel >= 2:2.16.0
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-devel
