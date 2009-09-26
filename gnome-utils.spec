@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.26.0
-Release:	2
+Version:	2.28.0
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.26/%{name}-%{version}.tar.bz2
-# Source0-md5:	667400cfb9bee954028024ac3cf91a09
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.28/%{name}-%{version}.tar.bz2
+# Source0-md5:	156e38fdf348bf2db4fcb7b84ddcc2aa
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf
@@ -28,7 +28,6 @@ BuildRequires:	gnome-vfs2-devel >= 2.24.0
 BuildRequires:	gtk+2-devel >= 2:2.16.0
 BuildRequires:	hal-devel >= 0.5.7.1
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libglade2-devel >= 1:2.6.2
 BuildRequires:	libgnomeui-devel >= 2.24.0
 BuildRequires:	libgtop-devel >= 2.14.8
 BuildRequires:	libtool
@@ -160,21 +159,6 @@ spellings of words.
 Pozwala na wyszukiwanie definicji i poprawnej pisowni słów w słowniku
 sieciowym.
 
-%package floppy
-Summary:	GNOME floppy formatter
-Summary(pl.UTF-8):	Formater dyskietek dla GNOME
-Group:		X11/Applications
-Requires(post,postun):	desktop-file-utils
-Requires(post,postun):	scrollkeeper
-Requires(post,preun):	GConf2
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-
-%description floppy
-GFloppy formats floppy disks.
-
-%description floppy -l pl.UTF-8
-GFloppy formatuje dyskietki.
-
 %package logview
 Summary:	System log viewer for GNOME
 Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
@@ -232,7 +216,6 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %{__autoheader}
 %{__automake}
 %configure \
-	--enable-gfloppy \
 	--disable-schemas-install \
 	--disable-scrollkeeper \
 	--with-html-dir=%{_gtkdocdir}
@@ -247,7 +230,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}-2.0
 %find_lang baobab --with-gnome --with-omf
-%find_lang gfloppy --with-gnome --with-omf
 %find_lang gnome-dictionary --with-gnome --with-omf
 %find_lang gnome-search-tool --with-gnome --with-omf
 %find_lang gnome-system-log --with-gnome --with-omf
@@ -282,18 +264,6 @@ rm -rf $RPM_BUILD_ROOT
 %scrollkeeper_update_postun
 %update_icon_cache hicolor
 
-%post floppy
-%scrollkeeper_update_post
-%update_desktop_database_post
-%gconf_schema_install gfloppy.schemas
-
-%preun floppy
-%gconf_schema_uninstall gfloppy.schemas
-
-%postun floppy
-%scrollkeeper_update_postun
-%update_desktop_database_postun
-
 %post logview
 %scrollkeeper_update_post
 %gconf_schema_install gnome-system-log.schemas
@@ -324,7 +294,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %dir %{_datadir}/%{name}
-%dir %{_datadir}/%{name}/glade
 
 %files -n libgdict
 %defattr(644,root,root,755)
@@ -359,7 +328,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files dictionary -f gnome-dictionary.lang
 %defattr(644,root,root,755)
-%doc gnome-dictionary/ChangeLog gnome-dictionary/README gnome-dictionary/TODO
+%doc gnome-dictionary/AUTHORS gnome-dictionary/README gnome-dictionary/TODO
 %attr(755,root,root) %{_bindir}/gnome-dictionary
 %attr(755,root,root) %{_libdir}/gnome-dictionary-applet
 %{_sysconfdir}/gconf/schemas/gnome-dictionary.schemas
@@ -369,21 +338,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
 
-%files floppy -f gfloppy.lang
-%defattr(644,root,root,755)
-%doc gfloppy/AUTHORS gfloppy/ChangeLog gfloppy/NEWS gfloppy/README gfloppy/TODO
-%attr(755,root,root) %{_bindir}/gfloppy
-%{_sysconfdir}/gconf/schemas/gfloppy.schemas
-%{_desktopdir}/gfloppy.desktop
-%{_datadir}/%{name}/glade/gfloppy2.glade
-%{_mandir}/man1/gfloppy*
-
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
 %doc logview/ChangeLog logview/TODO
 %attr(755,root,root) %{_bindir}/gnome-system-log
 %{_sysconfdir}/gconf/schemas/gnome-system-log.schemas
 %{_desktopdir}/gnome-system-log.desktop
+%{_datadir}/%{name}/logview-filter.ui
 %{_datadir}/%{name}/logview-toolbar.xml
 %{_mandir}/man1/gnome-system-log*
 
@@ -404,3 +365,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-screenshot
 %{_desktopdir}/gnome-screenshot.desktop
 %{_sysconfdir}/gconf/schemas/gnome-screenshot.schemas
+%{_mandir}/man1/gnome-screenshot*
