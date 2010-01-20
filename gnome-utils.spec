@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.28.1
-Release:	3
+Version:	2.28.3
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.28/%{name}-%{version}.tar.bz2
-# Source0-md5:	3c811993191ae0bbf8666405a504288a
+# Source0-md5:	ccfd36710952fa5280612c1c00e915e8
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf
