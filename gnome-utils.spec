@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.28.3
+Version:	2.30.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.28/%{name}-%{version}.tar.bz2
-# Source0-md5:	ccfd36710952fa5280612c1c00e915e8
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.30/%{name}-%{version}.tar.bz2
+# Source0-md5:	c6d779ddccf99cbe0667b578078dd011
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf
@@ -33,6 +33,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
+BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
@@ -204,6 +205,9 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 
+sed -i -e 's/^en@shaw//' po/LINGUAS
+rm -f po/en@shaw.po
+
 %build
 %{__intltoolize}
 %{__gnome_doc_common}
@@ -215,6 +219,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %configure \
 	--disable-schemas-install \
 	--disable-scrollkeeper \
+	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
