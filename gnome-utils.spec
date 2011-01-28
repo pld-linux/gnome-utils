@@ -34,6 +34,7 @@ BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libSM-devel
 BuildRequires:	zlib-devel
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	scrollkeeper
