@@ -245,6 +245,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %find_lang %{name}-2.0
 %find_lang baobab --with-gnome --with-omf
 %find_lang gnome-dictionary --with-gnome --with-omf
@@ -321,7 +323,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -n libgdict-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgdict-1.0.so
-%{_libdir}/libgdict-1.0.la
 %{_includedir}/gdict-1.0
 %{_pkgconfigdir}/gdict-1.0.pc
 
