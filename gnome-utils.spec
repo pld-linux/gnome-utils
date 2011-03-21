@@ -126,9 +126,9 @@ Dokumentacja API libgdict.
 Summary:	Graphical directory tree analyzer
 Summary(pl.UTF-8):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
+Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	scrollkeeper
-Requires(post,postun):	glib2 >= 1:2.26.0
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	hicolor-icon-theme
 Obsoletes:	baobab
@@ -143,11 +143,9 @@ Graficzny analizator drzew katalogów.
 Summary:	Online dictionary
 Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
-Requires(post,postun):	gtk-update-icon-cache
+Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	scrollkeeper
-Requires(post,preun):	glib2 >= 1:2.26.0
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Requires:	hicolor-icon-theme
 Provides:	gnome-utils-dict
 Obsoletes:	gnome-dict
 Obsoletes:	gnome-utils-dict
@@ -165,8 +163,8 @@ sieciowym.
 Summary:	Font viewer
 Summary(pl.UTF-8):	Przeglądarka czcionek
 Group:		X11/Applications
-Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires(post,postun):	desktop-file-utils
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description font-viewer
 This package provides font viewer.
@@ -178,9 +176,9 @@ Ten pakiet dostarcza przeglądarkę czcionek.
 Summary:	System log viewer for GNOME
 Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
 Group:		X11/Applications
-Requires(post,postun):	scrollkeeper
 Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	gtk-update-icon-cache
+Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	hicolor-icon-theme
 Conflicts:	gnome-utils <= 0:2.10.0-1
@@ -271,13 +269,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post dictionary
 %scrollkeeper_update_post
-%gconf_schema_install gnome-dictionary.schemas
-%update_icon_cache hicolor
 %glib_compile_schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
-%update_icon_cache hicolor
 %glib_compile_schemas
 
 %post font-viewer
@@ -375,7 +370,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/logview-filter.ui
 %{_datadir}/%{name}/logview-toolbar.xml
 %{_mandir}/man1/gnome-system-log*
-%{_iconsdir}/hicolor/*/*/*.png
+%{_iconsdir}/hicolor/*/*/logview.png
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
