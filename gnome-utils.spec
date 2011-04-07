@@ -5,30 +5,30 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	2.32.0
-Release:	2
+Version:	3.0.0
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.32/%{name}-%{version}.tar.bz2
-# Source0-md5:	e150cdb53314fe97ea80768850c2e03c
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/3.0/%{name}-%{version}.tar.bz2
+# Source0-md5:	a0d07b3b045caba13518bf25f7973745
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.64
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	bison
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.20.0
+BuildRequires:	glib2-devel >= 1:2.26.0
 BuildRequires:	gnome-common >= 2.24.0
 BuildRequires:	gnome-doc-utils >= 0.14.0
-BuildRequires:	gnome-panel-devel >= 2.26.0
-BuildRequires:	gtk+2-devel >= 2:2.18.0
+BuildRequires:	gsettings-desktop-schemas-devel
+BuildRequires:	gtk+3-devel >= 3.0.3
 BuildRequires:	gtk-doc >= 1.10
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libcanberra-gtk-devel >= 0.4
+BuildRequires:	libcanberra-gtk3-devel >= 0.26
 BuildRequires:	libgtop-devel >= 2.14.8
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
@@ -38,9 +38,10 @@ BuildRequires:	xorg-lib-libSM-devel
 BuildRequires:	zlib-devel
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	gtk-update-icon-cache
-Requires(post,postun):	hicolor-icon-theme
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
+Requires:	gsettings-desktop-schemas
+Requires:	hicolor-icon-theme
 Obsoletes:	gnome
 Obsoletes:	gnome-admin
 Obsoletes:	gnome-utils-floppy
@@ -125,11 +126,11 @@ Dokumentacja API libgdict.
 Summary:	Graphical directory tree analyzer
 Summary(pl.UTF-8):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
-Requires(post,postun):	gtk+2
-Requires(post,postun):	hicolor-icon-theme
+Requires(post,postun):	glib2 >= 1:2.26.0
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	scrollkeeper
-Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	hicolor-icon-theme
 Obsoletes:	baobab
 
 %description baobab
@@ -142,10 +143,8 @@ Graficzny analizator drzew katalogów.
 Summary:	Online dictionary
 Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
-Requires(post,postun):	gtk+2
-Requires(post,postun):	hicolor-icon-theme
+Requires(post,postun):	glib2 >= 1:2.26.0
 Requires(post,postun):	scrollkeeper
-Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
 Obsoletes:	gnome-dict
@@ -160,13 +159,28 @@ spellings of words.
 Pozwala na wyszukiwanie definicji i poprawnej pisowni słów w słowniku
 sieciowym.
 
+%package font-viewer
+Summary:	Font viewer
+Summary(pl.UTF-8):	Przeglądarka czcionek
+Group:		X11/Applications
+Requires(post,postun):	desktop-file-utils
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+
+%description font-viewer
+This package provides font viewer.
+
+%description font-viewer -l pl.UTF-8
+Ten pakiet dostarcza przeglądarkę czcionek.
+
 %package logview
 Summary:	System log viewer for GNOME
 Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
 Group:		X11/Applications
+Requires(post,postun):	glib2 >= 1:2.26.0
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	scrollkeeper
-Requires(post,preun):	GConf2
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	hicolor-icon-theme
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
 %description logview
@@ -194,8 +208,7 @@ Pozwala na wyszukiwanie plików w systemie.
 Summary:	Screenshot utility
 Summary(pl.UTF-8):	Narzędzie do robienia zrzutów ekranu
 Group:		X11/Applications
-Requires(post,postun):	scrollkeeper
-Requires(post,preun):	GConf2
+Requires(post,postun):	glib2 >= 1:2.26.0
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
@@ -208,9 +221,6 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 %prep
 %setup -q
 
-sed -i -e 's/^en@shaw//' po/LINGUAS
-rm -f po/en@shaw.po
-
 %build
 %{__intltoolize}
 %{__gnome_doc_common}
@@ -222,6 +232,8 @@ rm -f po/en@shaw.po
 %configure \
 	--disable-schemas-install \
 	--disable-scrollkeeper \
+	--disable-silent-rules \
+	--enable-static \
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
@@ -232,6 +244,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang %{name}-2.0
 %find_lang baobab --with-gnome --with-omf
@@ -247,37 +261,37 @@ rm -rf $RPM_BUILD_ROOT
 
 %post baobab
 %scrollkeeper_update_post
-%gconf_schema_install baobab.schemas
 %update_icon_cache hicolor
-
-%preun baobab
-%gconf_schema_uninstall baobab.schemas
+%glib_compile_schemas
 
 %postun baobab
 %scrollkeeper_update_postun
 %update_icon_cache hicolor
+%glib_compile_schemas
 
 %post dictionary
 %scrollkeeper_update_post
-%gconf_schema_install gnome-dictionary.schemas
-%update_icon_cache hicolor
-
-%preun dictionary
-%gconf_schema_uninstall gnome-dictionary.schemas
+%glib_compile_schemas
 
 %postun dictionary
 %scrollkeeper_update_postun
-%update_icon_cache hicolor
+%glib_compile_schemas
+
+%post font-viewer
+%update_desktop_database_post
+
+%postun font-viewer
+%update_desktop_database_post
 
 %post logview
 %scrollkeeper_update_post
-%gconf_schema_install gnome-system-log.schemas
-
-%preun logview
-%gconf_schema_uninstall gnome-system-log.schemas
+%glib_compile_schemas
+%update_icon_cache hicolor
 
 %postun logview
+%glib_compile_schemas
 %scrollkeeper_update_postun
+%update_icon_cache hicolor
 
 %post search-tool
 %scrollkeeper_update_post
@@ -290,10 +304,10 @@ rm -rf $RPM_BUILD_ROOT
 %scrollkeeper_update_postun
 
 %post screenshot
-%gconf_schema_install gnome-screenshot.schemas
+%glib_compile_schemas
 
-%preun screenshot
-%gconf_schema_uninstall gnome-screenshot.schemas
+%postun screenshot
+%glib_compile_schemas
 
 %files -f %{name}-2.0.lang
 %defattr(644,root,root,755)
@@ -309,7 +323,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -n libgdict-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgdict-1.0.so
-%{_libdir}/libgdict-1.0.la
 %{_includedir}/gdict-1.0
 %{_pkgconfigdir}/gdict-1.0.pc
 
@@ -325,7 +338,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc baobab/AUTHORS baobab/ChangeLog baobab/README baobab/TODO
 %attr(755,root,root) %{_bindir}/baobab
-%{_sysconfdir}/gconf/schemas/baobab.schemas
+%{_datadir}/glib-2.0/schemas/org.gnome.baobab.gschema.xml
 %{_desktopdir}/baobab.desktop
 %{_iconsdir}/hicolor/*/*/baobab.*
 %{_datadir}/baobab
@@ -335,23 +348,30 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc gnome-dictionary/AUTHORS gnome-dictionary/README gnome-dictionary/TODO
 %attr(755,root,root) %{_bindir}/gnome-dictionary
-%attr(755,root,root) %{_libdir}/gnome-dictionary-applet
-%{_sysconfdir}/gconf/schemas/gnome-dictionary.schemas
 %{_desktopdir}/gnome-dictionary.desktop
-%{_libdir}/bonobo/servers/*
+%{_datadir}/glib-2.0/schemas/org.gnome.dictionary.gschema.xml
 %{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
+
+%files font-viewer
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/gnome-font-viewer
+%attr(755,root,root) %{_bindir}/gnome-thumbnail-font
+%{_desktopdir}/gnome-font-viewer.desktop
+%{_datadir}/thumbnailers/gnome-font-viewer.thumbnailer
 
 %files logview -f gnome-system-log.lang
 %defattr(644,root,root,755)
 %doc logview/ChangeLog logview/TODO
 %attr(755,root,root) %{_bindir}/gnome-system-log
-%{_sysconfdir}/gconf/schemas/gnome-system-log.schemas
 %{_desktopdir}/gnome-system-log.desktop
+%{_datadir}/GConf/gsettings/logview.convert
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-system-log.gschema.xml
 %{_datadir}/%{name}/logview-filter.ui
 %{_datadir}/%{name}/logview-toolbar.xml
 %{_mandir}/man1/gnome-system-log*
+%{_iconsdir}/hicolor/*/*/logview.png
 
 %files search-tool -f gnome-search-tool.lang
 %defattr(644,root,root,755)
@@ -367,7 +387,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc gnome-screenshot/ChangeLog
 %attr(755,root,root) %{_bindir}/gnome-panel-screenshot
 %attr(755,root,root) %{_bindir}/gnome-screenshot
+%{_datadir}/GConf/gsettings/gnome-screenshot.convert
+%{_datadir}/glib-2.0/schemas/org.gnome.gnome-screenshot.gschema.xml
 %{_datadir}/gnome-screenshot
 %{_desktopdir}/gnome-screenshot.desktop
-%{_sysconfdir}/gconf/schemas/gnome-screenshot.schemas
 %{_mandir}/man1/gnome-screenshot*
