@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	3.0.0
+Version:	3.0.1
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/3.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	a0d07b3b045caba13518bf25f7973745
+# Source0-md5:	5bd230c484eedd290c39e34e48e363b1
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf >= 2.64
@@ -350,7 +350,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-dictionary
 %{_desktopdir}/gnome-dictionary.desktop
 %{_datadir}/glib-2.0/schemas/org.gnome.dictionary.gschema.xml
-%{_datadir}/gnome-2.0/ui/*
 %{_datadir}/gnome-dictionary
 %{_mandir}/man1/gnome-dictionary*
 
