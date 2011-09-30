@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	3.0.1
+Version:	3.2.0
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/3.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	5bd230c484eedd290c39e34e48e363b1
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/3.2/%{name}-%{version}.tar.xz
+# Source0-md5:	0ef9ec8577f6cfdb9d65fa26b8f1c6a5
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf >= 2.64
@@ -19,7 +19,7 @@ BuildRequires:	automake >= 1:1.11
 BuildRequires:	bison
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.26.0
+BuildRequires:	glib2-devel >= 1:2.30.0
 BuildRequires:	gnome-common >= 2.24.0
 BuildRequires:	gnome-doc-utils >= 0.14.0
 BuildRequires:	gsettings-desktop-schemas-devel
@@ -34,7 +34,9 @@ BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper >= 0.3.11
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libSM-devel
+BuildRequires:	xz
 BuildRequires:	zlib-devel
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	gtk-update-icon-cache
