@@ -5,13 +5,13 @@ Summary(ru.UTF-8):	Утилиты GNOME
 Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
-Version:	3.2.0
+Version:	3.2.1
 Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/3.2/%{name}-%{version}.tar.xz
-# Source0-md5:	0ef9ec8577f6cfdb9d65fa26b8f1c6a5
+# Source0-md5:	9c173160a4c5d5c315f6cef4a87a9620
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf >= 2.64
@@ -91,7 +91,7 @@ Biblioteka libgdict.
 Summary:	Header files for libgdict library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgdict
 Group:		X11/Development/Libraries
-Requires:	gtk+2-devel >= 2:2.18.0
+Requires:	gtk+3-devel >= 3.0.3
 Requires:	libgdict = %{epoch}:%{version}-%{release}
 
 %description -n libgdict-devel
@@ -128,7 +128,7 @@ Dokumentacja API libgdict.
 Summary:	Graphical directory tree analyzer
 Summary(pl.UTF-8):	Graficzny analizator drzew katalogów
 Group:		X11/Applications
-Requires(post,postun):	glib2 >= 1:2.26.0
+Requires(post,postun):	glib2 >= 1:2.30.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
@@ -145,7 +145,7 @@ Graficzny analizator drzew katalogów.
 Summary:	Online dictionary
 Summary(pl.UTF-8):	Słownik online
 Group:		X11/Applications
-Requires(post,postun):	glib2 >= 1:2.26.0
+Requires(post,postun):	glib2 >= 1:2.30.0
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	gnome-utils-dict
@@ -178,7 +178,7 @@ Ten pakiet dostarcza przeglądarkę czcionek.
 Summary:	System log viewer for GNOME
 Summary(pl.UTF-8):	Przeglądarka logów systemowych dla GNOME
 Group:		X11/Applications
-Requires(post,postun):	glib2 >= 1:2.26.0
+Requires(post,postun):	glib2 >= 1:2.30.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	scrollkeeper
 Requires:	%{name} = %{epoch}:%{version}-%{release}
@@ -210,7 +210,7 @@ Pozwala na wyszukiwanie plików w systemie.
 Summary:	Screenshot utility
 Summary(pl.UTF-8):	Narzędzie do robienia zrzutów ekranu
 Group:		X11/Applications
-Requires(post,postun):	glib2 >= 1:2.26.0
+Requires(post,postun):	glib2 >= 1:2.30.0
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Conflicts:	gnome-utils <= 0:2.10.0-1
 
