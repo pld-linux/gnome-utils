@@ -6,12 +6,13 @@ Summary(uk.UTF-8):	Утиліти GNOME
 Summary(zh_CN.UTF-8):	GNOME应用程序集
 Name:		gnome-utils
 Version:	2.32.0
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-utils/2.32/%{name}-%{version}.tar.bz2
 # Source0-md5:	e150cdb53314fe97ea80768850c2e03c
+Patch0:		%{name}-glib.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.26.0
 BuildRequires:	autoconf
@@ -207,6 +208,7 @@ Pozwala na zrobienie zrzutu ekranu biurka.
 
 %prep
 %setup -q
+%patch0 -p1
 
 sed -i -e 's/^en@shaw//' po/LINGUAS
 rm -f po/en@shaw.po
